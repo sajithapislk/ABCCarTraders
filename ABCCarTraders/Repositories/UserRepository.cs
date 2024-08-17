@@ -3,6 +3,7 @@ using ABCCarTraders.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace ABCCarTraders.Repositories
         public User GetUser(string username, string password)
         {
             string query = $"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'";
-            DataTable result = _dbService.ExecuteQuery(query);
+            DataTable result = _dbService.ExecuteQueryWithParameters(query, new SqlParameter("@username", username), new SqlParameter("@password", password));
             if (result.Rows.Count > 0)
             {
                 DataRow row = result.Rows[0];

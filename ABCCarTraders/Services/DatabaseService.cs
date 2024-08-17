@@ -38,6 +38,23 @@ namespace ABCCarTraders.Services
                 }
             }
         }
+        public DataTable ExecuteQueryWithParameters(string query, params SqlParameter[] parameters)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddRange(parameters); // Add parameters to the command
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+        }
 
         public int ExecuteNonQuery(string query)
         {
