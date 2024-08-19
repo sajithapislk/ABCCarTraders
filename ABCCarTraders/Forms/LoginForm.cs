@@ -29,7 +29,7 @@ namespace ABCCarTraders.Forms
             var user = _authService.Login(username, password);
             if (user != null)
             {
-                if (user is Admin)
+                if (user is AdminModel)
                 {
                     MessageBox.Show("Admin Dashboard");
                 }

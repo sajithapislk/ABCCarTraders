@@ -20,12 +20,12 @@ namespace ABCCarTraders
 
             if (SessionManager.IsLoggedIn())
             {
-                if (SessionManager.CurrentUser is Admin)
+                if (SessionManager.CurrentUser is AdminModel)
                 {
                     Console.WriteLine("Admin");
                     Application.Run(new AdminDashboardForm());
                 }
-                else if (SessionManager.CurrentUser is Customer)
+                else if (SessionManager.CurrentUser is CustomerModel)
                 {
                     Console.WriteLine("Customer");
                     Application.Run(new CustomerDashboardForm());

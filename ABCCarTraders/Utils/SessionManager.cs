@@ -13,9 +13,9 @@ namespace ABCCarTraders.Utils
     {
         private const string SESSION_FILE = "session.json";
 
-        public static User CurrentUser { get; private set; }
+        public static UserModel CurrentUser { get; private set; }
 
-        public static void Login(User user)
+        public static void Login(UserModel user)
         {
             CurrentUser = user;
             SaveSession();
@@ -37,18 +37,18 @@ namespace ABCCarTraders.Utils
             if (File.Exists(SESSION_FILE))
             {
                 string json = File.ReadAllText(SESSION_FILE);
-                ConcreteUser _concreteUser = JsonConvert.DeserializeObject<ConcreteUser>(json);
+                ConcreteUserModel _concreteUser = JsonConvert.DeserializeObject<ConcreteUserModel>(json);
                 if (_concreteUser != null && !string.IsNullOrEmpty(_concreteUser.Username))
                 {
                     if (_concreteUser.Type == "Admin") {  
-                        CurrentUser = new Admin {
+                        CurrentUser = new AdminModel {
                             Id = _concreteUser.Id,
                             Username = _concreteUser.Username,
                         };
                     }
                     else
                     {
-                        CurrentUser = new Customer
+                        CurrentUser = new CustomerModel
                         {
                             Id = _concreteUser.Id,
                             Username = _concreteUser.Username,
@@ -62,9 +62,9 @@ namespace ABCCarTraders.Utils
         {
             if (CurrentUser != null)
             {
-                string _type = CurrentUser is Admin ? "Admin" : "Customer" ;
+                string _type = CurrentUser is AdminModel ? "Admin" : "Customer" ;
 
-                ConcreteUser concreteUser = new ConcreteUser
+                ConcreteUserModel concreteUser = new ConcreteUserModel
                 {
                     Id = CurrentUser.Id,
                     Username = CurrentUser.Username,

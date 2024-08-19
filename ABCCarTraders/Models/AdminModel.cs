@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Models
 {
-    public class Admin : User
+    public class AdminModel : UserModel
     {
         //public override bool Login(string username, string password)
         //{

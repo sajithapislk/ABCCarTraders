@@ -18,15 +18,15 @@ namespace ABCCarTraders.Services
             _userRepository = new UserRepository();
         }
 
-        public User Login(string username, string password)
+        public UserModel Login(string username, string password)
         {
-            User user = _userRepository.GetUser(username, password);
+            UserModel user = _userRepository.GetUser(username, password);
             SessionManager.Login(user);
             return user;
         }
         public bool RegisterCustomer(string username, string password, string name, string email, string tp)
         {
-            var customer = new Customer
+            var customer = new CustomerModel
             {
                 Username = username,
                 Password = password,
