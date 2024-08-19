@@ -39,5 +39,10 @@ namespace ABCCarTraders.Forms
                 MessageBox.Show("Invalid username or password.");
             }
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

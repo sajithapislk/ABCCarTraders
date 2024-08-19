@@ -1,4 +1,6 @@
 ﻿using ABCCarTraders.Forms;
+using ABCCarTraders.Models;
+using ABCCarTraders.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,24 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerRegisterForm());
+            
+            SessionManager.LoadSession();
+
+            if (SessionManager.IsLoggedIn())
+            {
+                if (SessionManager.CurrentUser is Admin)
+                {
+                    Console.WriteLine("Admin");
+                }
+                else if (SessionManager.CurrentUser is Customer)
+                {
+                    Console.WriteLine("Customer");
+                }
+            }
+            else
+            {
+                Application.Run(new LoginForm());
+            }
         }
     }
 }

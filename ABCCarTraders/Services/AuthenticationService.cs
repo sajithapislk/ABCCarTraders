@@ -1,5 +1,6 @@
 ﻿using ABCCarTraders.Models;
 using ABCCarTraders.Repositories;
+using ABCCarTraders.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,9 @@ namespace ABCCarTraders.Services
 
         public User Login(string username, string password)
         {
-            return _userRepository.GetUser(username, password);
+            User user = _userRepository.GetUser(username, password);
+            SessionManager.Login(user);
+            return user;
         }
         public bool RegisterCustomer(string username, string password, string name, string email, string tp)
         {
