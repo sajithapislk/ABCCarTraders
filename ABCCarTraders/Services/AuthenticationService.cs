@@ -21,5 +21,17 @@ namespace ABCCarTraders.Services
         {
             return _userRepository.GetUser(username, password);
         }
+        public bool RegisterCustomer(string username, string password, string name, string email, string tp)
+        {
+            var customer = new Customer
+            {
+                Username = username,
+                Password = password,
+                Name = name,
+                Email = email,
+                Tp = tp
+            };
+            return _userRepository.AddUser(customer);
+        }
     }
 }

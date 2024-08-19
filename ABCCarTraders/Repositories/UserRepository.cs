@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public User GetUser(string username, string password)
         {
-            string query = $"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'";
+            string query = $"SELECT * FROM users WHERE username = @username AND password = @password";
             DataTable result = _dbService.ExecuteQueryWithParameters(query, new SqlParameter("@username", username), new SqlParameter("@password", password));
             if (result.Rows.Count > 0)
             {
@@ -37,6 +37,22 @@ namespace ABCCarTraders.Repositories
                 }
             }
             return null;
+        }
+        public bool AddUser(User user)
+        {
+            string query;
+            if (user is Customer)
+            {
+                Customer customer = user as Customer;
+                query = $"INSERT INTO users (username, password, name, email, tp, is_admin) VALUES ('{customer.Username}', '{customer.Password}', '{customer.Name}', '{customer.Email}', '{customer.Tp}', 0)";
+            }
+            else
+            {
+                query = $"INSERT INTO Users (Username, Password, IsAdmin) VALUES ('{user.Username}', '{user.Password}', 1)";
+            }
+
+            int rowsAffected = _dbService.ExecuteNonQuery(query);
+            return rowsAffected > 0;
         }
     }
 }

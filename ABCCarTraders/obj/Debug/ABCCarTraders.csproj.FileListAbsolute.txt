@@ -7,3 +7,4 @@ c:\users\sajith madhubashana\documents\visual studio 2015\Projects\ABCCarTraders
 c:\users\sajith madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.csproj.GenerateResource.Cache
 c:\users\sajith madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.exe
 c:\users\sajith madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.pdb
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.CustomerRegisterForm.resources
