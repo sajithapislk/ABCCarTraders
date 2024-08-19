@@ -1,5 +1,4 @@
-﻿using ABCCarTraders.Models;
-using ABCCarTraders.Services;
+﻿using ABCCarTraders.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABCCarTraders.Models;
 
 namespace ABCCarTraders.Forms
 {
@@ -38,11 +38,6 @@ namespace ABCCarTraders.Forms
             {
                 MessageBox.Show("Invalid username or password.");
             }
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
