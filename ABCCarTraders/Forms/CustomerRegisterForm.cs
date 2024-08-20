@@ -32,6 +32,8 @@ namespace ABCCarTraders.Forms
             if (res)
             {
                 MessageBox.Show("Customer register successfull");
+                this.Hide();
+                new LoginForm().Show();
             }
             else
             {

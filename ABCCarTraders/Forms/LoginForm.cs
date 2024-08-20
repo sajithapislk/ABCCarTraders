@@ -1,14 +1,9 @@
 ﻿using ABCCarTraders.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABCCarTraders.Models;
+using ABCCarTraders.Forms.AdminForms;
+using ABCCarTraders.Forms.CustomerForms;
 
 namespace ABCCarTraders.Forms
 {
@@ -31,7 +26,13 @@ namespace ABCCarTraders.Forms
             {
                 if (user is AdminModel)
                 {
-                    MessageBox.Show("Admin Dashboard");
+                    this.Hide();
+                    new AdminDashboardForm().Show();
+                }
+                else
+                {
+                    this.Hide();
+                    new CustomerDashboardForm().Show();
                 }
             }
             else
