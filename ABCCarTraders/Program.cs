@@ -5,6 +5,7 @@ using System;
 using System.Windows.Forms;
 using ABCCarTraders.Forms.AdminForms;
 using ABCCarTraders.Forms.CustomerForms;
+using ABCCarTraders.Forms.AdminForms.ManageVehicle;
 
 namespace ABCCarTraders
 {
@@ -15,26 +16,28 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            SessionManager.LoadSession();
+            Application.Run(new VehicleInsertForm());
 
-            if (SessionManager.IsLoggedIn())
-            {
-                if (SessionManager.CurrentUser is AdminModel)
-                {
-                    Console.WriteLine("Admin");
-                    Application.Run(new AdminDashboardForm());
-                }
-                else if (SessionManager.CurrentUser is CustomerModel)
-                {
-                    Console.WriteLine("Customer");
-                    Application.Run(new CustomerDashboardForm());
-                }
-            }
-            else
-            {
-                Application.Run(new LoginForm());
-            }
+
+            //SessionManager.LoadSession();
+
+            //if (SessionManager.IsLoggedIn())
+            //{
+            //    if (SessionManager.CurrentUser is AdminModel)
+            //    {
+            //        Console.WriteLine("Admin");
+            //        Application.Run(new AdminDashboardForm());
+            //    }
+            //    else if (SessionManager.CurrentUser is CustomerModel)
+            //    {
+            //        Console.WriteLine("Customer");
+            //        Application.Run(new CustomerDashboardForm());
+            //    }
+            //}
+            //else
+            //{
+            //    Application.Run(new LoginForm());
+            //}
         }
     }
 }
