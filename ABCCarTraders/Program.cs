@@ -5,7 +5,7 @@ using System;
 using System.Windows.Forms;
 using ABCCarTraders.Forms.AdminForms;
 using ABCCarTraders.Forms.CustomerForms;
-using ABCCarTraders.Forms.AdminForms.ManageVehicle;
+using ABCCarTraders.Forms.AdminForms.ManageVehicleForm;
 
 namespace ABCCarTraders
 {

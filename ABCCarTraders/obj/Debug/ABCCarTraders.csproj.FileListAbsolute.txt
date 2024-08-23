@@ -12,6 +12,6 @@ C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.AdminDashboardForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.CustomerForms.CustomerDashboardForm.resources
-C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicle.VehicleInsertForm.resources
-C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicle.VehicleForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.CustomerForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForm.VehicleForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForm.VehicleInsertForm.resources
