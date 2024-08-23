@@ -34,11 +34,11 @@ namespace ABCCarTraders.Repositories
                         Id = Convert.ToInt32(row["id"]),
                         Name = row["name"].ToString(),
                         Number = row["number"].ToString(),
-                        Type = Convert.ToInt32(row["type"]),
-                        Brand = Convert.ToInt32(row["brand"]),
+                        Type = Convert.ToInt32(row["type_id"]),
+                        Brand = Convert.ToInt32(row["brand_id"]),
                         Color = row["color"].ToString(),
                         Year = row["year"].ToString(),
-                        Price = Convert.ToDecimal(row["price"]),
+                        Price = Convert.ToDouble(row["price"]),
                         Engine = row["engine"].ToString(),
                         EngineCode = row["engine_code"].ToString(),
                         Torque = row["torque"].ToString(),
@@ -55,7 +55,7 @@ namespace ABCCarTraders.Repositories
         }
         public bool Add(VehicleModel vehicle)
         {
-            string query = $"INSERT INTO vehicles (name, number, type, brand, color, year, price, engine, engine_code, torque, afc, power) VALUES (@name, @number, @type, @brand, @color, @year, @price, @engine, @engine_code, @torque, @afc, @power)";
+            string query = $"INSERT INTO vehicles (name, number, type_id, brand_id, color, year, price, engine, engine_code, torque, afc, power) VALUES (@name, @number, @type, @brand, @color, @year, @price, @engine, @engine_code, @torque, @afc, @power)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {

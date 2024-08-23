@@ -16,7 +16,7 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VehicleInsertForm());
+            Application.Run(new VehicleForm());
 
 
             //SessionManager.LoadSession();
