@@ -16,11 +16,15 @@ namespace ABCCarTraders.Forms.AdminForms.ManageVehicle
     {
         private readonly VehicleTypeService _vehicleTypeService;
         private readonly VehicleBrandService _vehicleBrandService;
+        private readonly VehicleService _vehicleService;
+
         public VehicleInsertForm()
         {
             InitializeComponent();
             _vehicleTypeService = new VehicleTypeService();
             _vehicleBrandService = new VehicleBrandService();
+            _vehicleService = new VehicleService();
+
             getVehicleTypes();
             getVehicleBrands();
         }
@@ -43,7 +47,20 @@ namespace ABCCarTraders.Forms.AdminForms.ManageVehicle
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            string vehicleName = txtVehicleName.Text;
+            string vehicleNo = txtVehicleNo.Text;
+            int? vehicleType = cbVehicleType.SelectedValue as int?;
+            int? vehicleBrand = cbVehicleBrand.SelectedValue as int?;
+            string vehicleColor = cbVehicleColor.Text;
+            string vehicleYear = txtVehicleYear.Text;
+            double price = double.Parse(txtPrice.Text);
+            string vehicleEngine = txtVehicleEngine.Text;
+            string vehicleEngineCode = txtVehicleEngineCode.Text;
+            string vehicleTorque = txtVehicleTorque.Text;
+            string vehicleAFC = txtVehicleAFC.Text;
+            string vehiclePower = txtVehiclePower.Text;
 
+            bool res = _vehicleService.RegisterVehicle(vehicleName, vehicleNo, vehicleType??0, vehicleBrand??0, vehicleColor, vehicleYear, price, vehicleEngine, vehicleEngineCode, vehicleTorque, vehicleAFC, vehiclePower);
         }
     }
 }
