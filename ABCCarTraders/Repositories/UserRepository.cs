@@ -19,7 +19,7 @@ namespace ABCCarTraders.Repositories
             _dbService = new DatabaseService();
         }
 
-        public UserModel GetUser(string username, string password)
+        public UserModel GetUserForLogin(string username, string password)
         {
             string query = $"SELECT * FROM users WHERE username = @username AND password = @password";
             DataTable result = _dbService.ExecuteQueryWithParameters(query, new SqlParameter("@username", username), new SqlParameter("@password", password));
@@ -35,6 +35,31 @@ namespace ABCCarTraders.Repositories
                         Password = row["password"].ToString()
                     };
                 }
+            }
+            return null;
+        }
+        public List<CustomerModel> GetCustomers()
+        {
+            string query = $"SELECT * FROM users WHERE is_admin=0";
+            DataTable result = _dbService.ExecuteQuery(query);
+            List<CustomerModel> _customers = new List<CustomerModel>();
+
+            if (result.Rows.Count > 0)
+            {
+                foreach (DataRow row in result.Rows)
+                {
+                    CustomerModel _customer = new CustomerModel
+                    {
+                        Id = Convert.ToInt32(row["id"]),
+                        Name = row["name"].ToString(),
+                        Email = row["email"].ToString(),
+                        Tp = row["tp"].ToString()
+                    };
+
+                    _customers.Add(_customer);
+                }
+
+                return _customers;
             }
             return null;
         }

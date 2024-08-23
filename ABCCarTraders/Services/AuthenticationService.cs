@@ -20,7 +20,7 @@ namespace ABCCarTraders.Services
 
         public UserModel Login(string username, string password)
         {
-            UserModel user = _userRepository.GetUser(username, password);
+            UserModel user = _userRepository.GetUserForLogin(username, password);
             SessionManager.Login(user);
             return user;
         }
