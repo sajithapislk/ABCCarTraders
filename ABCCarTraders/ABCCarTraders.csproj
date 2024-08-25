@@ -101,28 +101,35 @@
     <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\VehicleModel.cs" />
     <Compile Include="Models\VehicleBrandModel.cs" />
+    <Compile Include="Models\VehicleOrderModel.cs" />
     <Compile Include="Models\VehicleTypeModel.cs" />
     <Compile Include="Models\ConcreteUserModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\VehicleOrderRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Repositories\VehicleBrandRepository.cs" />
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\VehicleOrderService.cs" />
     <Compile Include="Services\VehicleService.cs" />
     <Compile Include="Services\VehicleBrandService.cs" />
     <Compile Include="Services\CustomerService .cs" />
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Utils\SessionManager.cs" />
+    <Compile Include="Utils\TempVehicleOrderManager.cs" />
     <EmbeddedResource Include="Forms\AdminForms\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm\VehicleOrderForm.resx">
+      <DependentUpon>VehicleOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>
