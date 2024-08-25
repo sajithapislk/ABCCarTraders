@@ -10,13 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForm
+namespace ABCCarTraders.Forms.AdminForms
 {
-    public partial class VehicleOrderForm : Form
+    public partial class CustomerOrderForm : Form
     {
         private readonly VehicleOrderService _vehicleOrderService;
 
-        public VehicleOrderForm()
+        public CustomerOrderForm()
         {
             InitializeComponent();
             _vehicleOrderService = new VehicleOrderService();

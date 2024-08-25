@@ -62,11 +62,11 @@
     <Compile Include="Forms\AdminForms\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerOrderForm\VehicleOrderForm.cs">
+    <Compile Include="Forms\AdminForms\CustomerOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerOrderForm\VehicleOrderForm.Designer.cs">
-      <DependentUpon>VehicleOrderForm.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\CustomerOrderForm.Designer.cs">
+      <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.cs">
       <SubType>Form</SubType>
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm\VehicleOrderForm.resx">
-      <DependentUpon>VehicleOrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm.resx">
+      <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
-﻿namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForm
+﻿namespace ABCCarTraders.Forms.AdminForms
 {
-    partial class VehicleOrderForm
+    partial class CustomerOrderForm
     {
         /// <summary>
         /// Required designer variable.
