@@ -33,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\VehicleDataset1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +87,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.Designer.cs">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ReportForms\VehicleReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ReportForms\VehicleReportForm.Designer.cs">
+      <DependentUpon>VehicleReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.cs">
       <SubType>Form</SubType>
@@ -155,6 +169,9 @@
     <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.resx">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
+      <DependentUpon>VehicleReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.resx">
       <DependentUpon>VehiclePartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +196,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\AdminReports\Report1.rdlc" />
+    <None Include="Datasets\VehicleDataset.xsc">
+      <DependentUpon>VehicleDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\VehicleDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleDataset1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\VehicleDataset.xss">
+      <DependentUpon>VehicleDataset.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
