@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.vehicleDataset = new ABCCarTraders.Datasets.VehicleDataset();
+            this.VehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vehicleDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "VehicleDataset";
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABCCarTraders.Reports.AdminReports.Report1.rdlc";
+            reportDataSource1.Name = "VehicleDataset";
+            reportDataSource1.Value = this.VehicleBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABCCarTraders.Reports.AdminReports.VehicleReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(772, 437);
@@ -50,6 +53,11 @@
             // 
             this.vehicleDataset.DataSetName = "VehicleDataset";
             this.vehicleDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // VehicleBindingSource
+            // 
+            this.VehicleBindingSource.DataMember = "Vehicle";
+            this.VehicleBindingSource.DataSource = this.vehicleDataset;
             // 
             // VehicleReportForm
             // 
@@ -61,6 +69,7 @@
             this.Text = "VehicleReportForm";
             this.Load += new System.EventHandler(this.VehicleReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vehicleDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +78,6 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private Datasets.VehicleDataset vehicleDataset;
+        private System.Windows.Forms.BindingSource VehicleBindingSource;
     }
 }

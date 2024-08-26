@@ -1,6 +1,7 @@
 ﻿using ABCCarTraders.Forms;
 using ABCCarTraders.Forms.AdminForms.ReportForms;
 using ABCCarTraders.Forms.AdminForms.VehiclePartForms;
+using ABCCarTraders.Forms.CustomerForms;
 using ABCCarTraders.Models;
 using ABCCarTraders.Utils;
 using System;
@@ -15,7 +16,7 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VehicleReportForm());
+            Application.Run(new ShopForm());
 
 
             //SessionManager.LoadSession();

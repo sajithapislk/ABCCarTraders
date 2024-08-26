@@ -112,6 +112,12 @@
     <Compile Include="Forms\CustomerForms\CustomerDashboardForm.Designer.cs">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerForms\ShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\ShopForm.Designer.cs">
+      <DependentUpon>ShopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="Services\VehiclePartCategoryService.cs" />
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
+    <Compile Include="Widgets\ProfileWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\ProfileWidget.Designer.cs">
+      <DependentUpon>ProfileWidget.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="Utils\TempVehicleOrderManager.cs" />
     <EmbeddedResource Include="Forms\AdminForms\AdminDashboardForm.resx">
@@ -181,6 +193,9 @@
     <EmbeddedResource Include="Forms\CustomerForms\CustomerDashboardForm.resx">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\ShopForm.resx">
+      <DependentUpon>ShopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerRegisterForm.resx">
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,7 +211,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reports\AdminReports\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\AdminReports\VehicleReport.rdlc" />
+    <EmbeddedResource Include="Widgets\ProfileWidget.resx">
+      <DependentUpon>ProfileWidget.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datasets\VehicleDataset.xsc">
       <DependentUpon>VehicleDataset.xsd</DependentUpon>
     </None>
