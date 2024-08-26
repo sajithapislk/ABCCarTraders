@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ABCCarTraders.Models;
+using ABCCarTraders.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,20 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
 {
     public partial class VehiclePartForm : Form
     {
+        private readonly VehiclePartService _vehiclePartService;
+
         public VehiclePartForm()
         {
             InitializeComponent();
+            _vehiclePartService = new VehiclePartService();
+            getParts();
+
         }
 
-        public void getParts()
+        private void getParts()
         {
-
+            List<VehiclePartModel> list = _vehiclePartService.List();
+            dgvList.DataSource = list;
         }
     }
 }
