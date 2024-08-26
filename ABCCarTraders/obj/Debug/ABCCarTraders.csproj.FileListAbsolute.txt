@@ -5,9 +5,6 @@ C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.AdminDashboardForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.CustomerForm.resources
-C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.CustomerOrderForm.VehicleOrderForm.resources
-C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForm.VehicleForm.resources
-C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForm.VehicleInsertForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.CustomerForms.CustomerDashboardForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.CustomerRegisterForm.resources
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.LoginForm.resources
@@ -15,3 +12,9 @@ C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.csproj.GenerateResource.Cache
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.exe
 C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.pdb
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.csprojResolveAssemblyReference.cache
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.CustomerOrderForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForms.VehicleForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.ManageVehicleForms.VehicleInsertForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.VehiclePartForms.VehiclePartForm.resources
+C:\Users\Sajith Madhubashana\documents\visual studio 2015\Projects\ABCCarTraders\ABCCarTraders\obj\Debug\ABCCarTraders.Forms.AdminForms.VehiclePartForms.VehiclePartInsertForm.resources

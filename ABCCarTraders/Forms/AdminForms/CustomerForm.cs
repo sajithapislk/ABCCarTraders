@@ -22,7 +22,7 @@ namespace ABCCarTraders.Forms.AdminForms
             getVehicles();
         }
 
-        public void getVehicles()
+        private void getVehicles()
         {
             List<CustomerModel> list = _customerService.List();
             dgvList.DataSource = list;

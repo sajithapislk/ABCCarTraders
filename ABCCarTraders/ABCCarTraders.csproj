@@ -68,17 +68,29 @@
     <Compile Include="Forms\AdminForms\CustomerOrderForm.Designer.cs">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.cs">
+    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.Designer.cs">
       <DependentUpon>VehicleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForm\VehicleInsertForm.cs">
+    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForm\VehicleInsertForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.Designer.cs">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.Designer.cs">
+      <DependentUpon>VehiclePartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.Designer.cs">
+      <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CustomerForms\CustomerDashboardForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +114,8 @@
     <Compile Include="Models\VehicleModel.cs" />
     <Compile Include="Models\VehicleBrandModel.cs" />
     <Compile Include="Models\VehicleOrderModel.cs" />
+    <Compile Include="Models\VehiclePartCategoryModel.cs" />
+    <Compile Include="Models\VehiclePartModel.cs" />
     <Compile Include="Models\VehicleTypeModel.cs" />
     <Compile Include="Models\ConcreteUserModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
@@ -109,15 +123,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\VehicleOrderRepository.cs" />
+    <Compile Include="Repositories\VehiclePartRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Repositories\VehicleBrandRepository.cs" />
+    <Compile Include="Repositories\VehiclePartCategoryRepository.cs" />
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\VehicleOrderService.cs" />
+    <Compile Include="Services\VehiclePartService.cs" />
     <Compile Include="Services\VehicleService.cs" />
     <Compile Include="Services\VehicleBrandService.cs" />
     <Compile Include="Services\CustomerService .cs" />
+    <Compile Include="Services\VehiclePartCategoryService.cs" />
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Utils\SessionManager.cs" />
@@ -131,11 +149,17 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm.resx">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForm\VehicleForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForm\VehicleInsertForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.resx">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.resx">
+      <DependentUpon>VehiclePartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.resx">
+      <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\CustomerDashboardForm.resx">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
+namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForms
 {
     public partial class VehicleInsertForm : Form
     {
@@ -28,7 +28,7 @@ namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
             getVehicleTypes();
             getVehicleBrands();
         }
-        public void getVehicleTypes()
+        private void getVehicleTypes()
         {
             List<VehicleTypeModel> list = _vehicleTypeService.List();
 
@@ -36,7 +36,7 @@ namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
             cbVehicleType.DisplayMember = "Name";
             cbVehicleType.ValueMember = "Id";
         }
-        public void getVehicleBrands()
+        private void getVehicleBrands()
         {
             List<VehicleBrandModel> list = _vehicleBrandService.List();
 

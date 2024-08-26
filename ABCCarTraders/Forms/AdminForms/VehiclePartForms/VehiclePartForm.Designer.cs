@@ -1,6 +1,6 @@
-﻿namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
+﻿namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
 {
-    partial class VehicleForm
+    partial class VehiclePartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,12 @@
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.part_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engine_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.torque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,19 +46,16 @@
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.name,
-            this.type,
+            this.category_id,
+            this.part_number,
             this.brand,
-            this.color,
             this.price,
-            this.engine,
-            this.engine_code,
-            this.torque,
-            this.afc,
-            this.power});
-            this.dgvList.Location = new System.Drawing.Point(22, 38);
+            this.qty,
+            this.description});
+            this.dgvList.Location = new System.Drawing.Point(12, 12);
             this.dgvList.Name = "dgvList";
-            this.dgvList.Size = new System.Drawing.Size(700, 261);
-            this.dgvList.TabIndex = 0;
+            this.dgvList.Size = new System.Drawing.Size(849, 261);
+            this.dgvList.TabIndex = 1;
             // 
             // Id
             // 
@@ -75,11 +69,17 @@
             this.name.HeaderText = "name";
             this.name.Name = "name";
             // 
-            // type
+            // category_id
             // 
-            this.type.DataPropertyName = "type";
-            this.type.HeaderText = "type";
-            this.type.Name = "type";
+            this.category_id.DataPropertyName = "category_id";
+            this.category_id.HeaderText = "category_id";
+            this.category_id.Name = "category_id";
+            // 
+            // part_number
+            // 
+            this.part_number.DataPropertyName = "part_number";
+            this.part_number.HeaderText = "part_number";
+            this.part_number.Name = "part_number";
             // 
             // brand
             // 
@@ -87,56 +87,32 @@
             this.brand.HeaderText = "brand";
             this.brand.Name = "brand";
             // 
-            // color
-            // 
-            this.color.DataPropertyName = "color";
-            this.color.HeaderText = "color";
-            this.color.Name = "color";
-            // 
             // price
             // 
             this.price.DataPropertyName = "price";
             this.price.HeaderText = "price";
             this.price.Name = "price";
             // 
-            // engine
+            // qty
             // 
-            this.engine.DataPropertyName = "engine";
-            this.engine.HeaderText = "engine";
-            this.engine.Name = "engine";
+            this.qty.DataPropertyName = "qty";
+            this.qty.HeaderText = "qty";
+            this.qty.Name = "qty";
             // 
-            // engine_code
+            // description
             // 
-            this.engine_code.DataPropertyName = "engine_code";
-            this.engine_code.HeaderText = "engine_code";
-            this.engine_code.Name = "engine_code";
+            this.description.DataPropertyName = "description";
+            this.description.HeaderText = "description";
+            this.description.Name = "description";
             // 
-            // torque
-            // 
-            this.torque.DataPropertyName = "torque";
-            this.torque.HeaderText = "torque";
-            this.torque.Name = "torque";
-            // 
-            // afc
-            // 
-            this.afc.DataPropertyName = "afc";
-            this.afc.HeaderText = "afc";
-            this.afc.Name = "afc";
-            // 
-            // power
-            // 
-            this.power.DataPropertyName = "power";
-            this.power.HeaderText = "power";
-            this.power.Name = "power";
-            // 
-            // VehicleForm
+            // VehiclePartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 396);
+            this.ClientSize = new System.Drawing.Size(910, 296);
             this.Controls.Add(this.dgvList);
-            this.Name = "VehicleForm";
-            this.Text = "VehicleForm";
+            this.Name = "VehiclePartForm";
+            this.Text = "VehiclePartForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.ResumeLayout(false);
 
@@ -147,14 +123,11 @@
         private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn part_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn brand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn engine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn engine_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn torque;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn power;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
     }
 }

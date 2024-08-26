@@ -1,5 +1,5 @@
 ﻿using ABCCarTraders.Forms;
-using ABCCarTraders.Forms.AdminForms.CustomerOrderForm;
+using ABCCarTraders.Forms.AdminForms.VehiclePartForms;
 using ABCCarTraders.Models;
 using ABCCarTraders.Utils;
 using System;
@@ -14,7 +14,7 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerOrderForm());
+            Application.Run(new VehiclePartInsertForm());
 
 
             //SessionManager.LoadSession();

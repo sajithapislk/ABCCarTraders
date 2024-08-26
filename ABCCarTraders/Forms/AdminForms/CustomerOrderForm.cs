@@ -23,7 +23,7 @@ namespace ABCCarTraders.Forms.AdminForms
             getOrders();
 
         }
-        public void getOrders()
+        private void getOrders()
         {
             List<VehicleOrderModel> list = _vehicleOrderService.List();
             dgvList.DataSource = list;

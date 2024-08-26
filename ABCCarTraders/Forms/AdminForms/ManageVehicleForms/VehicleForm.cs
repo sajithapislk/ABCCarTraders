@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
+namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForms
 {
     public partial class VehicleForm : Form
     {
@@ -22,7 +22,7 @@ namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForm
             getVehicles();
         }
 
-        public void getVehicles() {
+        private void getVehicles() {
             List<VehicleModel> list = _vehicleService.List();
             dgvList.DataSource = list;
         }
