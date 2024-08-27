@@ -1,6 +1,6 @@
 ﻿namespace ABCCarTraders.Widgets
 {
-    partial class ProfileWidget
+    partial class ItemWidget
     {
         /// <summary> 
         /// Required designer variable.

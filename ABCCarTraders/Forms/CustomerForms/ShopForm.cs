@@ -17,7 +17,7 @@ namespace ABCCarTraders.Forms.CustomerForms
     {
         private readonly VehicleService _vehicleService;
         private readonly VehiclePartService _vehiclepartService;
-        private List<ProfileWidget> _profileListWidget = new List<ProfileWidget>();
+        private List<ItemWidget> _profileListWidget = new List<ItemWidget>();
 
         public ShopForm()
         {
@@ -47,9 +47,10 @@ namespace ABCCarTraders.Forms.CustomerForms
 
             foreach (VehicleModel vehicle in list)
             {
-                ProfileWidget widget = new ProfileWidget
+                ItemWidget widget = new ItemWidget
                 {
-                    Title = vehicle.Name
+                    Title = vehicle.Name,
+                    Type = "Vehicle"
                 };
 
                 _profileListWidget.Add(widget);
@@ -61,9 +62,10 @@ namespace ABCCarTraders.Forms.CustomerForms
 
             foreach (VehiclePartModel part in list)
             {
-                ProfileWidget widget = new ProfileWidget
+                ItemWidget widget = new ItemWidget
                 {
-                    Title = part.Name
+                    Title = part.Name,
+                    Type="VehiclePart"
                 };
 
                 _profileListWidget.Add(widget);
@@ -78,16 +80,56 @@ namespace ABCCarTraders.Forms.CustomerForms
             }
 
             string lowercaseFilter = filterText.Trim().ToLower();
+            bool filterByVehicle = cbVehicle.Checked;
+            bool filterByVehiclePart = cbVehiclePart.Checked;
 
-            var filteredWidgets = _profileListWidget
-                .Where(widget => string.IsNullOrEmpty(lowercaseFilter) ||
-                                 widget.Title.ToLower().Contains(lowercaseFilter)).ToList();
+            List<ItemWidget> filteredWidgets;
 
+
+            if (filterByVehicle == true && filterByVehiclePart == true)
+            {
+                filteredWidgets = _profileListWidget
+                    .Where(widget => (string.IsNullOrEmpty(lowercaseFilter) ||
+                    widget.Title.ToLower().Contains(lowercaseFilter)))
+                    .ToList();
+            }
+            else if (filterByVehicle) filteredWidgets = _profileListWidget
+                .Where(widget => (string.IsNullOrEmpty(lowercaseFilter) ||
+                                 widget.Title.ToLower().Contains(lowercaseFilter)) &&
+                                (!filterByVehicle || widget.Type == "Vehicle"))
+                .ToList();
+
+            else if (filterByVehiclePart)
+            {
+                filteredWidgets = _profileListWidget
+                    .Where(widget => (string.IsNullOrEmpty(lowercaseFilter) ||
+                                     widget.Title.ToLower().Contains(lowercaseFilter)) &&
+                                    (!filterByVehiclePart || widget.Type == "VehiclePart"))
+                    .ToList();
+            }
+            else 
+            {
+                filteredWidgets = _profileListWidget
+                    .Where(widget => (string.IsNullOrEmpty(lowercaseFilter) ||
+                    widget.Title.ToLower().Contains(lowercaseFilter)))
+                    .ToList();
+            }
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.AddRange(filteredWidgets.ToArray());
+        
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            FilterWidgetsByName(txtSearch.Text);
+        }
+
+        private void cbVehicle_Click(object sender, EventArgs e)
+        {
+            FilterWidgetsByName(txtSearch.Text);
+        }
+
+        private void cbVehiclePart_Click(object sender, EventArgs e)
         {
             FilterWidgetsByName(txtSearch.Text);
         }

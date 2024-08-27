@@ -158,11 +158,11 @@
     <Compile Include="Services\VehiclePartCategoryService.cs" />
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
-    <Compile Include="Widgets\ProfileWidget.cs">
+    <Compile Include="Widgets\ItemWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widgets\ProfileWidget.Designer.cs">
-      <DependentUpon>ProfileWidget.cs</DependentUpon>
+    <Compile Include="Widgets\ItemWidget.Designer.cs">
+      <DependentUpon>ItemWidget.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\SessionManager.cs" />
     <Compile Include="Utils\TempVehicleOrderManager.cs" />
@@ -212,8 +212,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\AdminReports\VehicleReport.rdlc" />
-    <EmbeddedResource Include="Widgets\ProfileWidget.resx">
-      <DependentUpon>ProfileWidget.cs</DependentUpon>
+    <EmbeddedResource Include="Widgets\ItemWidget.resx">
+      <DependentUpon>ItemWidget.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Datasets\VehicleDataset.xsc">
       <DependentUpon>VehicleDataset.xsd</DependentUpon>

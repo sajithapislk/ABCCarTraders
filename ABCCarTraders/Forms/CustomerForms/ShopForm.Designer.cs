@@ -30,7 +30,9 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbVehicle = new System.Windows.Forms.CheckBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbVehiclePart = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,12 +47,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.cbVehiclePart);
+            this.panel1.Controls.Add(this.cbVehicle);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // cbVehicle
+            // 
+            this.cbVehicle.AutoSize = true;
+            this.cbVehicle.Location = new System.Drawing.Point(556, 40);
+            this.cbVehicle.Name = "cbVehicle";
+            this.cbVehicle.Size = new System.Drawing.Size(66, 17);
+            this.cbVehicle.TabIndex = 1;
+            this.cbVehicle.Text = "Vehicles";
+            this.cbVehicle.UseVisualStyleBackColor = true;
+            this.cbVehicle.Click += new System.EventHandler(this.cbVehicle_Click);
             // 
             // txtSearch
             // 
@@ -59,6 +74,17 @@
             this.txtSearch.Size = new System.Drawing.Size(306, 20);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
+            // cbVehiclePart
+            // 
+            this.cbVehiclePart.AutoSize = true;
+            this.cbVehiclePart.Location = new System.Drawing.Point(628, 40);
+            this.cbVehiclePart.Name = "cbVehiclePart";
+            this.cbVehiclePart.Size = new System.Drawing.Size(88, 17);
+            this.cbVehiclePart.TabIndex = 1;
+            this.cbVehiclePart.Text = "Vehicle Parts";
+            this.cbVehiclePart.UseVisualStyleBackColor = true;
+            this.cbVehiclePart.Click += new System.EventHandler(this.cbVehiclePart_Click);
             // 
             // ShopForm
             // 
@@ -80,5 +106,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.CheckBox cbVehicle;
+        private System.Windows.Forms.CheckBox cbVehiclePart;
     }
 }
