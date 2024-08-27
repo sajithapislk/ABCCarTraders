@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Models
 {
-    class VehicleTypeModel
+    public class VehicleTypeModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

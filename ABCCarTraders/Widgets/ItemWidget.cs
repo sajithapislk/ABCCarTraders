@@ -7,21 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABCCarTraders.Services;
 
 namespace ABCCarTraders.Widgets
 {
     public partial class ItemWidget : UserControl
     {
-        public ItemWidget()
-        {
-            InitializeComponent();
-        }
+        private readonly TempOrderInfoService _tempOrderInfoService;
 
-        private string _id;
+        private int _id;
         private string _title;
         private string _type;
         [Category("Custom Props")]
-        public string Id
+        public int Id
         {
             get { return _id; }
             set { _id = value; }
@@ -37,6 +35,24 @@ namespace ABCCarTraders.Widgets
         {
             get { return _type; }
             set { _type = value; }
+        }
+
+        public ItemWidget()
+        {
+            InitializeComponent();
+            _tempOrderInfoService = new TempOrderInfoService();
+        }
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+            pnlQty.Visible = true;
+            
+        }
+
+        private void btnSaveCart_Click(object sender, EventArgs e)
+        {
+            int qty = int.Parse(txtQty.Text);
+            _tempOrderInfoService.saveVehicle(_id, qty);
+            pnlQty.Visible = false;
         }
     }
 }

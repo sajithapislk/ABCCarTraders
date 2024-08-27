@@ -133,9 +133,11 @@
     <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\VehicleModel.cs" />
     <Compile Include="Models\VehicleBrandModel.cs" />
+    <Compile Include="Models\VehicleOrderInfoModel.cs" />
     <Compile Include="Models\VehicleOrderModel.cs" />
     <Compile Include="Models\VehiclePartCategoryModel.cs" />
     <Compile Include="Models\VehiclePartModel.cs" />
+    <Compile Include="Models\VehiclePartOrderInfoModel.cs" />
     <Compile Include="Models\VehicleTypeModel.cs" />
     <Compile Include="Models\ConcreteUserModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
@@ -150,6 +152,8 @@
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\OrderInfoModel.cs" />
+    <Compile Include="Services\TempOrderInfoService.cs" />
     <Compile Include="Services\VehicleOrderService.cs" />
     <Compile Include="Services\VehiclePartService.cs" />
     <Compile Include="Services\VehicleService.cs" />
@@ -158,6 +162,7 @@
     <Compile Include="Services\VehiclePartCategoryService.cs" />
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
+    <Compile Include="Utils\TempVehiclePartOrderManager.cs" />
     <Compile Include="Widgets\ItemWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>

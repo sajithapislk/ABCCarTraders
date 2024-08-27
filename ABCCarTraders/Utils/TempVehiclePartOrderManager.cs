@@ -9,32 +9,25 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Utils
 {
-    class TempVehicleOrderManager
+    class TempVehiclePartOrderManager
     {
-        private const string SESSION_FILE = "temp_vehicle_order.json";
-
-        public static List<VehicleOrderInfoModel> list { get; private set; }
+        private const string SESSION_FILE = "temp_vehicle_part_order.json";
+        public static List<VehiclePartOrderInfoModel> list { get; private set; }
 
         public static void LoadSession()
         {
             if (File.Exists(SESSION_FILE))
             {
                 string json = File.ReadAllText(SESSION_FILE);
-                list = JsonConvert.DeserializeObject<List<VehicleOrderInfoModel>>(json);
-            }
-            else
-            {
-                list = new List<VehicleOrderInfoModel>();
+                list = JsonConvert.DeserializeObject<List<VehiclePartOrderInfoModel>>(json);
             }
         }
 
-        public static void SaveSession(VehicleOrderInfoModel vehicleOrder)
+        public static void SaveSession(VehiclePartOrderInfoModel vehicleOrder)
         {
-            LoadSession();
             list.Add(vehicleOrder);
             string json = JsonConvert.SerializeObject(list);
             File.WriteAllText(SESSION_FILE, json);
         }
-        
     }
 }

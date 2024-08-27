@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Models
 {
-    public class VehiclePartCategoryModel
+    public class VehiclePartOrderInfoModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public int PartId { get; set; }
+        public int Qty { get; set; }
     }
 }

@@ -49,6 +49,7 @@ namespace ABCCarTraders.Forms.CustomerForms
             {
                 ItemWidget widget = new ItemWidget
                 {
+                    Id = vehicle.Id ?? 0,
                     Title = vehicle.Name,
                     Type = "Vehicle"
                 };
@@ -64,6 +65,7 @@ namespace ABCCarTraders.Forms.CustomerForms
             {
                 ItemWidget widget = new ItemWidget
                 {
+                    Id = part.Id ?? 0,
                     Title = part.Name,
                     Type="VehiclePart"
                 };
@@ -132,6 +134,11 @@ namespace ABCCarTraders.Forms.CustomerForms
         private void cbVehiclePart_Click(object sender, EventArgs e)
         {
             FilterWidgetsByName(txtSearch.Text);
+        }
+
+        private void btnViewCart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

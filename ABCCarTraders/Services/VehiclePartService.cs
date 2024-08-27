@@ -26,7 +26,7 @@ namespace ABCCarTraders.Services
         {
             var vehiclePart = new VehiclePartModel
             {
-                VehicleId = vehicleId,
+                VehicleId = vehicleId ?? 0,
                 CategoryId = categoryId,
                 Name = name,
                 PartNumber = partNumber,
