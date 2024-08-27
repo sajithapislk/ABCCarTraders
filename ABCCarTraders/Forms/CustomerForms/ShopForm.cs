@@ -16,16 +16,31 @@ namespace ABCCarTraders.Forms.CustomerForms
     public partial class ShopForm : Form
     {
         private readonly VehicleService _vehicleService;
-        private List<ProfileWidget> _profileListWidget;
+        private readonly VehiclePartService _vehiclepartService;
+        private List<ProfileWidget> _profileListWidget = new List<ProfileWidget>();
 
         public ShopForm()
         {
             InitializeComponent();
-            _vehicleService = new VehicleService();
-            _profileListWidget = new List<ProfileWidget>(); // Initialize the list
-            getVehicles();
-        }
 
+            _vehicleService = new VehicleService();
+            _vehiclepartService = new VehiclePartService();
+
+            getList();
+        }
+        private void getList()
+        {
+            if (flowLayoutPanel1 == null)
+            {
+                MessageBox.Show("null");
+                return;
+            }
+            _profileListWidget.Clear();
+            getVehicles();
+            getParts();
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.AddRange(_profileListWidget.ToArray());
+        }
         private void getVehicles()
         {
             List<VehicleModel> list = _vehicleService.List();
@@ -39,12 +54,42 @@ namespace ABCCarTraders.Forms.CustomerForms
 
                 _profileListWidget.Add(widget);
             }
+        }
+        private void getParts()
+        {
+            List<VehiclePartModel> list = _vehiclepartService.List();
 
-            if (flowLayoutPanel1 != null)
+            foreach (VehiclePartModel part in list)
             {
-                flowLayoutPanel1.Controls.Clear();
-                flowLayoutPanel1.Controls.AddRange(_profileListWidget.ToArray());
+                ProfileWidget widget = new ProfileWidget
+                {
+                    Title = part.Name
+                };
+
+                _profileListWidget.Add(widget);
             }
+        }
+        private void FilterWidgetsByName(string filterText)
+        {
+            if (flowLayoutPanel1 == null)
+            {
+                MessageBox.Show("null");
+                return;
+            }
+
+            string lowercaseFilter = filterText.Trim().ToLower();
+
+            var filteredWidgets = _profileListWidget
+                .Where(widget => string.IsNullOrEmpty(lowercaseFilter) ||
+                                 widget.Title.ToLower().Contains(lowercaseFilter)).ToList();
+
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.AddRange(filteredWidgets.ToArray());
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            FilterWidgetsByName(txtSearch.Text);
         }
     }
 }
