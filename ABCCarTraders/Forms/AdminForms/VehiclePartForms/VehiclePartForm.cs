@@ -29,5 +29,15 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
             List<VehiclePartModel> list = _vehiclePartService.List();
             dgvList.DataSource = list;
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getParts();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new VehiclePartInsertForm().Show();
+        }
     }
 }

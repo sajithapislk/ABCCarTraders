@@ -111,6 +111,7 @@
             this.btnOrderHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOrderHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOrderHistory.UseVisualStyleBackColor = true;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
             // 
             // btnCart
             // 

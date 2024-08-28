@@ -68,7 +68,7 @@
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
-            this.dgvList.Size = new System.Drawing.Size(734, 347);
+            this.dgvList.Size = new System.Drawing.Size(734, 346);
             this.dgvList.TabIndex = 0;
             // 
             // Id
@@ -145,7 +145,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 49);
+            this.panel1.Size = new System.Drawing.Size(734, 50);
             this.panel1.TabIndex = 1;
             // 
             // btnAdd
@@ -183,9 +183,9 @@
             // 
             this.panel2.Controls.Add(this.dgvList);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 49);
+            this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 347);
+            this.panel2.Size = new System.Drawing.Size(734, 346);
             this.panel2.TabIndex = 2;
             // 
             // VehicleForm

@@ -1,4 +1,5 @@
 ﻿using ABCCarTraders.Forms.AdminForms.VehicleForms;
+using ABCCarTraders.Forms.AdminForms.VehiclePartForms;
 using ABCCarTraders.Services;
 using ABCCarTraders.Utils;
 using System;
@@ -44,6 +45,11 @@ namespace ABCCarTraders.Forms.AdminForms
         private void btnShop_Click(object sender, EventArgs e)
         {
             new CustomerForm().Show();
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+            new VehiclePartForm().Show();
         }
     }
 }
