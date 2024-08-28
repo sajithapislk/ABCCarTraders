@@ -51,8 +51,15 @@ namespace ABCCarTraders.Widgets
         private void btnSaveCart_Click(object sender, EventArgs e)
         {
             int qty = int.Parse(txtQty.Text);
-            _tempOrderInfoService.saveVehicle(_id, qty);
             pnlQty.Visible = false;
+
+            if (_type== "Vehicle")
+            {
+                _tempOrderInfoService.saveVehicle(_id, qty);
+            }else
+            {
+                _tempOrderInfoService.saveVehiclePart(_id, qty);
+            }
         }
     }
 }

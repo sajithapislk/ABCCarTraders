@@ -21,10 +21,15 @@ namespace ABCCarTraders.Utils
                 string json = File.ReadAllText(SESSION_FILE);
                 list = JsonConvert.DeserializeObject<List<VehiclePartOrderInfoModel>>(json);
             }
+            else
+            {
+                list = new List<VehiclePartOrderInfoModel>();
+            }
         }
 
         public static void SaveSession(VehiclePartOrderInfoModel vehicleOrder)
         {
+            LoadSession();
             list.Add(vehicleOrder);
             string json = JsonConvert.SerializeObject(list);
             File.WriteAllText(SESSION_FILE, json);

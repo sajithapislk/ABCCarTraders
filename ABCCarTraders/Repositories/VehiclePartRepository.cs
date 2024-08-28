@@ -55,7 +55,7 @@ namespace ABCCarTraders.Repositories
 
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@vehicleId", vehiclePart.VehicleId),
+                new SqlParameter("@vehicleId", vehiclePart.VehicleId ?? (object)DBNull.Value),
                 new SqlParameter("@categoryId", vehiclePart.CategoryId),
                 new SqlParameter("@name", vehiclePart.Name),
                 new SqlParameter("@partNumber", vehiclePart.PartNumber),

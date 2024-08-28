@@ -106,6 +106,12 @@
     <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.Designer.cs">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerForms\CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForms\CustomerDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.resx">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\CustomerDashboardForm.resx">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>

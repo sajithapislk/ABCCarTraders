@@ -16,7 +16,7 @@ namespace ABCCarTraders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ShopForm());
+            Application.Run(new CartForm());
 
 
             //SessionManager.LoadSession();

@@ -11,6 +11,19 @@ namespace ABCCarTraders.Services
 {
     class TempOrderInfoService
     {
+        public TempOrderInfoService()
+        {
+            TempVehicleOrderManager.LoadSession();
+            TempVehiclePartOrderManager.LoadSession();
+        }
+        public Dictionary<string, IEnumerable<object>> List()
+        {
+            return new Dictionary<string, IEnumerable<object>>
+            {
+                { "VehicleOrders", TempVehicleOrderManager.list },
+                { "VehiclePartOrders", TempVehiclePartOrderManager.list }
+            };
+        }
         public void saveVehicle(int vehicleId, int qty)
         {
             VehicleOrderInfoModel vehicleOrder = new VehicleOrderInfoModel

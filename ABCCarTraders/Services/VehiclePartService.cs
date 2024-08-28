@@ -22,7 +22,7 @@ namespace ABCCarTraders.Services
             return _vehiclePartRepository.All();
         }
 
-        public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, decimal price, int qty, string description)
+        public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
         {
             var vehiclePart = new VehiclePartModel
             {
