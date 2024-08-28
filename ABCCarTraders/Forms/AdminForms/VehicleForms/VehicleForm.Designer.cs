@@ -40,7 +40,14 @@
             this.torque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvList
@@ -58,9 +65,10 @@
             this.torque,
             this.afc,
             this.power});
-            this.dgvList.Location = new System.Drawing.Point(22, 38);
+            this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
-            this.dgvList.Size = new System.Drawing.Size(700, 261);
+            this.dgvList.Size = new System.Drawing.Size(734, 347);
             this.dgvList.TabIndex = 0;
             // 
             // Id
@@ -129,15 +137,68 @@
             this.power.HeaderText = "power";
             this.power.Name = "power";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(734, 49);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvList);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 49);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(734, 347);
+            this.panel2.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(294, 26);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Vehicle - ABC Car Traders ";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::ABCCarTraders.Properties.Resources.refresh;
+            this.button1.Location = new System.Drawing.Point(613, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 35);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::ABCCarTraders.Properties.Resources.insert;
+            this.button2.Location = new System.Drawing.Point(666, 8);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 35);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // VehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(734, 396);
-            this.Controls.Add(this.dgvList);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "VehicleForm";
-            this.Text = "VehicleForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -156,5 +217,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn torque;
         private System.Windows.Forms.DataGridViewTextBoxColumn afc;
         private System.Windows.Forms.DataGridViewTextBoxColumn power;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

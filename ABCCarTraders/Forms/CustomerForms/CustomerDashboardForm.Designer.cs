@@ -30,11 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnShop = new System.Windows.Forms.Button();
-            this.btnCart = new System.Windows.Forms.Button();
-            this.btnOrderHistory = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnOrderHistory = new System.Windows.Forms.Button();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,46 +57,6 @@
             this.lblName.Size = new System.Drawing.Size(0, 22);
             this.lblName.TabIndex = 0;
             // 
-            // btnShop
-            // 
-            this.btnShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnShop.Image = global::ABCCarTraders.Properties.Resources.PngItem_62303471;
-            this.btnShop.Location = new System.Drawing.Point(37, 140);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(138, 142);
-            this.btnShop.TabIndex = 2;
-            this.btnShop.Text = "Shop";
-            this.btnShop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnShop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnShop.UseVisualStyleBackColor = true;
-            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
-            // 
-            // btnCart
-            // 
-            this.btnCart.Image = global::ABCCarTraders.Properties.Resources.cart;
-            this.btnCart.Location = new System.Drawing.Point(181, 140);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(130, 142);
-            this.btnCart.TabIndex = 2;
-            this.btnCart.Text = "Cart";
-            this.btnCart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCart.UseVisualStyleBackColor = true;
-            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
-            // 
-            // btnOrderHistory
-            // 
-            this.btnOrderHistory.Image = global::ABCCarTraders.Properties.Resources.order_history;
-            this.btnOrderHistory.Location = new System.Drawing.Point(317, 140);
-            this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(128, 142);
-            this.btnOrderHistory.TabIndex = 2;
-            this.btnOrderHistory.Text = "Order History";
-            this.btnOrderHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOrderHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnOrderHistory.UseVisualStyleBackColor = true;
-            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -116,6 +77,56 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "© 2024 APIS.LK, Inc. All rights reserved.";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = global::ABCCarTraders.Properties.Resources.logout;
+            this.btnLogout.Location = new System.Drawing.Point(441, 22);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(31, 26);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnOrderHistory
+            // 
+            this.btnOrderHistory.Image = global::ABCCarTraders.Properties.Resources.order_history;
+            this.btnOrderHistory.Location = new System.Drawing.Point(317, 140);
+            this.btnOrderHistory.Name = "btnOrderHistory";
+            this.btnOrderHistory.Size = new System.Drawing.Size(128, 142);
+            this.btnOrderHistory.TabIndex = 3;
+            this.btnOrderHistory.Text = "Order History";
+            this.btnOrderHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOrderHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnOrderHistory.UseVisualStyleBackColor = true;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
+            // 
+            // btnCart
+            // 
+            this.btnCart.Image = global::ABCCarTraders.Properties.Resources.cart;
+            this.btnCart.Location = new System.Drawing.Point(181, 140);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(130, 142);
+            this.btnCart.TabIndex = 2;
+            this.btnCart.Text = "Cart";
+            this.btnCart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
+            // btnShop
+            // 
+            this.btnShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnShop.Image = global::ABCCarTraders.Properties.Resources.PngItem_62303471;
+            this.btnShop.Location = new System.Drawing.Point(37, 140);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(138, 142);
+            this.btnShop.TabIndex = 1;
+            this.btnShop.Text = "Shop";
+            this.btnShop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnShop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnShop.UseVisualStyleBackColor = true;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            // 
             // CustomerDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.btnCart);
             this.Controls.Add(this.btnShop);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btnOrderHistory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

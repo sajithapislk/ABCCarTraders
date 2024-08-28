@@ -1,4 +1,5 @@
 ﻿using ABCCarTraders.Models;
+using ABCCarTraders.Services;
 using ABCCarTraders.Utils;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace ABCCarTraders.Forms.CustomerForms
 {
     public partial class CustomerDashboardForm : Form
     {
+        private readonly AuthenticationService _authService;
         public CustomerDashboardForm()
         {
             InitializeComponent();
             loadUser();
+            _authService = new AuthenticationService();
         }
 
         private void loadUser()
@@ -40,6 +43,13 @@ namespace ABCCarTraders.Forms.CustomerForms
         {
             //this.Hide();
             //new OrderForm().Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            _authService.Logout();
+            this.Hide();
+            new LoginForm().Show();
         }
     }
 }

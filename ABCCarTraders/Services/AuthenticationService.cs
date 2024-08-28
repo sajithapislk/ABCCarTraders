@@ -36,5 +36,9 @@ namespace ABCCarTraders.Services
             };
             return _userRepository.AddUser(customer);
         }
+        public void Logout()
+        {
+            SessionManager.Logout();
+        }
     }
 }
