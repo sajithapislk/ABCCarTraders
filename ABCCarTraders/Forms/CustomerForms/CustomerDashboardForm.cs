@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ABCCarTraders.Models;
+using ABCCarTraders.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,29 @@ namespace ABCCarTraders.Forms.CustomerForms
         public CustomerDashboardForm()
         {
             InitializeComponent();
+            loadUser();
+        }
+
+        private void loadUser()
+        {
+            SessionManager.LoadSession();
+            lblName.Text = SessionManager.CurrentUser.Username;
+        }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            new ShopForm().Show();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            new CartForm().Show();
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //new OrderForm().Show();
         }
     }
 }
