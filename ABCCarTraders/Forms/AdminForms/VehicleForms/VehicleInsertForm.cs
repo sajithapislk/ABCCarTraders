@@ -61,6 +61,37 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
             string vehiclePower = txtVehiclePower.Text;
 
             bool res = _vehicleService.RegisterVehicle(vehicleName, vehicleNo, vehicleType??0, vehicleBrand??0, vehicleColor, vehicleYear, price, vehicleEngine, vehicleEngineCode, vehicleTorque, vehicleAFC, vehiclePower);
+
+            if (res)
+            {
+                MessageBox.Show("Successfully Inserted");
+
+                clearData();
+            }
+            else
+            {
+                MessageBox.Show("Insert Error");
+            }
+        }
+        public void clearData()
+        {
+            txtVehicleName.Text = string.Empty;
+            txtVehicleNo.Text = string.Empty;
+            cbVehicleType.SelectedIndex = -1;
+            cbVehicleBrand.SelectedIndex = -1;
+            cbVehicleColor.Text = string.Empty;
+            txtVehicleYear.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            txtVehicleEngine.Text = string.Empty;
+            txtVehicleEngineCode.Text = string.Empty;
+            txtVehicleTorque.Text = string.Empty;
+            txtVehicleAFC.Text = string.Empty;
+            txtVehiclePower.Text = string.Empty;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clearData();
         }
     }
 }

@@ -53,7 +53,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(130, 9);
+            this.label3.Location = new System.Drawing.Point(198, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 26);
             this.label3.TabIndex = 12;
@@ -81,7 +81,7 @@
             // btnLogout
             // 
             this.btnLogout.Image = global::ABCCarTraders.Properties.Resources.logout;
-            this.btnLogout.Location = new System.Drawing.Point(524, 9);
+            this.btnLogout.Location = new System.Drawing.Point(532, 9);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(31, 26);
             this.btnLogout.TabIndex = 14;
@@ -91,7 +91,7 @@
             // button1
             // 
             this.button1.Image = global::ABCCarTraders.Properties.Resources.order_history;
-            this.button1.Location = new System.Drawing.Point(427, 128);
+            this.button1.Location = new System.Drawing.Point(435, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 142);
             this.button1.TabIndex = 4;
@@ -103,7 +103,7 @@
             // btnOrderHistory
             // 
             this.btnOrderHistory.Image = global::ABCCarTraders.Properties.Resources.maintain;
-            this.btnOrderHistory.Location = new System.Drawing.Point(293, 128);
+            this.btnOrderHistory.Location = new System.Drawing.Point(301, 128);
             this.btnOrderHistory.Name = "btnOrderHistory";
             this.btnOrderHistory.Size = new System.Drawing.Size(128, 142);
             this.btnOrderHistory.TabIndex = 3;
@@ -115,7 +115,7 @@
             // btnCart
             // 
             this.btnCart.Image = global::ABCCarTraders.Properties.Resources.vehicle;
-            this.btnCart.Location = new System.Drawing.Point(157, 128);
+            this.btnCart.Location = new System.Drawing.Point(165, 128);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(130, 142);
             this.btnCart.TabIndex = 2;
@@ -129,7 +129,7 @@
             // 
             this.btnShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnShop.Image = global::ABCCarTraders.Properties.Resources.people;
-            this.btnShop.Location = new System.Drawing.Point(13, 128);
+            this.btnShop.Location = new System.Drawing.Point(21, 128);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(138, 142);
             this.btnShop.TabIndex = 1;
@@ -137,6 +137,7 @@
             this.btnShop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnShop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnShop.UseVisualStyleBackColor = true;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
             // AdminDashboardForm
             // 
@@ -152,7 +153,9 @@
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdminDashboardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboardForm";
             this.ResumeLayout(false);
             this.PerformLayout();

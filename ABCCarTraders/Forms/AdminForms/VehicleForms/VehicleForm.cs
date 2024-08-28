@@ -24,8 +24,18 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
 
         private void getVehicles() {
             List<VehicleModel> list = _vehicleService.List();
+            dgvList.ClearSelection();
             dgvList.DataSource = list;
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getVehicles();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new VehicleInsertForm().Show();
+        }
     }
 }

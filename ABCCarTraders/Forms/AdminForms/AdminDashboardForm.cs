@@ -40,5 +40,10 @@ namespace ABCCarTraders.Forms.AdminForms
         {
             new VehicleForm().Show();
         }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            new CustomerForm().Show();
+        }
     }
 }
