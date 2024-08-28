@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForms
+namespace ABCCarTraders.Forms.AdminForms.VehicleForms
 {
     public partial class VehicleForm : Form
     {

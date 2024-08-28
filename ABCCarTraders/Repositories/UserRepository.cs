@@ -34,6 +34,17 @@ namespace ABCCarTraders.Repositories
                         Username = row["username"].ToString(),
                         Password = row["password"].ToString()
                     };
+                }else
+                {
+                    return new CustomerModel
+                    {
+                        Id = Convert.ToInt32(row["Id"]),
+                        Username = row["username"].ToString(),
+                        Password = row["password"].ToString(),
+                        Email = row["email"].ToString(),
+                        Tp = row["tp"].ToString(),
+                        Name = row["name"].ToString(),
+                    };
                 }
             }
             return null;

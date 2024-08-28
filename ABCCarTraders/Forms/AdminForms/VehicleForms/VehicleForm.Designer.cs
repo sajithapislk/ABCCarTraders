@@ -1,4 +1,4 @@
-﻿namespace ABCCarTraders.Forms.AdminForms.ManageVehicleForms
+﻿namespace ABCCarTraders.Forms.AdminForms.VehicleForms
 {
     partial class VehicleForm
     {

@@ -76,16 +76,16 @@
     <Compile Include="Forms\AdminForms\CustomerOrderForm.Designer.cs">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.cs">
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleForm.Designer.cs">
       <DependentUpon>VehicleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.cs">
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleInsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleInsertForm.Designer.cs">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\ReportForms\VehicleReportForm.cs">
@@ -186,10 +186,10 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm.resx">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForms\VehicleForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\ManageVehicleForms\VehicleInsertForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleInsertForm.resx">
       <DependentUpon>VehicleInsertForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
@@ -213,6 +213,9 @@
     <EmbeddedResource Include="Forms\CustomerRegisterForm.resx">
       <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.aa.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +227,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\AdminReports\VehicleReport.rdlc" />
     <EmbeddedResource Include="Widgets\ItemWidget.resx">
@@ -254,7 +258,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\vecteezy_cloud-computing-modern-flat-concept-for-web-banner-design_5879539 [Converted].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_6230347.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

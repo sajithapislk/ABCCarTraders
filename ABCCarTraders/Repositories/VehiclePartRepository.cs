@@ -37,7 +37,7 @@ namespace ABCCarTraders.Repositories
                         Name = row["name"].ToString(),
                         PartNumber = row["part_number"].ToString(),
                         Brand = row["brand"].ToString(),
-                        Price = Convert.ToDecimal(row["price"]),
+                        Price = Convert.ToDouble(row["price"]),
                         Qty = Convert.ToInt32(row["qty"]),
                         Description = row["description"].ToString()
                     };
@@ -55,16 +55,16 @@ namespace ABCCarTraders.Repositories
 
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@vehicleId", vehiclePart.VehicleId ?? (object)DBNull.Value),
-                new SqlParameter("@categoryId", vehiclePart.CategoryId),
-                new SqlParameter("@name", vehiclePart.Name),
-                new SqlParameter("@partNumber", vehiclePart.PartNumber),
-                new SqlParameter("@brand", vehiclePart.Brand),
-                new SqlParameter("@price", vehiclePart.Price),
-                new SqlParameter("@qty", vehiclePart.Qty),
-                new SqlParameter("@description", vehiclePart.Description),
-                new SqlParameter("@createdAt", DateTime.Now),
-                new SqlParameter("@updatedAt", DateTime.Now)
+                new SqlParameter("@vehicleId", SqlDbType.Int) { Value = vehiclePart.VehicleId },
+                new SqlParameter("@categoryId", SqlDbType.Int) { Value = vehiclePart.CategoryId },
+                new SqlParameter("@name", SqlDbType.NVarChar) { Value = vehiclePart.Name },
+                new SqlParameter("@partNumber", SqlDbType.NVarChar) { Value = vehiclePart.PartNumber },
+                new SqlParameter("@brand", SqlDbType.NVarChar) { Value = vehiclePart.Brand },
+                new SqlParameter("@price", SqlDbType.Decimal) { Value = vehiclePart.Price },
+                new SqlParameter("@qty", SqlDbType.Int) { Value = vehiclePart.Qty },
+                new SqlParameter("@description", SqlDbType.NVarChar) { Value = vehiclePart.Description },
+                new SqlParameter("@createdAt", SqlDbType.DateTime) { Value = DateTime.Now },
+                new SqlParameter("@updatedAt", SqlDbType.DateTime) { Value = DateTime.Now }
             };
 
             int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
