@@ -53,18 +53,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtVehicleAFC = new System.Windows.Forms.TextBox();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 105);
+            this.label1.Location = new System.Drawing.Point(3, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 19);
             this.label1.TabIndex = 0;
@@ -73,7 +71,7 @@
             // txtVehicleNo
             // 
             this.txtVehicleNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleNo.Location = new System.Drawing.Point(103, 101);
+            this.txtVehicleNo.Location = new System.Drawing.Point(93, 54);
             this.txtVehicleNo.Name = "txtVehicleNo";
             this.txtVehicleNo.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleNo.TabIndex = 1;
@@ -82,7 +80,7 @@
             // 
             this.cbVehicleType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.cbVehicleType.FormattingEnabled = true;
-            this.cbVehicleType.Location = new System.Drawing.Point(103, 137);
+            this.cbVehicleType.Location = new System.Drawing.Point(93, 90);
             this.cbVehicleType.Name = "cbVehicleType";
             this.cbVehicleType.Size = new System.Drawing.Size(157, 27);
             this.cbVehicleType.TabIndex = 2;
@@ -91,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(13, 142);
+            this.label2.Location = new System.Drawing.Point(3, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 19);
             this.label2.TabIndex = 3;
@@ -101,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(13, 216);
+            this.label3.Location = new System.Drawing.Point(3, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 19);
             this.label3.TabIndex = 0;
@@ -278,7 +276,7 @@
             "wisteria",
             "yellow",
             "zucchini"});
-            this.cbVehicleColor.Location = new System.Drawing.Point(103, 211);
+            this.cbVehicleColor.Location = new System.Drawing.Point(93, 164);
             this.cbVehicleColor.Name = "cbVehicleColor";
             this.cbVehicleColor.Size = new System.Drawing.Size(157, 27);
             this.cbVehicleColor.TabIndex = 4;
@@ -287,7 +285,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(15, 253);
+            this.label4.Location = new System.Drawing.Point(5, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 19);
             this.label4.TabIndex = 0;
@@ -296,7 +294,7 @@
             // txtVehicleYear
             // 
             this.txtVehicleYear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleYear.Location = new System.Drawing.Point(103, 248);
+            this.txtVehicleYear.Location = new System.Drawing.Point(93, 201);
             this.txtVehicleYear.Name = "txtVehicleYear";
             this.txtVehicleYear.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleYear.TabIndex = 1;
@@ -305,7 +303,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(301, 245);
+            this.label5.Location = new System.Drawing.Point(291, 198);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 19);
             this.label5.TabIndex = 0;
@@ -314,7 +312,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.Location = new System.Drawing.Point(423, 242);
+            this.txtPrice.Location = new System.Drawing.Point(413, 195);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 26);
             this.txtPrice.TabIndex = 1;
@@ -323,7 +321,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(301, 100);
+            this.label6.Location = new System.Drawing.Point(291, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 19);
             this.label6.TabIndex = 0;
@@ -332,7 +330,7 @@
             // txtVehicleEngine
             // 
             this.txtVehicleEngine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleEngine.Location = new System.Drawing.Point(423, 97);
+            this.txtVehicleEngine.Location = new System.Drawing.Point(413, 50);
             this.txtVehicleEngine.Name = "txtVehicleEngine";
             this.txtVehicleEngine.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleEngine.TabIndex = 1;
@@ -341,7 +339,7 @@
             // 
             this.cbVehicleBrand.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.cbVehicleBrand.FormattingEnabled = true;
-            this.cbVehicleBrand.Location = new System.Drawing.Point(103, 174);
+            this.cbVehicleBrand.Location = new System.Drawing.Point(93, 127);
             this.cbVehicleBrand.Name = "cbVehicleBrand";
             this.cbVehicleBrand.Size = new System.Drawing.Size(157, 27);
             this.cbVehicleBrand.TabIndex = 2;
@@ -350,7 +348,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(13, 179);
+            this.label7.Location = new System.Drawing.Point(3, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 19);
             this.label7.TabIndex = 3;
@@ -360,7 +358,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(301, 131);
+            this.label8.Location = new System.Drawing.Point(291, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 19);
             this.label8.TabIndex = 0;
@@ -369,7 +367,7 @@
             // txtVehicleEngineCode
             // 
             this.txtVehicleEngineCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleEngineCode.Location = new System.Drawing.Point(423, 128);
+            this.txtVehicleEngineCode.Location = new System.Drawing.Point(413, 81);
             this.txtVehicleEngineCode.Name = "txtVehicleEngineCode";
             this.txtVehicleEngineCode.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleEngineCode.TabIndex = 1;
@@ -378,7 +376,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(13, 68);
+            this.label9.Location = new System.Drawing.Point(3, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 19);
             this.label9.TabIndex = 0;
@@ -387,16 +385,16 @@
             // txtVehicleName
             // 
             this.txtVehicleName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleName.Location = new System.Drawing.Point(103, 65);
+            this.txtVehicleName.Location = new System.Drawing.Point(93, 18);
             this.txtVehicleName.Name = "txtVehicleName";
-            this.txtVehicleName.Size = new System.Drawing.Size(477, 26);
+            this.txtVehicleName.Size = new System.Drawing.Size(292, 26);
             this.txtVehicleName.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(301, 210);
+            this.label10.Location = new System.Drawing.Point(291, 163);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 19);
             this.label10.TabIndex = 0;
@@ -405,7 +403,7 @@
             // txtVehicleTorque
             // 
             this.txtVehicleTorque.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleTorque.Location = new System.Drawing.Point(423, 207);
+            this.txtVehicleTorque.Location = new System.Drawing.Point(413, 160);
             this.txtVehicleTorque.Name = "txtVehicleTorque";
             this.txtVehicleTorque.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleTorque.TabIndex = 1;
@@ -414,7 +412,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(13, 290);
+            this.label11.Location = new System.Drawing.Point(3, 243);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 19);
             this.label11.TabIndex = 0;
@@ -423,7 +421,7 @@
             // txtVehiclePower
             // 
             this.txtVehiclePower.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehiclePower.Location = new System.Drawing.Point(103, 284);
+            this.txtVehiclePower.Location = new System.Drawing.Point(93, 237);
             this.txtVehiclePower.Name = "txtVehiclePower";
             this.txtVehiclePower.Size = new System.Drawing.Size(157, 26);
             this.txtVehiclePower.TabIndex = 1;
@@ -432,7 +430,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(301, 163);
+            this.label12.Location = new System.Drawing.Point(291, 116);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 38);
             this.label12.TabIndex = 0;
@@ -441,7 +439,7 @@
             // txtVehicleAFC
             // 
             this.txtVehicleAFC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleAFC.Location = new System.Drawing.Point(423, 160);
+            this.txtVehicleAFC.Location = new System.Drawing.Point(413, 113);
             this.txtVehicleAFC.Name = "txtVehicleAFC";
             this.txtVehicleAFC.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleAFC.TabIndex = 1;
@@ -451,7 +449,7 @@
             this.btnInsert.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnInsert.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(448, 276);
+            this.btnInsert.Location = new System.Drawing.Point(438, 229);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(130, 40);
             this.btnInsert.TabIndex = 5;
@@ -459,42 +457,12 @@
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 49);
-            this.panel1.TabIndex = 6;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(533, 9);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(47, 35);
-            this.btnRefresh.TabIndex = 16;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(12, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(294, 26);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Vehicle - ABC Car Traders ";
-            // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Red;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(305, 277);
+            this.btnClear.Location = new System.Drawing.Point(295, 230);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(130, 40);
             this.btnClear.TabIndex = 5;
@@ -502,12 +470,31 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // txtQty
+            // 
+            this.txtQty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtQty.Location = new System.Drawing.Point(508, 18);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(62, 26);
+            this.txtQty.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(409, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 19);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Qty";
+            // 
             // VehicleInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 332);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(592, 280);
+            this.Controls.Add(this.txtQty);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.cbVehicleColor);
@@ -537,9 +524,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VehicleInsertForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VehicleInsertForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "Insert Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,9 +557,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtVehicleAFC;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtQty;
+        private System.Windows.Forms.Label label13;
     }
 }

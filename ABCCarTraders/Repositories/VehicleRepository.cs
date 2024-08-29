@@ -55,7 +55,7 @@ namespace ABCCarTraders.Repositories
         }
         public bool Add(VehicleModel vehicle)
         {
-            string query = $"INSERT INTO vehicles (name, number, type_id, brand_id, color, year, price, engine, engine_code, torque, afc, power) VALUES (@name, @number, @type, @brand, @color, @year, @price, @engine, @engine_code, @torque, @afc, @power)";
+            string query = $"INSERT INTO vehicles (name, number, type_id, brand_id, color, year, price, engine, engine_code, torque, afc, power, qty) VALUES (@name, @number, @type, @brand, @color, @year, @price, @engine, @engine_code, @torque, @afc, @power, @qty)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -70,7 +70,8 @@ namespace ABCCarTraders.Repositories
                 new SqlParameter("@engine_code", vehicle.EngineCode),
                 new SqlParameter("@torque", vehicle.Torque),
                 new SqlParameter("@afc", vehicle.AFC),
-                new SqlParameter("@power", vehicle.Power)
+                new SqlParameter("@power", vehicle.Power),
+                new SqlParameter("@qty", vehicle.Qty)
             };
 
             int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);

@@ -22,7 +22,7 @@ namespace ABCCarTraders.Services
             return _vehicleRepository.All();
         }
 
-        public bool RegisterVehicle(string name, string number, int type, int brand, string color, string year, double price, string engine, string engineCode, string torque, string afc, string power)
+        public bool RegisterVehicle(string name, string number, int type, int brand, string color, string year, double price, string engine, string engineCode, string torque, string afc, string power,int qty)
         {
             var vehicle = new VehicleModel
             {
@@ -37,7 +37,8 @@ namespace ABCCarTraders.Services
                 EngineCode = engineCode,
                 Torque = torque,
                 AFC = afc,
-                Power = power
+                Power = power,
+                Qty= qty
             };
             return _vehicleRepository.Add(vehicle);
         }

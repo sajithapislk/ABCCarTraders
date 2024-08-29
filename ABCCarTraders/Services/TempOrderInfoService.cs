@@ -11,6 +11,7 @@ namespace ABCCarTraders.Services
 {
     class TempOrderInfoService
     {
+        private Dictionary<string, IEnumerable<object>> list;
         public TempOrderInfoService()
         {
             TempVehicleOrderManager.LoadSession();
@@ -18,11 +19,12 @@ namespace ABCCarTraders.Services
         }
         public Dictionary<string, IEnumerable<object>> List()
         {
-            return new Dictionary<string, IEnumerable<object>>
+            list = new Dictionary<string, IEnumerable<object>>
             {
                 { "VehicleOrders", TempVehicleOrderManager.list },
                 { "VehiclePartOrders", TempVehiclePartOrderManager.list }
             };
+            return list;
         }
         public void saveVehicle(int vehicleId, int qty)
         {
@@ -43,6 +45,11 @@ namespace ABCCarTraders.Services
                 Qty = qty
             };
             TempVehiclePartOrderManager.SaveSession(vehiclePartOrder);
+        }
+        public void clearTempData()
+        {
+            TempVehicleOrderManager.Clear();
+            TempVehiclePartOrderManager.Clear();
         }
 
     }

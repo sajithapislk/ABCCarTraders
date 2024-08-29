@@ -59,8 +59,9 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
             string vehicleTorque = txtVehicleTorque.Text;
             string vehicleAFC = txtVehicleAFC.Text;
             string vehiclePower = txtVehiclePower.Text;
+            int qty = int.Parse(txtQty.Text);
 
-            bool res = _vehicleService.RegisterVehicle(vehicleName, vehicleNo, vehicleType??0, vehicleBrand??0, vehicleColor, vehicleYear, price, vehicleEngine, vehicleEngineCode, vehicleTorque, vehicleAFC, vehiclePower);
+            bool res = _vehicleService.RegisterVehicle(vehicleName, vehicleNo, vehicleType??0, vehicleBrand??0, vehicleColor, vehicleYear, price, vehicleEngine, vehicleEngineCode, vehicleTorque, vehicleAFC, vehiclePower, qty);
 
             if (res)
             {

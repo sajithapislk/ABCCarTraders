@@ -21,5 +21,6 @@ namespace ABCCarTraders.Models
         public string Torque { get; set; }
         public string AFC { get; set; }
         public string Power { get; set; }
+        public int Qty { get; set; }
     }
 }

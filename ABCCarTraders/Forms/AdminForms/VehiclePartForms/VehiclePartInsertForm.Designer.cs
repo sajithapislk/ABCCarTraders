@@ -245,7 +245,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Name = "VehiclePartInsertForm";
-            this.Text = "VehiclePartInsertForm";
+            this.Text = "Part Insert Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

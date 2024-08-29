@@ -35,7 +35,7 @@ namespace ABCCarTraders.Services
                 Status="Pending"
             };
 
-            return _vehicleOrderRepository.Add(order);
+            return 0 >_vehicleOrderRepository.Add(order);
         }
     }
 }

@@ -150,6 +150,8 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\VehiclePartOrderInfoRepository.cs" />
+    <Compile Include="Repositories\VehicleOrderInfoRepository.cs" />
     <Compile Include="Repositories\VehicleOrderRepository.cs" />
     <Compile Include="Repositories\VehiclePartRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
@@ -158,7 +160,7 @@
     <Compile Include="Repositories\VehicleTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
-    <Compile Include="Services\OrderInfoModel.cs" />
+    <Compile Include="Services\TempCartToPermentService.cs" />
     <Compile Include="Services\TempOrderInfoService.cs" />
     <Compile Include="Services\VehicleOrderService.cs" />
     <Compile Include="Services\VehiclePartService.cs" />

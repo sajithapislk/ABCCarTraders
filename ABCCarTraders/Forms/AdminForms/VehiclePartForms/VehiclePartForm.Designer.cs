@@ -172,7 +172,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "VehiclePartForm";
-            this.Text = "VehiclePartForm";
             this.Activated += new System.EventHandler(this.VehiclePartForm_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -44,9 +44,9 @@ namespace ABCCarTraders.Repositories
             }
             return null;
         }
-        public bool Add(VehicleOrderModel order)
+        public int Add(VehicleOrderModel order)
         {
-            string query = $"INSERT INTO vehicle_orders (customer_id, address, amount, status) VALUES (@customerId, @address, @amount, @status)";
+            string query = $"INSERT INTO orders(customer_id, address, amount, status) VALUES(@customerId, @address, @amount, @status); SELECT SCOPE_IDENTITY(); ";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -56,8 +56,7 @@ namespace ABCCarTraders.Repositories
                 new SqlParameter("@status", order.Status),
             };
 
-            int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
-            return rowsAffected > 0;
+            return _dbService.ExecuteNonQueryWithParametersAndResult(query, parameters);
         }
         public bool Delete(int id)
         {

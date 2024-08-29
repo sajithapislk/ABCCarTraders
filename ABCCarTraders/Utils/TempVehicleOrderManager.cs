@@ -35,6 +35,9 @@ namespace ABCCarTraders.Utils
             string json = JsonConvert.SerializeObject(list);
             File.WriteAllText(SESSION_FILE, json);
         }
-        
+        public static void Clear()
+        {
+            File.Delete(SESSION_FILE);
+        }
     }
 }

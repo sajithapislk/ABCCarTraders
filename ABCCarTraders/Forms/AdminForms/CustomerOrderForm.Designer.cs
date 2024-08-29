@@ -136,7 +136,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerOrderForm";
-            this.Text = "VehicleOrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
