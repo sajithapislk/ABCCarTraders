@@ -34,9 +34,9 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,15 +90,6 @@
             this.panel1.Size = new System.Drawing.Size(691, 50);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvList);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(691, 276);
-            this.panel2.TabIndex = 3;
-            // 
             // btnRefresh
             // 
             this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
@@ -119,6 +110,15 @@
             this.label3.Size = new System.Drawing.Size(365, 26);
             this.label3.TabIndex = 17;
             this.label3.Text = "Customer List - ABC Car Traders ";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvList);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(691, 276);
+            this.panel2.TabIndex = 3;
             // 
             // CustomerForm
             // 

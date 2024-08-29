@@ -28,5 +28,10 @@ namespace ABCCarTraders.Forms.AdminForms
             List<VehicleOrderModel> list = _vehicleOrderService.List();
             dgvList.DataSource = list;
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            getOrders();
+        }
     }
 }

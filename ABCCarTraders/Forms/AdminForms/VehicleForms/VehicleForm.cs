@@ -35,7 +35,12 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            new VehicleInsertForm().Show();
+            new VehicleInsertForm().ShowDialog();
+        }
+
+        private void VehicleForm_Activated(object sender, EventArgs e)
+        {
+            getVehicles();
         }
     }
 }

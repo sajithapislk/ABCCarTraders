@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public List<VehicleOrderModel> All()
         {
-            string query = $"SELECT * FROM vehicle_orders";
+            string query = $"SELECT * FROM orders";
             DataTable result = _dbService.ExecuteQuery(query);
             List<VehicleOrderModel> vehicle_orders = new List<VehicleOrderModel>();
 
