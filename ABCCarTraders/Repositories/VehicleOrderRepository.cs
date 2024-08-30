@@ -19,17 +19,17 @@ namespace ABCCarTraders.Repositories
             _dbService = new DatabaseService();
         }
 
-        public List<VehicleOrderModel> All()
+        public List<OrderModel> All()
         {
             string query = $"SELECT * FROM orders";
             DataTable result = _dbService.ExecuteQuery(query);
-            List<VehicleOrderModel> vehicle_orders = new List<VehicleOrderModel>();
+            List<OrderModel> vehicle_orders = new List<OrderModel>();
 
             if (result.Rows.Count > 0)
             {
                 foreach (DataRow row in result.Rows)
                 {
-                    VehicleOrderModel order = new VehicleOrderModel
+                    OrderModel order = new OrderModel
                     {
                         Id = Convert.ToInt32(row["id"]),
                         CustomerId = Convert.ToInt32(row["customer_id"]),
@@ -44,7 +44,7 @@ namespace ABCCarTraders.Repositories
             }
             return null;
         }
-        public int Add(VehicleOrderModel order)
+        public int Add(OrderModel order)
         {
             string query = $"INSERT INTO orders(customer_id, address, amount, status) VALUES(@customerId, @address, @amount, @status); SELECT SCOPE_IDENTITY(); ";
 
@@ -60,10 +60,19 @@ namespace ABCCarTraders.Repositories
         }
         public bool Delete(int id)
         {
-            string query = $"DELETE FROM vehicle_orders WHERE id={id}";
+            string query = $"DELETE FROM orders WHERE id={id}";
 
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;
         }
+
+        public bool UpdateStatus(int id,string status)
+        {
+            string query = $"UPDATE orders SET status='{status}' WHERE id={id}";
+
+            int rowsAffected = _dbService.ExecuteNonQuery(query);
+            return rowsAffected > 0;
+        }
+
     }
 }

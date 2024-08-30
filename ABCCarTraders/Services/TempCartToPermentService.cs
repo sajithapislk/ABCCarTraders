@@ -34,7 +34,7 @@ namespace ABCCarTraders.Services
                 SessionManager.LoadSession();
                 int userId = SessionManager.CurrentUser.Id;
 
-                var order = new VehicleOrderModel
+                var order = new OrderModel
                 {
                     CustomerId=userId,
                     Address=address,

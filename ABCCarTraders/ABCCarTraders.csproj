@@ -70,11 +70,17 @@
     <Compile Include="Forms\AdminForms\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerOrderForm.cs">
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerOrderForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderForm.Designer.cs">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.Designer.cs">
+      <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehicleForms\VehicleForm.cs">
       <SubType>Form</SubType>
@@ -140,7 +146,7 @@
     <Compile Include="Models\VehicleModel.cs" />
     <Compile Include="Models\VehicleBrandModel.cs" />
     <Compile Include="Models\VehicleOrderInfoModel.cs" />
-    <Compile Include="Models\VehicleOrderModel.cs" />
+    <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\VehiclePartCategoryModel.cs" />
     <Compile Include="Models\VehiclePartModel.cs" />
     <Compile Include="Models\VehiclePartOrderInfoModel.cs" />
@@ -185,8 +191,11 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderForm.resx">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.resx">
+      <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>

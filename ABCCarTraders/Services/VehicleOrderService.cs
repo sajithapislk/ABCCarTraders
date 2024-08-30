@@ -18,7 +18,7 @@ namespace ABCCarTraders.Services
             _vehicleOrderRepository = new VehicleOrderRepository();
         }
 
-        public List<VehicleOrderModel> List()
+        public List<OrderModel> List()
         {
             return _vehicleOrderRepository.All();
         }
@@ -27,7 +27,7 @@ namespace ABCCarTraders.Services
         {
             if (!SessionManager.IsLoggedIn()) return false;
 
-            VehicleOrderModel order = new VehicleOrderModel
+            OrderModel order = new OrderModel
             {
                 CustomerId = SessionManager.CurrentUser.Id,
                 Address= address,
@@ -36,6 +36,10 @@ namespace ABCCarTraders.Services
             };
 
             return 0 >_vehicleOrderRepository.Add(order);
+        }
+        public bool UpdateStatus(int id,string status)
+        {
+            return _vehicleOrderRepository.UpdateStatus(id,status);
         }
     }
 }
