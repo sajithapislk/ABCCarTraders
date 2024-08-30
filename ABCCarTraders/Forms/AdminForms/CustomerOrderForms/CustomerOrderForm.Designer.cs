@@ -1,4 +1,4 @@
-﻿namespace ABCCarTraders.Forms.AdminForms
+﻿namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
 {
     partial class CustomerOrderForm
     {
