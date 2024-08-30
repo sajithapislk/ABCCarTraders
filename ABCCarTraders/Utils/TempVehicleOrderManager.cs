@@ -39,5 +39,12 @@ namespace ABCCarTraders.Utils
         {
             File.Delete(SESSION_FILE);
         }
+        public static void RemoveIndex(int index)
+        {
+            LoadSession();
+            list.RemoveAt(index);
+            string json = JsonConvert.SerializeObject(list);
+            File.WriteAllText(SESSION_FILE, json);
+        }
     }
 }

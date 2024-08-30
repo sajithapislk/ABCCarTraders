@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using ABCCarTraders.Models;
 using ABCCarTraders.Services;
+using System.Data;
 
 namespace ABCCarTraders.Forms.CustomerForms
 {
@@ -17,6 +18,8 @@ namespace ABCCarTraders.Forms.CustomerForms
         private List<VehicleModel> _vehicleList;
         private List<VehiclePartModel> _vehiclePartList;
         private Dictionary<string, IEnumerable<object>> _tempList;
+
+        private double totalAmout = 0.00; 
 
         public CartForm()
         {
@@ -40,26 +43,29 @@ namespace ABCCarTraders.Forms.CustomerForms
         {
             AddOrdersToGrid("VehicleOrders", true, "Vehicle");
             AddOrdersToGrid("VehiclePartOrders", false, "Part");
+            lblAmount.Text = totalAmout.ToString();
         }
 
         private void AddOrdersToGrid(string orderKey, bool isVehicle, string orderType)
         {
             if (!_tempList.ContainsKey(orderKey)) return;
 
-            foreach (var order in _tempList[orderKey])
+            for (int i = 0; i < _tempList[orderKey].Count(); i++)
             {
-                var orderInfo = order as dynamic;
+                var orderInfo = _tempList[orderKey].ElementAt(i) as dynamic;
                 if (orderInfo != null)
                 {
                     var itemInfo = GetItemInfo(isVehicle, isVehicle ? orderInfo.VehicleId : orderInfo.PartId);
                     double price = itemInfo.Price;
                     dgvList.Rows.Add(
+                        i,
                         itemInfo.Name,
                         orderType,
                         price,
                         orderInfo.Qty,
                         price * orderInfo.Qty
                     );
+                    totalAmout += price * orderInfo.Qty;
                 }
             }
         }
@@ -75,6 +81,25 @@ namespace ABCCarTraders.Forms.CustomerForms
         {
             string address = txtAddress.Text;
             _tempCartToPermentService.ConvertList(address);
+        }
+
+        private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvList.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                var result = MessageBox.Show("Are you sure you want to delete this item?", "Confirm Delete", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
+
+                    int indexValue = int.Parse(currentRow.Cells[0].Value.ToString());
+                    string typeValue = currentRow.Cells[2].Value.ToString();
+                    _tempOrderInfoService.DeleteIndex(typeValue, indexValue);
+
+                    dgvList.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
     }
 }
