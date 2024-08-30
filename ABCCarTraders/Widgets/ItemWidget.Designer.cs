@@ -32,10 +32,13 @@
             this.btnAddCart = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.pnlQty = new System.Windows.Forms.Panel();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSaveCart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.pbDp = new System.Windows.Forms.PictureBox();
+            this.btnView = new System.Windows.Forms.Button();
             this.pnlQty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDp)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -49,7 +52,7 @@
             // 
             // btnAddCart
             // 
-            this.btnAddCart.Location = new System.Drawing.Point(58, 205);
+            this.btnAddCart.Location = new System.Drawing.Point(12, 206);
             this.btnAddCart.Name = "btnAddCart";
             this.btnAddCart.Size = new System.Drawing.Size(75, 23);
             this.btnAddCart.TabIndex = 1;
@@ -72,37 +75,58 @@
             this.pnlQty.Controls.Add(this.btnSaveCart);
             this.pnlQty.Controls.Add(this.label1);
             this.pnlQty.Controls.Add(this.txtQty);
-            this.pnlQty.Location = new System.Drawing.Point(25, 113);
+            this.pnlQty.Location = new System.Drawing.Point(0, 128);
             this.pnlQty.Name = "pnlQty";
-            this.pnlQty.Size = new System.Drawing.Size(151, 115);
+            this.pnlQty.Size = new System.Drawing.Size(200, 122);
             this.pnlQty.TabIndex = 3;
             this.pnlQty.Visible = false;
             // 
-            // txtQty
+            // btnSaveCart
             // 
-            this.txtQty.Location = new System.Drawing.Point(30, 38);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(100, 20);
-            this.txtQty.TabIndex = 0;
+            this.btnSaveCart.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSaveCart.ForeColor = System.Drawing.Color.White;
+            this.btnSaveCart.Location = new System.Drawing.Point(48, 69);
+            this.btnSaveCart.Name = "btnSaveCart";
+            this.btnSaveCart.Size = new System.Drawing.Size(99, 32);
+            this.btnSaveCart.TabIndex = 2;
+            this.btnSaveCart.Text = "Save Cart";
+            this.btnSaveCart.UseVisualStyleBackColor = false;
+            this.btnSaveCart.Click += new System.EventHandler(this.btnSaveCart_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 22);
+            this.label1.Location = new System.Drawing.Point(71, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quntity";
             // 
-            // btnSaveCart
+            // txtQty
             // 
-            this.btnSaveCart.Location = new System.Drawing.Point(43, 79);
-            this.btnSaveCart.Name = "btnSaveCart";
-            this.btnSaveCart.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveCart.TabIndex = 2;
-            this.btnSaveCart.Text = "Save Cart";
-            this.btnSaveCart.UseVisualStyleBackColor = true;
-            this.btnSaveCart.Click += new System.EventHandler(this.btnSaveCart_Click);
+            this.txtQty.Location = new System.Drawing.Point(48, 37);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(100, 20);
+            this.txtQty.TabIndex = 0;
+            // 
+            // pbDp
+            // 
+            this.pbDp.BackColor = System.Drawing.Color.White;
+            this.pbDp.Location = new System.Drawing.Point(0, 0);
+            this.pbDp.Name = "pbDp";
+            this.pbDp.Size = new System.Drawing.Size(200, 132);
+            this.pbDp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDp.TabIndex = 4;
+            this.pbDp.TabStop = false;
+            // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(101, 206);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 23);
+            this.btnView.TabIndex = 5;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
             // 
             // ItemWidget
             // 
@@ -110,6 +134,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.pnlQty);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.pbDp);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.btnAddCart);
             this.Controls.Add(this.lblTitle);
@@ -117,6 +143,7 @@
             this.Size = new System.Drawing.Size(200, 250);
             this.pnlQty.ResumeLayout(false);
             this.pnlQty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +158,7 @@
         private System.Windows.Forms.Button btnSaveCart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtQty;
+        private System.Windows.Forms.PictureBox pbDp;
+        private System.Windows.Forms.Button btnView;
     }
 }

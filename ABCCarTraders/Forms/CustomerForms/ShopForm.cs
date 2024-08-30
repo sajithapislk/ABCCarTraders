@@ -50,6 +50,7 @@ namespace ABCCarTraders.Forms.CustomerForms
                 ItemWidget widget = new ItemWidget
                 {
                     Id = vehicle.Id ?? 0,
+                    Price = vehicle.Price.ToString(),
                     Title = vehicle.Name,
                     Type = "Vehicle"
                 };
@@ -66,6 +67,7 @@ namespace ABCCarTraders.Forms.CustomerForms
                 ItemWidget widget = new ItemWidget
                 {
                     Id = part.Id ?? 0,
+                    Price = part.Price.ToString(),
                     Title = part.Name,
                     Type="VehiclePart"
                 };

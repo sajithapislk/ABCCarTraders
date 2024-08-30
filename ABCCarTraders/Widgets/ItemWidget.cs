@@ -16,6 +16,7 @@ namespace ABCCarTraders.Widgets
         private readonly TempOrderInfoService _tempOrderInfoService;
 
         private int _id;
+        private string _price;
         private string _title;
         private string _type;
         [Category("Custom Props")]
@@ -23,6 +24,12 @@ namespace ABCCarTraders.Widgets
         {
             get { return _id; }
             set { _id = value; }
+        }
+        [Category("Custom Props")]
+        public string Price
+        {
+            get { return _price; }
+            set { _price = value;lblPrice.Text = value; }
         }
         [Category("Custom Props")]
         public string Title
@@ -34,7 +41,11 @@ namespace ABCCarTraders.Widgets
         public string Type
         {
             get { return _type; }
-            set { _type = value; }
+            set {
+                _type = value;
+                pbDp.Image = _type == "Vehicle" ? Properties.Resources.vehicle : Properties.Resources.vehicle1;
+                pbDp.Refresh();
+            }
         }
 
         public ItemWidget()
