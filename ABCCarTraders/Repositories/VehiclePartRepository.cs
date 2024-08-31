@@ -70,6 +70,39 @@ namespace ABCCarTraders.Repositories
             int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
             return rowsAffected > 0;
         }
+
+        public bool Update(VehiclePartModel vehiclePart)
+        {
+            string query = @"UPDATE vehicle_parts 
+                    SET vehicle_id = @vehicleId, 
+                        category_id = @categoryId, 
+                        name = @name, 
+                        part_number = @partNumber, 
+                        brand = @brand, 
+                        price = @price, 
+                        qty = @qty, 
+                        description = @description, 
+                        updated_at = @updatedAt
+                    WHERE id = @id";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@id", SqlDbType.Int) { Value = vehiclePart.Id },
+                new SqlParameter("@vehicleId", SqlDbType.Int) { Value = vehiclePart.VehicleId },
+                new SqlParameter("@categoryId", SqlDbType.Int) { Value = vehiclePart.CategoryId },
+                new SqlParameter("@name", SqlDbType.NVarChar) { Value = vehiclePart.Name },
+                new SqlParameter("@partNumber", SqlDbType.NVarChar) { Value = vehiclePart.PartNumber },
+                new SqlParameter("@brand", SqlDbType.NVarChar) { Value = vehiclePart.Brand },
+                new SqlParameter("@price", SqlDbType.Decimal) { Value = vehiclePart.Price },
+                new SqlParameter("@qty", SqlDbType.Int) { Value = vehiclePart.Qty },
+                new SqlParameter("@description", SqlDbType.NVarChar) { Value = vehiclePart.Description },
+                new SqlParameter("@updatedAt", SqlDbType.DateTime) { Value = DateTime.Now }
+            };
+
+            int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
+            return rowsAffected > 0;
+        }
+
         public bool Delete(int id)
         {
             string query = $"DELETE FROM vehicle_parts WHERE id={id}";

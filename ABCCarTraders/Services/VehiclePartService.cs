@@ -38,5 +38,26 @@ namespace ABCCarTraders.Services
 
             return _vehiclePartRepository.Add(vehiclePart);
         }
+        public bool UpdateVehiclePart(int id, int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
+        {
+            var vehiclePart = new VehiclePartModel
+            {
+                Id = id,
+                VehicleId = vehicleId ?? 0,
+                CategoryId = categoryId,
+                Name = name,
+                PartNumber = partNumber,
+                Brand = brand,
+                Price = price,
+                Qty = qty,
+                Description = description
+            };
+
+            return _vehiclePartRepository.Update(vehiclePart);
+        }
+        public bool DeleteVehiclePart(int id)
+        {
+            return _vehiclePartRepository.Delete(id);
+        }
     }
 }

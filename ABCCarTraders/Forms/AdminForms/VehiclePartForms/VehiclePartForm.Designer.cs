@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.category_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,11 +42,8 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,60 +60,15 @@
             this.brand,
             this.price,
             this.qty,
-            this.description});
+            this.description,
+            this.Update,
+            this.Delete});
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
             this.dgvList.Size = new System.Drawing.Size(910, 246);
             this.dgvList.TabIndex = 1;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "name";
-            this.name.Name = "name";
-            // 
-            // category_id
-            // 
-            this.category_id.DataPropertyName = "category_id";
-            this.category_id.HeaderText = "category_id";
-            this.category_id.Name = "category_id";
-            // 
-            // part_number
-            // 
-            this.part_number.DataPropertyName = "part_number";
-            this.part_number.HeaderText = "part_number";
-            this.part_number.Name = "part_number";
-            // 
-            // brand
-            // 
-            this.brand.DataPropertyName = "brand";
-            this.brand.HeaderText = "brand";
-            this.brand.Name = "brand";
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "price";
-            this.price.HeaderText = "price";
-            this.price.Name = "price";
-            // 
-            // qty
-            // 
-            this.qty.DataPropertyName = "qty";
-            this.qty.HeaderText = "qty";
-            this.qty.Name = "qty";
-            // 
-            // description
-            // 
-            this.description.DataPropertyName = "description";
-            this.description.HeaderText = "description";
-            this.description.Name = "description";
+            this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
             // 
             // panel1
             // 
@@ -164,6 +121,68 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Vehicle - ABC Car Traders ";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "name";
+            this.name.Name = "name";
+            // 
+            // category_id
+            // 
+            this.category_id.DataPropertyName = "category_id";
+            this.category_id.HeaderText = "category_id";
+            this.category_id.Name = "category_id";
+            // 
+            // part_number
+            // 
+            this.part_number.DataPropertyName = "part_number";
+            this.part_number.HeaderText = "part_number";
+            this.part_number.Name = "part_number";
+            // 
+            // brand
+            // 
+            this.brand.DataPropertyName = "brand";
+            this.brand.HeaderText = "brand";
+            this.brand.Name = "brand";
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "price";
+            this.price.Name = "price";
+            // 
+            // qty
+            // 
+            this.qty.DataPropertyName = "qty";
+            this.qty.HeaderText = "qty";
+            this.qty.Name = "qty";
+            // 
+            // description
+            // 
+            this.description.DataPropertyName = "description";
+            this.description.HeaderText = "description";
+            this.description.Name = "description";
+            // 
+            // Update
+            // 
+            this.Update.HeaderText = "Update";
+            this.Update.Name = "Update";
+            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // VehiclePartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +203,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvList;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn category_id;
@@ -192,10 +216,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
