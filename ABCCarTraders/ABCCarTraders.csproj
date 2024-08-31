@@ -82,6 +82,12 @@
     <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.Designer.cs">
       <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleForms\VehicleEditForm.Designer.cs">
+      <DependentUpon>VehicleEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\VehicleForms\VehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.resx">
       <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleEditForm.resx">
+      <DependentUpon>VehicleEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleForm.resx">
       <DependentUpon>VehicleForm.cs</DependentUpon>

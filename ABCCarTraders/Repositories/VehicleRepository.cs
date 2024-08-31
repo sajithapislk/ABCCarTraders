@@ -77,6 +77,47 @@ namespace ABCCarTraders.Repositories
             int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
             return rowsAffected > 0;
         }
+        public bool Update(VehicleModel vehicle)
+        {
+            string query = @"
+                UPDATE vehicles
+                SET 
+                    name = @name,
+                    number = @number,
+                    type_id = @type,
+                    brand_id = @brand,
+                    color = @color,
+                    year = @year,
+                    price = @price,
+                    engine = @engine,
+                    engine_code = @engine_code,
+                    torque = @torque,
+                    afc = @afc,
+                    power = @power,
+                    qty = @qty
+                WHERE id = @id";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@id", vehicle.Id),
+                new SqlParameter("@name", vehicle.Name),
+                new SqlParameter("@number", vehicle.Number),
+                new SqlParameter("@type", vehicle.Type),
+                new SqlParameter("@brand", vehicle.Brand),
+                new SqlParameter("@color", vehicle.Color),
+                new SqlParameter("@year", vehicle.Year),
+                new SqlParameter("@price", vehicle.Price),
+                new SqlParameter("@engine", vehicle.Engine),
+                new SqlParameter("@engine_code", vehicle.EngineCode),
+                new SqlParameter("@torque", vehicle.Torque),
+                new SqlParameter("@afc", vehicle.AFC),
+                new SqlParameter("@power", vehicle.Power),
+                new SqlParameter("@qty", vehicle.Qty)
+            };
+
+            int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);
+            return rowsAffected > 0;
+        }
         public bool Delete(int id)
         {
             string query = $"DELETE FROM vehicles WHERE id={id}";
