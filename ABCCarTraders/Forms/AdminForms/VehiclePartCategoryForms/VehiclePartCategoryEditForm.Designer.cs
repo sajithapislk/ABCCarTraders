@@ -66,7 +66,7 @@
             this.txtName.Size = new System.Drawing.Size(208, 26);
             this.txtName.TabIndex = 9;
             // 
-            // CategoryEditForm
+            // VehiclePartCategoryEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,8 +74,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtName);
-            this.Name = "CategoryEditForm";
+            this.Name = "VehiclePartCategoryEditForm";
             this.Text = "CategoryEditForm";
+            this.Load += new System.EventHandler(this.VehiclePartCategoryEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -50,5 +50,10 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleBrandForms
                 MessageBox.Show("Insert Error");
             }
         }
+
+        private void VehicleBrandEditForm_Load(object sender, EventArgs e)
+        {
+            txtName.Text = _name;
+        }
     }
 }

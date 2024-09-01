@@ -80,5 +80,10 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
                 }
             }
         }
+
+        private void VehicleTypeForm_Activated(object sender, EventArgs e)
+        {
+            getBrand();
+        }
     }
 }
