@@ -70,11 +70,17 @@
     <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.Designer.cs">
       <DependentUpon>VehicleBrandForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.cs">
+    <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.Designer.cs">
-      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandEditForm.Designer.cs">
+      <DependentUpon>VehicleBrandEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryEditForm.Designer.cs">
+      <DependentUpon>VehiclePartCategoryEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.cs">
       <SubType>Form</SubType>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.Designer.cs">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeEditForm.Designer.cs">
+      <DependentUpon>VehicleTypeEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeForm.cs">
       <SubType>Form</SubType>
@@ -236,6 +248,9 @@
     <EmbeddedResource Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.resx">
       <DependentUpon>VehicleBrandForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandEditForm.resx">
+      <DependentUpon>VehicleBrandEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleEditForm.resx">
       <DependentUpon>VehicleEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,8 +263,8 @@
     <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
       <DependentUpon>VehicleReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.resx">
-      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryEditForm.resx">
+      <DependentUpon>VehiclePartCategoryEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.resx">
       <DependentUpon>VehiclePartCategoryForm.cs</DependentUpon>
@@ -262,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.resx">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeEditForm.resx">
+      <DependentUpon>VehicleTypeEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeForm.resx">
       <DependentUpon>VehicleTypeForm.cs</DependentUpon>

@@ -48,6 +48,13 @@ namespace ABCCarTraders.Repositories
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;
         }
+        public bool UpdateCategory(int id, string name)
+        {
+            string query = $"UPDATE vehicle_part_categories SET name='{name}' WHERE id={id}";
+
+            int rowsAffected = _dbService.ExecuteNonQuery(query);
+            return rowsAffected > 0;
+        }
         public bool DeleteCategory(int id)
         {
             string query = $"DELETE FROM vehicle_part_categories WHERE id={id}";

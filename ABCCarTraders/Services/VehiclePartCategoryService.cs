@@ -26,5 +26,9 @@ namespace ABCCarTraders.Services
         {
             return _vehiclePartCategoryRepository.AddCategory(name);
         }
+        public bool Update(int id, string name)
+        {
+            return _vehiclePartCategoryRepository.UpdateCategory(id,name);
+        }
     }
 }

@@ -25,5 +25,9 @@ namespace ABCCarTraders.Services
         {
             return _vehicleBrandRepository.AddBrand(name);
         }
+        public bool Update(int id, string name)
+        {
+            return _vehicleBrandRepository.UpdateBrand(id, name);
+        }
     }
 }

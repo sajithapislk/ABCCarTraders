@@ -45,5 +45,41 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
                 MessageBox.Show("Insert Error");
             }
         }
+
+        private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvList.Columns[e.ColumnIndex].Name == "Update")
+            {
+                var result = MessageBox.Show("Are you sure you want to update this item?", "Confirm update", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
+
+                    string _name = currentRow.Cells["Name"].Value.ToString();
+                    int _id = int.Parse(currentRow.Cells["Id"].Value.ToString());
+
+                    var _form = new VehiclePartCategoryEditForm();
+                    _form.IdValue = _id;
+                    _form.NameValue = _name;
+
+                    _form.ShowDialog();
+
+                }
+            }
+            if (e.RowIndex >= 0 && dgvList.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                var result = MessageBox.Show("Are you sure you want to delete this item?", "Confirm Delete", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
+                    int _id = int.Parse(currentRow.Cells["Id"].Value.ToString());
+                    //_vehicleService.DeleteVehicle(_id);
+                    //getVehicles();
+                }
+            }
+        }
+       
     }
 }

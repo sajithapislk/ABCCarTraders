@@ -1,6 +1,6 @@
 ﻿namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
 {
-    partial class CategoryEditForm
+    partial class VehiclePartCategoryEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -44,18 +44,19 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Name";
             // 
-            // btnLogin
+            // btnUpdate
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogin.Location = new System.Drawing.Point(12, 100);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(208, 33);
-            this.btnLogin.TabIndex = 11;
-            this.btnLogin.Text = "Update";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnUpdate.Location = new System.Drawing.Point(12, 100);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(208, 33);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtName
             // 
@@ -71,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(244, 155);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtName);
             this.Name = "CategoryEditForm";
             this.Text = "CategoryEditForm";
@@ -83,7 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtName;
     }
 }
