@@ -64,6 +64,24 @@
     <Compile Include="Forms\AdminForms\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.Designer.cs">
+      <DependentUpon>VehicleBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.Designer.cs">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.Designer.cs">
+      <DependentUpon>VehiclePartCategoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +141,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.Designer.cs">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeForm.Designer.cs">
+      <DependentUpon>VehicleTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CustomerForms\CartForm.cs">
       <SubType>Form</SubType>
@@ -209,6 +233,9 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.resx">
       <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.resx">
+      <DependentUpon>VehicleBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleForms\VehicleEditForm.resx">
       <DependentUpon>VehicleEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +248,12 @@
     <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
       <DependentUpon>VehicleReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryEditForm.resx">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.resx">
+      <DependentUpon>VehiclePartCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartForm.resx">
       <DependentUpon>VehiclePartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartForms\VehiclePartInsertForm.resx">
       <DependentUpon>VehiclePartInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehicleTypeForms\VehicleTypeForm.resx">
+      <DependentUpon>VehicleTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
@@ -322,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vehicle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

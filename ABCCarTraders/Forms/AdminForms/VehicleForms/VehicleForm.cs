@@ -1,4 +1,5 @@
-﻿using ABCCarTraders.Models;
+﻿using ABCCarTraders.Forms.AdminForms.ReportForms;
+using ABCCarTraders.Models;
 using ABCCarTraders.Services;
 using System;
 using System.Collections.Generic;
@@ -90,6 +91,11 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
                     getVehicles();
                 }
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            new VehicleReportForm().ShowDialog();
         }
     }
 }

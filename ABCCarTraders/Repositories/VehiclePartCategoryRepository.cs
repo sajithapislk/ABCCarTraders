@@ -18,7 +18,7 @@ namespace ABCCarTraders.Repositories
             _dbService = new DatabaseService();
         }
 
-        public List<VehiclePartCategoryModel> GetCategories()
+        public List<VehiclePartCategoryModel> All()
         {
             string query = $"SELECT * FROM vehicle_part_categories";
             DataTable result = _dbService.ExecuteQuery(query);
@@ -41,9 +41,9 @@ namespace ABCCarTraders.Repositories
             }
             return null;
         }
-        public bool AddCategory(VehiclePartCategoryModel category)
+        public bool AddCategory(string category)
         {
-            string query = $"INSERT INTO vehicle_part_categories (name) VALUES ('{category.Name}')";
+            string query = $"INSERT INTO vehicle_part_categories (name) VALUES ('{category}')";
 
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;

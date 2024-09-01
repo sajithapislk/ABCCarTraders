@@ -37,12 +37,15 @@
             this.btnOrderHistory = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
+            this.btnVehiclePartCategory = new System.Windows.Forms.Button();
+            this.btnVehicleBrand = new System.Windows.Forms.Button();
+            this.btnVehicleType = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(199, 339);
+            this.label5.Location = new System.Drawing.Point(149, 468);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(199, 13);
             this.label5.TabIndex = 13;
@@ -141,15 +144,54 @@
             this.btnShop.UseVisualStyleBackColor = true;
             this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
+            // btnVehiclePartCategory
+            // 
+            this.btnVehiclePartCategory.Location = new System.Drawing.Point(65, 276);
+            this.btnVehiclePartCategory.Name = "btnVehiclePartCategory";
+            this.btnVehiclePartCategory.Size = new System.Drawing.Size(128, 142);
+            this.btnVehiclePartCategory.TabIndex = 3;
+            this.btnVehiclePartCategory.Text = "Vehicle Part Category";
+            this.btnVehiclePartCategory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVehiclePartCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVehiclePartCategory.UseVisualStyleBackColor = true;
+            this.btnVehiclePartCategory.Click += new System.EventHandler(this.btnVehiclePartCategory_Click);
+            // 
+            // btnVehicleBrand
+            // 
+            this.btnVehicleBrand.Location = new System.Drawing.Point(199, 276);
+            this.btnVehicleBrand.Name = "btnVehicleBrand";
+            this.btnVehicleBrand.Size = new System.Drawing.Size(128, 142);
+            this.btnVehicleBrand.TabIndex = 4;
+            this.btnVehicleBrand.Text = "Vehicle Brand";
+            this.btnVehicleBrand.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVehicleBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVehicleBrand.UseVisualStyleBackColor = true;
+            this.btnVehicleBrand.Click += new System.EventHandler(this.btnVehicleBrand_Click);
+            // 
+            // btnVehicleType
+            // 
+            this.btnVehicleType.Location = new System.Drawing.Point(335, 276);
+            this.btnVehicleType.Name = "btnVehicleType";
+            this.btnVehicleType.Size = new System.Drawing.Size(128, 142);
+            this.btnVehicleType.TabIndex = 4;
+            this.btnVehicleType.Text = "Vehicle Type";
+            this.btnVehicleType.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVehicleType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVehicleType.UseVisualStyleBackColor = true;
+            this.btnVehicleType.Click += new System.EventHandler(this.btnVehicleType_Click);
+            // 
             // AdminDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(578, 491);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnVehicleType);
+            this.Controls.Add(this.btnVehicleBrand);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVehiclePartCategory);
             this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.btnCart);
             this.Controls.Add(this.btnShop);
@@ -175,5 +217,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnVehiclePartCategory;
+        private System.Windows.Forms.Button btnVehicleBrand;
+        private System.Windows.Forms.Button btnVehicleType;
     }
 }

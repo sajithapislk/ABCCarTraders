@@ -1,5 +1,6 @@
 ﻿using ABCCarTraders.Forms.AdminForms.CustomerOrderForms;
 using ABCCarTraders.Forms.AdminForms.VehicleForms;
+using ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms;
 using ABCCarTraders.Forms.AdminForms.VehiclePartForms;
 using ABCCarTraders.Services;
 using ABCCarTraders.Utils;
@@ -56,6 +57,21 @@ namespace ABCCarTraders.Forms.AdminForms
         private void button1_Click(object sender, EventArgs e)
         {
             new CustomerOrderForm().Show();
+        }
+
+        private void btnVehiclePartCategory_Click(object sender, EventArgs e)
+        {
+            new VehiclePartCategoryForm().Show();
+        }
+
+        private void btnVehicleBrand_Click(object sender, EventArgs e)
+        {
+            new VehicleBrandForm().Show();
+        }
+
+        private void btnVehicleType_Click(object sender, EventArgs e)
+        {
+            new VehicleTypeForm().Show();
         }
     }
 }

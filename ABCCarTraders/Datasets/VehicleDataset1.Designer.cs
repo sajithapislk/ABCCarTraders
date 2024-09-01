@@ -283,27 +283,27 @@ namespace ABCCarTraders.Datasets {
             
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnnumber;
+            private global::System.Data.DataColumn columnNumber;
             
-            private global::System.Data.DataColumn columntype_id;
+            private global::System.Data.DataColumn columnTypeId;
             
-            private global::System.Data.DataColumn columnbrand_id;
+            private global::System.Data.DataColumn columnBrandId;
             
-            private global::System.Data.DataColumn columncolor;
+            private global::System.Data.DataColumn columnColor;
             
-            private global::System.Data.DataColumn columnyear;
+            private global::System.Data.DataColumn columnYear;
             
-            private global::System.Data.DataColumn columnprice;
+            private global::System.Data.DataColumn columnPrice;
             
-            private global::System.Data.DataColumn columnengine;
+            private global::System.Data.DataColumn columnEngine;
             
-            private global::System.Data.DataColumn columnengine_code;
+            private global::System.Data.DataColumn columnEngineCode;
             
-            private global::System.Data.DataColumn columntorque;
+            private global::System.Data.DataColumn columnTorque;
             
-            private global::System.Data.DataColumn columnafc;
+            private global::System.Data.DataColumn columnAFC;
             
-            private global::System.Data.DataColumn columnpower;
+            private global::System.Data.DataColumn columnPower;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -356,89 +356,89 @@ namespace ABCCarTraders.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numberColumn {
+            public global::System.Data.DataColumn NumberColumn {
                 get {
-                    return this.columnnumber;
+                    return this.columnNumber;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn type_idColumn {
+            public global::System.Data.DataColumn TypeIdColumn {
                 get {
-                    return this.columntype_id;
+                    return this.columnTypeId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn brand_idColumn {
+            public global::System.Data.DataColumn BrandIdColumn {
                 get {
-                    return this.columnbrand_id;
+                    return this.columnBrandId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn colorColumn {
+            public global::System.Data.DataColumn ColorColumn {
                 get {
-                    return this.columncolor;
+                    return this.columnColor;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn yearColumn {
+            public global::System.Data.DataColumn YearColumn {
                 get {
-                    return this.columnyear;
+                    return this.columnYear;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn priceColumn {
+            public global::System.Data.DataColumn PriceColumn {
                 get {
-                    return this.columnprice;
+                    return this.columnPrice;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn engineColumn {
+            public global::System.Data.DataColumn EngineColumn {
                 get {
-                    return this.columnengine;
+                    return this.columnEngine;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn engine_codeColumn {
+            public global::System.Data.DataColumn EngineCodeColumn {
                 get {
-                    return this.columnengine_code;
+                    return this.columnEngineCode;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn torqueColumn {
+            public global::System.Data.DataColumn TorqueColumn {
                 get {
-                    return this.columntorque;
+                    return this.columnTorque;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn afcColumn {
+            public global::System.Data.DataColumn AFCColumn {
                 get {
-                    return this.columnafc;
+                    return this.columnAFC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn powerColumn {
+            public global::System.Data.DataColumn PowerColumn {
                 get {
-                    return this.columnpower;
+                    return this.columnPower;
                 }
             }
             
@@ -479,22 +479,22 @@ namespace ABCCarTraders.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VehicleRow AddVehicleRow(string Id, string Name, string number, string type_id, string brand_id, string color, string year, string price, string engine, string engine_code, string torque, string afc, string power) {
+            public VehicleRow AddVehicleRow(string Id, string Name, string Number, string TypeId, string BrandId, string Color, string Year, string Price, string Engine, string EngineCode, string Torque, string AFC, string Power) {
                 VehicleRow rowVehicleRow = ((VehicleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         Name,
-                        number,
-                        type_id,
-                        brand_id,
-                        color,
-                        year,
-                        price,
-                        engine,
-                        engine_code,
-                        torque,
-                        afc,
-                        power};
+                        Number,
+                        TypeId,
+                        BrandId,
+                        Color,
+                        Year,
+                        Price,
+                        Engine,
+                        EngineCode,
+                        Torque,
+                        AFC,
+                        Power};
                 rowVehicleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVehicleRow);
                 return rowVehicleRow;
@@ -519,17 +519,17 @@ namespace ABCCarTraders.Datasets {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnName = base.Columns["Name"];
-                this.columnnumber = base.Columns["number"];
-                this.columntype_id = base.Columns["type_id"];
-                this.columnbrand_id = base.Columns["brand_id"];
-                this.columncolor = base.Columns["color"];
-                this.columnyear = base.Columns["year"];
-                this.columnprice = base.Columns["price"];
-                this.columnengine = base.Columns["engine"];
-                this.columnengine_code = base.Columns["engine_code"];
-                this.columntorque = base.Columns["torque"];
-                this.columnafc = base.Columns["afc"];
-                this.columnpower = base.Columns["power"];
+                this.columnNumber = base.Columns["Number"];
+                this.columnTypeId = base.Columns["TypeId"];
+                this.columnBrandId = base.Columns["BrandId"];
+                this.columnColor = base.Columns["Color"];
+                this.columnYear = base.Columns["Year"];
+                this.columnPrice = base.Columns["Price"];
+                this.columnEngine = base.Columns["Engine"];
+                this.columnEngineCode = base.Columns["EngineCode"];
+                this.columnTorque = base.Columns["Torque"];
+                this.columnAFC = base.Columns["AFC"];
+                this.columnPower = base.Columns["Power"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -539,28 +539,28 @@ namespace ABCCarTraders.Datasets {
                 base.Columns.Add(this.columnId);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnnumber = new global::System.Data.DataColumn("number", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumber);
-                this.columntype_id = new global::System.Data.DataColumn("type_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntype_id);
-                this.columnbrand_id = new global::System.Data.DataColumn("brand_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbrand_id);
-                this.columncolor = new global::System.Data.DataColumn("color", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncolor);
-                this.columnyear = new global::System.Data.DataColumn("year", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnyear);
-                this.columnprice = new global::System.Data.DataColumn("price", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprice);
-                this.columnengine = new global::System.Data.DataColumn("engine", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnengine);
-                this.columnengine_code = new global::System.Data.DataColumn("engine_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnengine_code);
-                this.columntorque = new global::System.Data.DataColumn("torque", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntorque);
-                this.columnafc = new global::System.Data.DataColumn("afc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnafc);
-                this.columnpower = new global::System.Data.DataColumn("power", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpower);
+                this.columnNumber = new global::System.Data.DataColumn("Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumber);
+                this.columnTypeId = new global::System.Data.DataColumn("TypeId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTypeId);
+                this.columnBrandId = new global::System.Data.DataColumn("BrandId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBrandId);
+                this.columnColor = new global::System.Data.DataColumn("Color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColor);
+                this.columnYear = new global::System.Data.DataColumn("Year", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnYear);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
+                this.columnEngine = new global::System.Data.DataColumn("Engine", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEngine);
+                this.columnEngineCode = new global::System.Data.DataColumn("EngineCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEngineCode);
+                this.columnTorque = new global::System.Data.DataColumn("Torque", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTorque);
+                this.columnAFC = new global::System.Data.DataColumn("AFC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFC);
+                this.columnPower = new global::System.Data.DataColumn("Power", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPower);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -735,177 +735,177 @@ namespace ABCCarTraders.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string number {
+            public string Number {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.numberColumn]));
+                        return ((string)(this[this.tableVehicle.NumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'number\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Number\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.numberColumn] = value;
+                    this[this.tableVehicle.NumberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string type_id {
+            public string TypeId {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.type_idColumn]));
+                        return ((string)(this[this.tableVehicle.TypeIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'type_id\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TypeId\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.type_idColumn] = value;
+                    this[this.tableVehicle.TypeIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string brand_id {
+            public string BrandId {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.brand_idColumn]));
+                        return ((string)(this[this.tableVehicle.BrandIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'brand_id\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BrandId\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.brand_idColumn] = value;
+                    this[this.tableVehicle.BrandIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string color {
+            public string Color {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.colorColumn]));
+                        return ((string)(this[this.tableVehicle.ColorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'color\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Color\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.colorColumn] = value;
+                    this[this.tableVehicle.ColorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string year {
+            public string Year {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.yearColumn]));
+                        return ((string)(this[this.tableVehicle.YearColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'year\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Year\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.yearColumn] = value;
+                    this[this.tableVehicle.YearColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string price {
+            public string Price {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.priceColumn]));
+                        return ((string)(this[this.tableVehicle.PriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'price\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.priceColumn] = value;
+                    this[this.tableVehicle.PriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string engine {
+            public string Engine {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.engineColumn]));
+                        return ((string)(this[this.tableVehicle.EngineColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'engine\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Engine\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.engineColumn] = value;
+                    this[this.tableVehicle.EngineColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string engine_code {
+            public string EngineCode {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.engine_codeColumn]));
+                        return ((string)(this[this.tableVehicle.EngineCodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'engine_code\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EngineCode\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.engine_codeColumn] = value;
+                    this[this.tableVehicle.EngineCodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string torque {
+            public string Torque {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.torqueColumn]));
+                        return ((string)(this[this.tableVehicle.TorqueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'torque\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Torque\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.torqueColumn] = value;
+                    this[this.tableVehicle.TorqueColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string afc {
+            public string AFC {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.afcColumn]));
+                        return ((string)(this[this.tableVehicle.AFCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'afc\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AFC\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.afcColumn] = value;
+                    this[this.tableVehicle.AFCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string power {
+            public string Power {
                 get {
                     try {
-                        return ((string)(this[this.tableVehicle.powerColumn]));
+                        return ((string)(this[this.tableVehicle.PowerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'power\' in table \'Vehicle\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Power\' in table \'Vehicle\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVehicle.powerColumn] = value;
+                    this[this.tableVehicle.PowerColumn] = value;
                 }
             }
             
@@ -935,134 +935,134 @@ namespace ABCCarTraders.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnumberNull() {
-                return this.IsNull(this.tableVehicle.numberColumn);
+            public bool IsNumberNull() {
+                return this.IsNull(this.tableVehicle.NumberColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnumberNull() {
-                this[this.tableVehicle.numberColumn] = global::System.Convert.DBNull;
+            public void SetNumberNull() {
+                this[this.tableVehicle.NumberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istype_idNull() {
-                return this.IsNull(this.tableVehicle.type_idColumn);
+            public bool IsTypeIdNull() {
+                return this.IsNull(this.tableVehicle.TypeIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settype_idNull() {
-                this[this.tableVehicle.type_idColumn] = global::System.Convert.DBNull;
+            public void SetTypeIdNull() {
+                this[this.tableVehicle.TypeIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isbrand_idNull() {
-                return this.IsNull(this.tableVehicle.brand_idColumn);
+            public bool IsBrandIdNull() {
+                return this.IsNull(this.tableVehicle.BrandIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setbrand_idNull() {
-                this[this.tableVehicle.brand_idColumn] = global::System.Convert.DBNull;
+            public void SetBrandIdNull() {
+                this[this.tableVehicle.BrandIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscolorNull() {
-                return this.IsNull(this.tableVehicle.colorColumn);
+            public bool IsColorNull() {
+                return this.IsNull(this.tableVehicle.ColorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcolorNull() {
-                this[this.tableVehicle.colorColumn] = global::System.Convert.DBNull;
+            public void SetColorNull() {
+                this[this.tableVehicle.ColorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsyearNull() {
-                return this.IsNull(this.tableVehicle.yearColumn);
+            public bool IsYearNull() {
+                return this.IsNull(this.tableVehicle.YearColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetyearNull() {
-                this[this.tableVehicle.yearColumn] = global::System.Convert.DBNull;
+            public void SetYearNull() {
+                this[this.tableVehicle.YearColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspriceNull() {
-                return this.IsNull(this.tableVehicle.priceColumn);
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableVehicle.PriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpriceNull() {
-                this[this.tableVehicle.priceColumn] = global::System.Convert.DBNull;
+            public void SetPriceNull() {
+                this[this.tableVehicle.PriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsengineNull() {
-                return this.IsNull(this.tableVehicle.engineColumn);
+            public bool IsEngineNull() {
+                return this.IsNull(this.tableVehicle.EngineColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetengineNull() {
-                this[this.tableVehicle.engineColumn] = global::System.Convert.DBNull;
+            public void SetEngineNull() {
+                this[this.tableVehicle.EngineColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isengine_codeNull() {
-                return this.IsNull(this.tableVehicle.engine_codeColumn);
+            public bool IsEngineCodeNull() {
+                return this.IsNull(this.tableVehicle.EngineCodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setengine_codeNull() {
-                this[this.tableVehicle.engine_codeColumn] = global::System.Convert.DBNull;
+            public void SetEngineCodeNull() {
+                this[this.tableVehicle.EngineCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstorqueNull() {
-                return this.IsNull(this.tableVehicle.torqueColumn);
+            public bool IsTorqueNull() {
+                return this.IsNull(this.tableVehicle.TorqueColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettorqueNull() {
-                this[this.tableVehicle.torqueColumn] = global::System.Convert.DBNull;
+            public void SetTorqueNull() {
+                this[this.tableVehicle.TorqueColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsafcNull() {
-                return this.IsNull(this.tableVehicle.afcColumn);
+            public bool IsAFCNull() {
+                return this.IsNull(this.tableVehicle.AFCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetafcNull() {
-                this[this.tableVehicle.afcColumn] = global::System.Convert.DBNull;
+            public void SetAFCNull() {
+                this[this.tableVehicle.AFCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspowerNull() {
-                return this.IsNull(this.tableVehicle.powerColumn);
+            public bool IsPowerNull() {
+                return this.IsNull(this.tableVehicle.PowerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpowerNull() {
-                this[this.tableVehicle.powerColumn] = global::System.Convert.DBNull;
+            public void SetPowerNull() {
+                this[this.tableVehicle.PowerColumn] = global::System.Convert.DBNull;
             }
         }
         

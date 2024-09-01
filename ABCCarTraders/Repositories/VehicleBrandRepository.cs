@@ -41,9 +41,9 @@ namespace ABCCarTraders.Repositories
             }
             return null;
         }
-        public bool AddBrand(VehicleBrandModel carType)
+        public bool AddBrand(string carType)
         {
-            string query = $"INSERT INTO vehicle_brands (name) VALUES ('{carType.Name}')";
+            string query = $"INSERT INTO vehicle_brands (name) VALUES ('{carType}')";
 
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;

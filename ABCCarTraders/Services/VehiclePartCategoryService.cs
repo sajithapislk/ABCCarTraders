@@ -19,7 +19,12 @@ namespace ABCCarTraders.Services
 
         public List<VehiclePartCategoryModel> List()
         {
-            return _vehiclePartCategoryRepository.GetCategories();
+            return _vehiclePartCategoryRepository.All();
+        }
+
+        public bool Add(string name)
+        {
+            return _vehiclePartCategoryRepository.AddCategory(name);
         }
     }
 }
