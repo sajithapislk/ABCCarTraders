@@ -39,6 +39,7 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdateStatus = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,7 +54,8 @@
             this.address,
             this.amount,
             this.status,
-            this.UpdateStatus});
+            this.UpdateStatus,
+            this.View});
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
@@ -137,6 +139,13 @@
             this.UpdateStatus.Name = "UpdateStatus";
             this.UpdateStatus.UseColumnTextForButtonValue = true;
             // 
+            // View
+            // 
+            this.View.HeaderText = "View";
+            this.View.Name = "View";
+            this.View.Text = "View";
+            this.View.UseColumnTextForButtonValue = true;
+            // 
             // CustomerOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewButtonColumn UpdateStatus;
+        private System.Windows.Forms.DataGridViewButtonColumn View;
     }
 }
