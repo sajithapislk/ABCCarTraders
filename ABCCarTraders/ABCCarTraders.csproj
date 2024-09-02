@@ -53,6 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\CustomerOrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerOrderDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datasets\VehicleDataset1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +68,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.Designer.cs">
+      <DependentUpon>CustomerOrderViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.cs">
       <SubType>Form</SubType>
@@ -206,7 +217,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\VehiclePartOrderInfoRepository.cs" />
     <Compile Include="Repositories\VehicleOrderInfoRepository.cs" />
-    <Compile Include="Repositories\VehicleOrderRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\VehiclePartRepository.cs" />
     <Compile Include="Repositories\VehicleRepository.cs" />
     <Compile Include="Repositories\VehicleBrandRepository.cs" />
@@ -216,7 +227,8 @@
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\TempCartToPermentService.cs" />
     <Compile Include="Services\TempOrderInfoService.cs" />
-    <Compile Include="Services\VehicleOrderService.cs" />
+    <Compile Include="Services\OrderInfoService.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\VehiclePartService.cs" />
     <Compile Include="Services\VehicleService.cs" />
     <Compile Include="Services\VehicleBrandService.cs" />
@@ -245,6 +257,9 @@
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderUpdateStateForm.resx">
       <DependentUpon>CustomerOrderUpdateStateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.resx">
+      <DependentUpon>CustomerOrderViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.resx">
       <DependentUpon>VehicleBrandForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +278,7 @@
     <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
       <DependentUpon>VehicleReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryInsertForm.resx" />
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryEditForm.resx">
       <DependentUpon>VehiclePartCategoryEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,10 +328,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\AdminReports\CustomerOrderReport.rdlc" />
     <EmbeddedResource Include="Reports\AdminReports\VehicleReport.rdlc" />
     <EmbeddedResource Include="Widgets\ItemWidget.resx">
       <DependentUpon>ItemWidget.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datasets\CustomerOrderDataSet.xsc">
+      <DependentUpon>CustomerOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\CustomerOrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerOrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\CustomerOrderDataSet.xss">
+      <DependentUpon>CustomerOrderDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Datasets\VehicleDataset.xsc">
       <DependentUpon>VehicleDataset.xsd</DependentUpon>
     </None>

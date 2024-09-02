@@ -14,7 +14,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
 {
     public partial class CustomerOrderUpdateStateForm : Form
     {
-        private readonly VehicleOrderService _vehicleOrderService;
+        private readonly OrderService _vehicleOrderService;
         private OrderModel _order;
 
         public OrderModel Order
@@ -26,7 +26,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
         public CustomerOrderUpdateStateForm()
         {
             InitializeComponent();
-            _vehicleOrderService = new VehicleOrderService();
+            _vehicleOrderService = new OrderService();
         }
         private void loadData()
         {

@@ -46,5 +46,37 @@ namespace ABCCarTraders.Repositories
 
             return rowsAffected > 0;
         }
+        public List<VehiclePartOrderInfoModel> FilterByOrderId(int id)
+        {
+            try
+            {
+                string query = $"SELECT * FROM vehicle_parts WHERE order_id={id}";
+                DataTable result = _dbService.ExecuteQuery(query);
+                List<VehiclePartOrderInfoModel> list = new List<VehiclePartOrderInfoModel>();
+
+                if (result.Rows.Count > 0)
+                {
+                    foreach (DataRow row in result.Rows)
+                    {
+                        VehiclePartOrderInfoModel vehiclePartinfo = new VehiclePartOrderInfoModel
+                        {
+                            Id = Convert.ToInt32(row["id"]),
+                            OrderId = Convert.ToInt32(row["order_id"]),
+                            PartId = Convert.ToInt32(row["part_id"]),
+                            Qty = Convert.ToInt32(row["qty"])
+                        };
+
+                        list.Add(vehiclePartinfo);
+                    }
+
+                    return list;
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return null;
+        }
     }
 }

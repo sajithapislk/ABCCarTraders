@@ -14,12 +14,12 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
 {
     public partial class CustomerOrderForm : Form
     {
-        private readonly VehicleOrderService _vehicleOrderService;
+        private readonly OrderService _vehicleOrderService;
 
         public CustomerOrderForm()
         {
             InitializeComponent();
-            _vehicleOrderService = new VehicleOrderService();
+            _vehicleOrderService = new OrderService();
             getOrders();
 
         }
@@ -38,7 +38,6 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
         {
             if (e.RowIndex >= 0 && dgvList.Columns[e.ColumnIndex].Name == "UpdateStatus")
             {
-
                 DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
 
                 OrderModel order = new OrderModel
@@ -55,6 +54,17 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
 
                 _form.ShowDialog();
             }
+
+            if (e.RowIndex >= 0 && dgvList.Columns[e.ColumnIndex].Name == "View")
+            {
+                DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
+
+                var _form = new CustomerOrderViewForm();
+                _form.OrderId = int.Parse(currentRow.Cells["Id"].Value.ToString());
+
+                _form.ShowDialog();
+            }
+
         }
 
         private void CustomerOrderForm_Activated(object sender, EventArgs e)

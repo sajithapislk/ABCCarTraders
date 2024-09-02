@@ -11,7 +11,7 @@ namespace ABCCarTraders.Services
 {
     public class TempCartToPermentService
     {
-        private readonly VehicleOrderRepository _vehicleOrderRepository;
+        private readonly OrderRepository _vehicleOrderRepository;
         private readonly VehicleOrderInfoRepository _vehicleOrderInfoRepository;
         private readonly VehiclePartOrderInfoRepository _vehiclePartOrderInfoRepository;
         private readonly TempOrderInfoService _tempOrderInfoService;
@@ -20,7 +20,7 @@ namespace ABCCarTraders.Services
 
         public TempCartToPermentService()
         {
-            _vehicleOrderRepository = new VehicleOrderRepository();
+            _vehicleOrderRepository = new OrderRepository();
             _vehicleOrderInfoRepository = new VehicleOrderInfoRepository();
             _vehiclePartOrderInfoRepository = new VehiclePartOrderInfoRepository();
             _tempOrderInfoService = new TempOrderInfoService();

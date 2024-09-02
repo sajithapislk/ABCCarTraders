@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Services
 {
-    class VehicleOrderService
+    class OrderService
     {
-        private readonly VehicleOrderRepository _vehicleOrderRepository;
+        private readonly OrderRepository _vehicleOrderRepository;
 
-        public VehicleOrderService()
+        public OrderService()
         {
-            _vehicleOrderRepository = new VehicleOrderRepository();
+            _vehicleOrderRepository = new OrderRepository();
         }
 
         public List<OrderModel> List()
