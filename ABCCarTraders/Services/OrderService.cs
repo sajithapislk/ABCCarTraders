@@ -25,6 +25,7 @@ namespace ABCCarTraders.Services
 
         public bool MakeOrder(string address)
         {
+            if (address == null) return false;
             if (!SessionManager.IsLoggedIn()) return false;
 
             OrderModel order = new OrderModel

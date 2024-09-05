@@ -20,12 +20,14 @@ namespace ABCCarTraders.Services
 
         public UserModel Login(string username, string password)
         {
+            if (username == null || password == null) return null;
             UserModel user = _userRepository.GetUserForLogin(username, password);
-            SessionManager.Login(user);
+            if (user!=null) SessionManager.Login(user);
             return user;
         }
         public bool RegisterCustomer(string username, string password, string name, string email, string tp)
         {
+            if (username == null || password == null || name == null || email == null || tp == null) return false;
             var customer = new CustomerModel
             {
                 Username = username,

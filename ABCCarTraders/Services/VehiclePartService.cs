@@ -24,6 +24,7 @@ namespace ABCCarTraders.Services
 
         public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
         {
+            if (vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == 0 || qty == 0 || description == null) return false;
             var vehiclePart = new VehiclePartModel
             {
                 VehicleId = vehicleId ?? 0,
@@ -40,6 +41,7 @@ namespace ABCCarTraders.Services
         }
         public bool UpdateVehiclePart(int id, int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
         {
+            if (id == null || vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == null || qty == null || description == null) return false;
             var vehiclePart = new VehiclePartModel
             {
                 Id = id,

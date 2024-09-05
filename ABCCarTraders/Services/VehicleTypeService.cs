@@ -23,10 +23,12 @@ namespace ABCCarTraders.Services
         }
         public bool Add(string name)
         {
+            if (name == null) return false;
             return _vehicleTypeRepository.AddType(name);
         }
         public bool Update(int id,string name)
         {
+            if (name == null) return false;
             return _vehicleTypeRepository.UpdateType(id,name);
         }
     }

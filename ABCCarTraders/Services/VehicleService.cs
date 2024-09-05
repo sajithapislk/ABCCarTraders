@@ -24,6 +24,7 @@ namespace ABCCarTraders.Services
 
         public bool RegisterVehicle(string name, string number, int type, int brand, string color, string year, double price, string engine, string engineCode, string torque, string afc, string power,int qty)
         {
+            if (name == null || number == null || type == 0 || brand == 0 || color == null || year == null || price == 0 || engine == null || engineCode == null || torque == null || afc == null || power == null || qty == 0) return false;
             var vehicle = new VehicleModel
             {
                 Name = name,
@@ -44,6 +45,7 @@ namespace ABCCarTraders.Services
         }
         public bool UpdateVehicle(int id, string name, string number, int type, int brand, string color, string year, double price, string engine, string engineCode, string torque, string afc, string power,int qty)
         {
+            if (name == null || number == null || type == 0 || brand == 0 || color == null || year == null || price == 0 || engine == null || engineCode == null || torque == null || afc == null || power == null || qty == 0) return false;
             var vehicle = new VehicleModel
             {
                 Id=id,

@@ -28,6 +28,7 @@ namespace ABCCarTraders.Services
         }
         public void saveVehicle(int vehicleId, int qty)
         {
+            if (vehicleId == 0 || qty == 0) return;
             VehicleOrderInfoModel vehicleOrder = new VehicleOrderInfoModel
             {
                 VehicleId = vehicleId,

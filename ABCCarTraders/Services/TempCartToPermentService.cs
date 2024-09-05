@@ -29,6 +29,7 @@ namespace ABCCarTraders.Services
         }
         public bool ConvertList(string address)
         {
+            if (address == null) return false;
             try
             {
                 SessionManager.LoadSession();

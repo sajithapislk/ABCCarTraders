@@ -24,10 +24,12 @@ namespace ABCCarTraders.Services
 
         public bool Add(string name)
         {
+            if (name == null) return false;
             return _vehiclePartCategoryRepository.AddCategory(name);
         }
         public bool Update(int id, string name)
         {
+            if (name == null) return false;
             return _vehiclePartCategoryRepository.UpdateCategory(id,name);
         }
     }
