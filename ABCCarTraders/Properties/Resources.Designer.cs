@@ -163,6 +163,16 @@ namespace ABCCarTraders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap repair_workshop_icon_png_2897 {
+            get {
+                object obj = ResourceManager.GetObject("repair-workshop-icon-png-2897", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vecteezy_cloud_computing_modern_flat_concept_for_web_banner_design_5879539__Converted_ {
             get {
                 object obj = ResourceManager.GetObject("vecteezy_cloud-computing-modern-flat-concept-for-web-banner-design_5879539 [Conve" +

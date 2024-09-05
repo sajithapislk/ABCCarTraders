@@ -20,11 +20,11 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
         {
             InitializeComponent();
             _vehicleTypeService = new VehicleTypeService();
-            getBrand();
+            getType();
 
         }
 
-        private void getBrand()
+        private void getType()
         {
             List<VehicleTypeModel> list = _vehicleTypeService.List();
             dgvList.DataSource = list;
@@ -39,7 +39,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
             {
                 MessageBox.Show("Successfully Inserted");
                 txtName.Text = "";
-                getBrand();
+                getType();
             }
             else
             {
@@ -83,7 +83,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
 
         private void VehicleTypeForm_Activated(object sender, EventArgs e)
         {
-            getBrand();
+            getType();
         }
     }
 }
