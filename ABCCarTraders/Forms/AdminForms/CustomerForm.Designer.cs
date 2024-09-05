@@ -53,7 +53,7 @@
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
-            this.dgvList.Size = new System.Drawing.Size(691, 276);
+            this.dgvList.Size = new System.Drawing.Size(792, 640);
             this.dgvList.TabIndex = 1;
             // 
             // Id
@@ -82,18 +82,19 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 50);
+            this.panel1.Size = new System.Drawing.Size(792, 50);
             this.panel1.TabIndex = 2;
             // 
             // btnRefresh
             // 
             this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(623, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(733, 9);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(47, 35);
             this.btnRefresh.TabIndex = 18;
@@ -104,12 +105,13 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(365, 26);
+            this.label3.Size = new System.Drawing.Size(158, 26);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Customer List - ABC Car Traders ";
+            this.label3.Text = "Customer List";
             // 
             // panel2
             // 
@@ -117,7 +119,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(691, 276);
+            this.panel2.Size = new System.Drawing.Size(792, 640);
             this.panel2.TabIndex = 3;
             // 
             // CustomerForm
@@ -125,10 +127,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(691, 326);
+            this.ClientSize = new System.Drawing.Size(792, 690);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.panel1.ResumeLayout(false);
