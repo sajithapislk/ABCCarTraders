@@ -41,37 +41,50 @@ namespace ABCCarTraders.Forms.AdminForms
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            new VehicleForm().Show();
+            loadForm(new VehicleForm());
         }
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            new CustomerForm().Show();
+            loadForm(new CustomerForm());
         }
 
         private void btnOrderHistory_Click(object sender, EventArgs e)
         {
-            new VehiclePartForm().Show();
+            loadForm(new VehiclePartForm());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new CustomerOrderForm().Show();
+            loadForm(new CustomerOrderForm());
         }
 
         private void btnVehiclePartCategory_Click(object sender, EventArgs e)
         {
-            new VehiclePartCategoryForm().Show();
+            loadForm(new VehiclePartCategoryForm());
         }
 
         private void btnVehicleBrand_Click(object sender, EventArgs e)
         {
-            new VehicleBrandForm().Show();
+            loadForm(new VehicleBrandForm());
         }
 
         private void btnVehicleType_Click(object sender, EventArgs e)
         {
-            new VehicleTypeForm().Show();
+            loadForm(new VehicleTypeForm());
+        }
+        private void loadForm(object form)
+        {
+            if (this.mainPenel.Controls.Count > 0)
+            {
+                this.mainPenel.Controls.RemoveAt(0);
+            }
+            Form _form = form as Form;
+            _form.TopLevel = false;
+            _form.Dock = DockStyle.Fill;
+            this.mainPenel.Controls.Add(_form);
+            this.mainPenel.Tag = _form;
+            _form.Show();
         }
     }
 }

@@ -284,7 +284,6 @@
     <EmbeddedResource Include="Forms\AdminForms\ReportForms\VehicleReportForm.resx">
       <DependentUpon>VehicleReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\CategoryInsertForm.resx" />
     <EmbeddedResource Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryEditForm.resx">
       <DependentUpon>VehiclePartCategoryEditForm.cs</DependentUpon>
     </EmbeddedResource>

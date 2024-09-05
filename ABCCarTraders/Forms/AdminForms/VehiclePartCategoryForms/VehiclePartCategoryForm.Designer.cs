@@ -179,6 +179,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Text = "CategoryForm";
             this.Activated += new System.EventHandler(this.VehiclePartCategoryForm_Activated);
             this.panel1.ResumeLayout(false);
