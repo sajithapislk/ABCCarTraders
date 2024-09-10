@@ -108,6 +108,7 @@
             this.txtCustomerId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerId.Location = new System.Drawing.Point(10, 126);
             this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.ReadOnly = true;
             this.txtCustomerId.Size = new System.Drawing.Size(208, 26);
             this.txtCustomerId.TabIndex = 11;
             // 
@@ -117,6 +118,7 @@
             this.txtAmount.Location = new System.Drawing.Point(12, 78);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PasswordChar = '*';
+            this.txtAmount.ReadOnly = true;
             this.txtAmount.Size = new System.Drawing.Size(208, 26);
             this.txtAmount.TabIndex = 10;
             // 
@@ -125,6 +127,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(12, 30);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(208, 26);
             this.txtAddress.TabIndex = 12;
             // 

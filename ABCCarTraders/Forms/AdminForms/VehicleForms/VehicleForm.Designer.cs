@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +48,6 @@
             this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,6 +76,73 @@
             this.dgvList.Size = new System.Drawing.Size(792, 640);
             this.dgvList.TabIndex = 0;
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.btnRefresh);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(792, 50);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Image = global::ABCCarTraders.Properties.Resources.insert;
+            this.btnAdd.Location = new System.Drawing.Point(728, 8);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(47, 35);
+            this.btnAdd.TabIndex = 16;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.Image = global::ABCCarTraders.Properties.Resources.print;
+            this.btnPrint.Location = new System.Drawing.Point(622, 9);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(47, 35);
+            this.btnPrint.TabIndex = 16;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
+            this.btnRefresh.Location = new System.Drawing.Point(675, 8);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(47, 35);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 26);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Vehicle";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvList);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(792, 640);
+            this.panel2.TabIndex = 2;
             // 
             // Id
             // 
@@ -147,6 +214,8 @@
             // 
             this.Update.HeaderText = "Update";
             this.Update.Name = "Update";
+            this.Update.Text = "Update";
+            this.Update.UseColumnTextForButtonValue = true;
             // 
             // Delete
             // 
@@ -154,73 +223,8 @@
             this.Delete.Name = "Delete";
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnPrint);
-            this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 50);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Image = global::ABCCarTraders.Properties.Resources.insert;
-            this.btnAdd.Location = new System.Drawing.Point(728, 8);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(47, 35);
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrint.Image = global::ABCCarTraders.Properties.Resources.print;
-            this.btnPrint.Location = new System.Drawing.Point(622, 9);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(47, 35);
-            this.btnPrint.TabIndex = 16;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(675, 8);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(47, 35);
-            this.btnRefresh.TabIndex = 16;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 26);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Vehicle";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvList);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 640);
-            this.panel2.TabIndex = 2;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // VehicleForm
             // 
@@ -251,6 +255,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
@@ -264,6 +269,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn power;
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Button btnPrint;
     }
 }

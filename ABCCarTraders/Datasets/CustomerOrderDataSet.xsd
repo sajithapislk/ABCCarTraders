@@ -1,16 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="CustomerOrderDataSet" 
-                  targetNamespace="http://tempuri.org/CustomerOrderDataSet.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/CustomerOrderDataSet.xsd"
-                  xmlns:mstns="http://tempuri.org/CustomerOrderDataSet.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="CustomerOrderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomerOrderDataSet" targetNamespace="http://tempuri.org/CustomerOrderDataSet.xsd" xmlns:mstns="http://tempuri.org/CustomerOrderDataSet.xsd" xmlns="http://tempuri.org/CustomerOrderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CustomerOrderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CustomerOrderDataSet" msprop:Generator_UserDSName="CustomerOrderDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Orders" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_TableVarName="tableOrders" msprop:Generator_TablePropName="Orders" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_UserTableName="Orders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_RowEvArgName="OrdersRowChangeEvent" msprop:Generator_RowClassName="OrdersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" />
+              <xs:element name="CustomerId" msprop:Generator_ColumnVarNameInTable="columnCustomerId" msprop:Generator_ColumnPropNameInRow="CustomerId" msprop:Generator_ColumnPropNameInTable="CustomerIdColumn" msprop:Generator_UserColumnName="CustomerId" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="OrdersKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Orders" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
 </xs:schema>

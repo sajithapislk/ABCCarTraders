@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnViewCart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,11 +42,11 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(792, 590);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flpList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpList.Location = new System.Drawing.Point(0, 0);
+            this.flpList.Name = "flowLayoutPanel1";
+            this.flpList.Size = new System.Drawing.Size(792, 590);
+            this.flpList.TabIndex = 1;
             // 
             // panel1
             // 
@@ -123,7 +123,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.flpList);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
@@ -149,7 +149,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.CheckBox cbVehicle;

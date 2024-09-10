@@ -37,9 +37,10 @@
             this.UpdateStatus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,6 +98,7 @@
             // 
             this.UpdateStatus.HeaderText = "Update Status";
             this.UpdateStatus.Name = "UpdateStatus";
+            this.UpdateStatus.Text = "Update Status";
             this.UpdateStatus.UseColumnTextForButtonValue = true;
             // 
             // View
@@ -109,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -116,16 +119,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(792, 50);
             this.panel1.TabIndex = 3;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
-            this.btnRefresh.Location = new System.Drawing.Point(733, 11);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(47, 35);
-            this.btnRefresh.TabIndex = 18;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label3
             // 
@@ -147,6 +140,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(792, 640);
             this.panel2.TabIndex = 4;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = global::ABCCarTraders.Properties.Resources.refresh;
+            this.btnRefresh.Location = new System.Drawing.Point(733, 11);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(47, 35);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.Image = global::ABCCarTraders.Properties.Resources.print;
+            this.btnPrint.Location = new System.Drawing.Point(680, 9);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(47, 35);
+            this.btnPrint.TabIndex = 19;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // CustomerOrderForm
             // 
@@ -180,5 +194,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewButtonColumn UpdateStatus;
         private System.Windows.Forms.DataGridViewButtonColumn View;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

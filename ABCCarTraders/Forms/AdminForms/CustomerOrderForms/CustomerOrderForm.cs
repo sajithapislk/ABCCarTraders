@@ -1,4 +1,5 @@
-﻿using ABCCarTraders.Models;
+﻿using ABCCarTraders.Forms.AdminForms.ReportForms;
+using ABCCarTraders.Models;
 using ABCCarTraders.Services;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,11 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
         private void CustomerOrderForm_Activated(object sender, EventArgs e)
         {
             getOrders();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            new CustomerOrderReportForm().ShowDialog();
         }
     }
 }

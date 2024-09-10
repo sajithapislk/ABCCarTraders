@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Repositories
 {
-    class VehicleRepository
+    public class VehicleRepository
     {
         private readonly DatabaseService _dbService;
 

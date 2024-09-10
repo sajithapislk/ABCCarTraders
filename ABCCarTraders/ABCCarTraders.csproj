@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\CustomerOrderDataSet.cs">
+      <DependentUpon>CustomerOrderDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datasets\CustomerOrderDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +77,12 @@
     </Compile>
     <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.Designer.cs">
       <DependentUpon>CustomerOrderViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ReportForms\CustomerOrderReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ReportForms\CustomerOrderReportForm.Designer.cs">
+      <DependentUpon>CustomerOrderReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.cs">
       <SubType>Form</SubType>
@@ -265,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.resx">
       <DependentUpon>CustomerOrderViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\ReportForms\CustomerOrderReportForm.resx">
+      <DependentUpon>CustomerOrderReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\VehicleBrandForms\VehicleBrandForm.resx">
       <DependentUpon>VehicleBrandForm.cs</DependentUpon>

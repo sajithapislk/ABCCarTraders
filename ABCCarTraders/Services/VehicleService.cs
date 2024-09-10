@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ABCCarTraders.Services
 {
-    class VehicleService
+    public class VehicleService
     {
         private readonly VehicleRepository _vehicleRepository;
 

@@ -30,7 +30,7 @@ namespace ABCCarTraders.Forms.CustomerForms
         }
         private void getList()
         {
-            if (flowLayoutPanel1 == null)
+            if (flpList == null)
             {
                 MessageBox.Show("null");
                 return;
@@ -38,8 +38,8 @@ namespace ABCCarTraders.Forms.CustomerForms
             _profileListWidget.Clear();
             getVehicles();
             getParts();
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.AddRange(_profileListWidget.ToArray());
+            flpList.Controls.Clear();
+            flpList.Controls.AddRange(_profileListWidget.ToArray());
         }
         private void getVehicles()
         {
@@ -77,7 +77,7 @@ namespace ABCCarTraders.Forms.CustomerForms
         }
         private void FilterWidgetsByName(string filterText)
         {
-            if (flowLayoutPanel1 == null)
+            if (flpList == null)
             {
                 MessageBox.Show("null");
                 return;
@@ -118,8 +118,8 @@ namespace ABCCarTraders.Forms.CustomerForms
                     widget.Title.ToLower().Contains(lowercaseFilter)))
                     .ToList();
             }
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.AddRange(filteredWidgets.ToArray());
+            flpList.Controls.Clear();
+            flpList.Controls.AddRange(filteredWidgets.ToArray());
         
         }
 
