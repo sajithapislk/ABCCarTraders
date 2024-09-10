@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mainPenel = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnShop = new System.Windows.Forms.Button();
-            this.btnCart = new System.Windows.Forms.Button();
             this.btnOrderHistory = new System.Windows.Forms.Button();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.mainPenel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,46 +104,17 @@
             this.panel1.Size = new System.Drawing.Size(200, 729);
             this.panel1.TabIndex = 8;
             // 
-            // mainPenel
+            // btnOrderHistory
             // 
-            this.mainPenel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPenel.Location = new System.Drawing.Point(200, 0);
-            this.mainPenel.Name = "mainPenel";
-            this.mainPenel.Size = new System.Drawing.Size(808, 729);
-            this.mainPenel.TabIndex = 0;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::ABCCarTraders.Properties.Resources.logout;
-            this.btnLogout.Location = new System.Drawing.Point(6, 643);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(178, 50);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ABCCarTraders.Properties.Resources.repair_workshop_icon_png_2897;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnShop
-            // 
-            this.btnShop.BackColor = System.Drawing.Color.White;
-            this.btnShop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnShop.Location = new System.Drawing.Point(0, 218);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(200, 48);
-            this.btnShop.TabIndex = 7;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = false;
-            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            this.btnOrderHistory.BackColor = System.Drawing.Color.White;
+            this.btnOrderHistory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOrderHistory.Location = new System.Drawing.Point(0, 326);
+            this.btnOrderHistory.Name = "btnOrderHistory";
+            this.btnOrderHistory.Size = new System.Drawing.Size(200, 48);
+            this.btnOrderHistory.TabIndex = 7;
+            this.btnOrderHistory.Text = "Order History";
+            this.btnOrderHistory.UseVisualStyleBackColor = false;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
             // 
             // btnCart
             // 
@@ -157,17 +128,46 @@
             this.btnCart.UseVisualStyleBackColor = false;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
-            // btnOrderHistory
+            // btnShop
             // 
-            this.btnOrderHistory.BackColor = System.Drawing.Color.White;
-            this.btnOrderHistory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnOrderHistory.Location = new System.Drawing.Point(0, 326);
-            this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(200, 48);
-            this.btnOrderHistory.TabIndex = 7;
-            this.btnOrderHistory.Text = "Order History";
-            this.btnOrderHistory.UseVisualStyleBackColor = false;
-            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
+            this.btnShop.BackColor = System.Drawing.Color.White;
+            this.btnShop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnShop.Location = new System.Drawing.Point(0, 218);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(200, 48);
+            this.btnShop.TabIndex = 7;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ABCCarTraders.Properties.Resources.repair_workshop_icon_png_2897;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::ABCCarTraders.Properties.Resources.logout;
+            this.btnLogout.Location = new System.Drawing.Point(6, 643);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(178, 50);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // mainPenel
+            // 
+            this.mainPenel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPenel.Location = new System.Drawing.Point(200, 0);
+            this.mainPenel.Name = "mainPenel";
+            this.mainPenel.Size = new System.Drawing.Size(808, 729);
+            this.mainPenel.TabIndex = 0;
             // 
             // CustomerDashboardForm
             // 
@@ -196,10 +196,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel mainPenel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOrderHistory;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.Button btnShop;
+        public System.Windows.Forms.Panel mainPenel;
     }
 }

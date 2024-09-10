@@ -15,13 +15,15 @@ namespace ABCCarTraders.Forms.CustomerForms
 {
     public partial class ShopForm : Form
     {
+        private CustomerDashboardForm _dashboardForm;
         private readonly VehicleService _vehicleService;
         private readonly VehiclePartService _vehiclepartService;
         private List<ItemWidget> _profileListWidget = new List<ItemWidget>();
 
-        public ShopForm()
+        public ShopForm(CustomerDashboardForm dashboardForm)
         {
             InitializeComponent();
+            _dashboardForm = dashboardForm;
 
             _vehicleService = new VehicleService();
             _vehiclepartService = new VehiclePartService();
@@ -140,7 +142,8 @@ namespace ABCCarTraders.Forms.CustomerForms
 
         private void btnViewCart_Click(object sender, EventArgs e)
         {
-
+            var cartForm = new CartForm();
+            _dashboardForm.loadForm(cartForm);
         }
     }
 }

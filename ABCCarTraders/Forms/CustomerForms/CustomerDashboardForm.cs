@@ -28,9 +28,15 @@ namespace ABCCarTraders.Forms.CustomerForms
             SessionManager.LoadSession();
             lblName.Text = SessionManager.CurrentUser.Username;
         }
-        private void loadForm(object form)
+        public void loadForm(object form)
         {
-            if(this.mainPenel.Controls.Count > 0)
+            if (form == null)
+            {
+                throw new ArgumentNullException(nameof(form), "The form cannot be null.");
+            }
+
+
+            if (this.mainPenel.Controls.Count > 0)
             {
                 this.mainPenel.Controls.RemoveAt(0);
             }
@@ -43,10 +49,10 @@ namespace ABCCarTraders.Forms.CustomerForms
         }
         private void btnShop_Click(object sender, EventArgs e)
         {
-            loadForm(new ShopForm());
+            loadForm(new ShopForm(this));
         }
 
-        private void btnCart_Click(object sender, EventArgs e)
+        public void btnCart_Click(object sender, EventArgs e)
         {
             loadForm(new CartForm());
         }

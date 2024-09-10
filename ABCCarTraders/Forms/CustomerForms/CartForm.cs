@@ -80,7 +80,16 @@ namespace ABCCarTraders.Forms.CustomerForms
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string address = txtAddress.Text;
-            _tempCartToPermentService.ConvertList(address);
+            var res = _tempCartToPermentService.ConvertList(address);
+            if (res)
+            {
+                MessageBox.Show("Order placed successfull");
+                FetchData();
+            }
+            else
+            {
+                MessageBox.Show("Order place failled");
+            }
         }
 
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
