@@ -43,7 +43,8 @@ namespace ABCCarTraders.Repositories
                         EngineCode = row["engine_code"].ToString(),
                         Torque = row["torque"].ToString(),
                         AFC = row["afc"].ToString(),
-                        Power = row["power"].ToString()
+                        Power = row["power"].ToString(),
+                        Img = row["img"].ToString()
                     };
 
                     vehicles.Add(vehicle);

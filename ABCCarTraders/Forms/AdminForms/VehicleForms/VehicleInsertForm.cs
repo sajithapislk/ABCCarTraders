@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,10 +62,25 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
             string vehiclePower = txtVehiclePower.Text;
             int qty = int.Parse(txtQty.Text);
 
+            string filePath = lblFilePath.Text;
+            string fileName = Path.GetFileName(filePath);
+
             bool res = _vehicleService.RegisterVehicle(vehicleName, vehicleNo, vehicleType??0, vehicleBrand??0, vehicleColor, vehicleYear, price, vehicleEngine, vehicleEngineCode, vehicleTorque, vehicleAFC, vehiclePower, qty);
 
             if (res)
             {
+                string localFilePath = Path.Combine(Application.StartupPath, "images", Path.GetFileName(filePath));
+                string imagesDir = Path.GetDirectoryName(localFilePath);
+
+                if (!Directory.Exists(imagesDir))
+                {
+                    Directory.CreateDirectory(imagesDir);
+                }
+
+                byte[] fileBytes = File.ReadAllBytes(filePath);
+
+                File.WriteAllBytes(localFilePath, fileBytes);
+
                 MessageBox.Show("Successfully Inserted");
 
                 clearData();
@@ -93,6 +109,16 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
         private void btnClear_Click(object sender, EventArgs e)
         {
             clearData();
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                lblFilePath.Text = open.FileName;
+            }
         }
     }
 }

@@ -22,5 +22,6 @@ namespace ABCCarTraders.Models
         public string AFC { get; set; }
         public string Power { get; set; }
         public int Qty { get; set; }
+        public string Img { get; set; }
     }
 }

@@ -54,7 +54,8 @@ namespace ABCCarTraders.Forms.CustomerForms
                     Id = vehicle.Id ?? 0,
                     Price = vehicle.Price.ToString(),
                     Title = vehicle.Name,
-                    Type = "Vehicle"
+                    Type = "Vehicle",
+                    Img = vehicle.Img
                 };
 
                 _profileListWidget.Add(widget);

@@ -56,6 +56,9 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblFilePath = new System.Windows.Forms.Label();
+            this.btnImg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -303,7 +306,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(291, 198);
+            this.label5.Location = new System.Drawing.Point(291, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 19);
             this.label5.TabIndex = 0;
@@ -312,7 +315,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.Location = new System.Drawing.Point(413, 195);
+            this.txtPrice.Location = new System.Drawing.Point(413, 231);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 26);
             this.txtPrice.TabIndex = 1;
@@ -321,7 +324,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(291, 53);
+            this.label6.Location = new System.Drawing.Point(291, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 19);
             this.label6.TabIndex = 0;
@@ -330,7 +333,7 @@
             // txtVehicleEngine
             // 
             this.txtVehicleEngine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleEngine.Location = new System.Drawing.Point(413, 50);
+            this.txtVehicleEngine.Location = new System.Drawing.Point(413, 86);
             this.txtVehicleEngine.Name = "txtVehicleEngine";
             this.txtVehicleEngine.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleEngine.TabIndex = 1;
@@ -358,7 +361,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(291, 84);
+            this.label8.Location = new System.Drawing.Point(291, 120);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 19);
             this.label8.TabIndex = 0;
@@ -367,7 +370,7 @@
             // txtVehicleEngineCode
             // 
             this.txtVehicleEngineCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleEngineCode.Location = new System.Drawing.Point(413, 81);
+            this.txtVehicleEngineCode.Location = new System.Drawing.Point(413, 117);
             this.txtVehicleEngineCode.Name = "txtVehicleEngineCode";
             this.txtVehicleEngineCode.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleEngineCode.TabIndex = 1;
@@ -394,7 +397,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(291, 163);
+            this.label10.Location = new System.Drawing.Point(291, 199);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 19);
             this.label10.TabIndex = 0;
@@ -403,7 +406,7 @@
             // txtVehicleTorque
             // 
             this.txtVehicleTorque.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleTorque.Location = new System.Drawing.Point(413, 160);
+            this.txtVehicleTorque.Location = new System.Drawing.Point(413, 196);
             this.txtVehicleTorque.Name = "txtVehicleTorque";
             this.txtVehicleTorque.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleTorque.TabIndex = 1;
@@ -430,7 +433,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(291, 116);
+            this.label12.Location = new System.Drawing.Point(291, 152);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 38);
             this.label12.TabIndex = 0;
@@ -439,7 +442,7 @@
             // txtVehicleAFC
             // 
             this.txtVehicleAFC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVehicleAFC.Location = new System.Drawing.Point(413, 113);
+            this.txtVehicleAFC.Location = new System.Drawing.Point(413, 149);
             this.txtVehicleAFC.Name = "txtVehicleAFC";
             this.txtVehicleAFC.Size = new System.Drawing.Size(157, 26);
             this.txtVehicleAFC.TabIndex = 1;
@@ -449,7 +452,7 @@
             this.btnInsert.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnInsert.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(438, 229);
+            this.btnInsert.Location = new System.Drawing.Point(438, 276);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(130, 40);
             this.btnInsert.TabIndex = 5;
@@ -462,7 +465,7 @@
             this.btnClear.BackColor = System.Drawing.Color.Red;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(295, 230);
+            this.btnClear.Location = new System.Drawing.Point(295, 277);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(130, 40);
             this.btnClear.TabIndex = 5;
@@ -473,26 +476,60 @@
             // txtQty
             // 
             this.txtQty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtQty.Location = new System.Drawing.Point(508, 18);
+            this.txtQty.Location = new System.Drawing.Point(413, 54);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(62, 26);
+            this.txtQty.Size = new System.Drawing.Size(155, 26);
             this.txtQty.TabIndex = 7;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(409, 21);
+            this.label13.Location = new System.Drawing.Point(291, 58);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 19);
             this.label13.TabIndex = 6;
             this.label13.Text = "Qty";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(3, 277);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 19);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Image";
+            // 
+            // lblFilePath
+            // 
+            this.lblFilePath.AutoSize = true;
+            this.lblFilePath.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFilePath.Location = new System.Drawing.Point(5, 301);
+            this.lblFilePath.Name = "lblFilePath";
+            this.lblFilePath.Size = new System.Drawing.Size(38, 19);
+            this.lblFilePath.TabIndex = 0;
+            this.lblFilePath.Text = "path";
+            // 
+            // btnImg
+            // 
+            this.btnImg.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnImg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnImg.ForeColor = System.Drawing.Color.White;
+            this.btnImg.Location = new System.Drawing.Point(93, 277);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(130, 29);
+            this.btnImg.TabIndex = 26;
+            this.btnImg.Text = "Upload";
+            this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+            // 
             // VehicleInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 280);
+            this.ClientSize = new System.Drawing.Size(592, 329);
+            this.Controls.Add(this.btnImg);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnClear);
@@ -513,6 +550,8 @@
             this.Controls.Add(this.txtVehicleNo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblFilePath);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -560,5 +599,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblFilePath;
+        private System.Windows.Forms.Button btnImg;
     }
 }
