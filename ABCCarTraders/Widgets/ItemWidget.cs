@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABCCarTraders.Services;
+using System.IO;
 
 namespace ABCCarTraders.Widgets
 {
@@ -19,6 +20,7 @@ namespace ABCCarTraders.Widgets
         private string _price;
         private string _title;
         private string _type;
+        private string _img;
         [Category("Custom Props")]
         public int Id
         {
@@ -47,7 +49,20 @@ namespace ABCCarTraders.Widgets
                 pbDp.Refresh();
             }
         }
-
+        [Category("Custom Props")]
+        public string Img
+        {
+            get { return _img; }
+            set {
+                _img = value;
+                
+                if(_img != "")
+                {
+                    string imagesDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"images\\{_img}");
+                    pbDp.ImageLocation = imagesDir;
+                }
+            }
+        }
         public ItemWidget()
         {
             InitializeComponent();

@@ -39,7 +39,8 @@ namespace ABCCarTraders.Repositories
                         Brand = row["brand"].ToString(),
                         Price = Convert.ToDouble(row["price"]),
                         Qty = Convert.ToInt32(row["qty"]),
-                        Description = row["description"].ToString()
+                        Description = row["description"].ToString(),
+                        Img = row["img"].ToString()
                     };
 
                     vehicleParts.Add(vehicle);
@@ -51,7 +52,7 @@ namespace ABCCarTraders.Repositories
         }
         public bool Add(VehiclePartModel vehiclePart)
         {
-            string query = @"INSERT INTO vehicle_parts (vehicle_id, category_id, name, part_number, brand, price, qty, description, created_at, updated_at) VALUES (@vehicleId, @categoryId, @name, @partNumber, @brand, @price, @qty, @description, @createdAt, @updatedAt)";
+            string query = @"INSERT INTO vehicle_parts (vehicle_id, category_id, name, part_number, brand, price, qty, description, created_at, updated_at, img) VALUES (@vehicleId, @categoryId, @name, @partNumber, @brand, @price, @qty, @description, @createdAt, @updatedAt, @img)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -64,7 +65,8 @@ namespace ABCCarTraders.Repositories
                 new SqlParameter("@qty", SqlDbType.Int) { Value = vehiclePart.Qty },
                 new SqlParameter("@description", SqlDbType.NVarChar) { Value = vehiclePart.Description },
                 new SqlParameter("@createdAt", SqlDbType.DateTime) { Value = DateTime.Now },
-                new SqlParameter("@updatedAt", SqlDbType.DateTime) { Value = DateTime.Now }
+                new SqlParameter("@updatedAt", SqlDbType.DateTime) { Value = DateTime.Now },
+                new SqlParameter("@img", SqlDbType.NVarChar) { Value = vehiclePart.Img },
             };
 
             int rowsAffected = _dbService.ExecuteNonQueryWithParameters(query, parameters);

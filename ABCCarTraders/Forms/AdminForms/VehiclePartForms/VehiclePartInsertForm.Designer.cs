@@ -46,6 +46,9 @@
             this.rtxDescription = new System.Windows.Forms.RichTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnImg = new System.Windows.Forms.Button();
+            this.lblFilePath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -180,7 +183,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(12, 133);
+            this.label8.Location = new System.Drawing.Point(12, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 19);
             this.label8.TabIndex = 6;
@@ -189,9 +192,9 @@
             // rtxDescription
             // 
             this.rtxDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.rtxDescription.Location = new System.Drawing.Point(16, 155);
+            this.rtxDescription.Location = new System.Drawing.Point(16, 193);
             this.rtxDescription.Name = "rtxDescription";
-            this.rtxDescription.Size = new System.Drawing.Size(753, 281);
+            this.rtxDescription.Size = new System.Drawing.Size(753, 243);
             this.rtxDescription.TabIndex = 22;
             this.rtxDescription.Text = "";
             // 
@@ -221,12 +224,46 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(12, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Image";
+            // 
+            // btnImg
+            // 
+            this.btnImg.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnImg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnImg.ForeColor = System.Drawing.Color.White;
+            this.btnImg.Location = new System.Drawing.Point(108, 122);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(130, 29);
+            this.btnImg.TabIndex = 25;
+            this.btnImg.Text = "Upload";
+            this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+            // 
+            // lblFilePath
+            // 
+            this.lblFilePath.AutoSize = true;
+            this.lblFilePath.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFilePath.Location = new System.Drawing.Point(113, 154);
+            this.lblFilePath.Name = "lblFilePath";
+            this.lblFilePath.Size = new System.Drawing.Size(63, 19);
+            this.lblFilePath.TabIndex = 6;
+            this.lblFilePath.Text = "file path";
+            // 
             // VehiclePartInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 448);
             this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnImg);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rtxDescription);
             this.Controls.Add(this.txtQty);
@@ -238,10 +275,12 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtBrand);
             this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblFilePath);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPartNo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Name = "VehiclePartInsertForm";
@@ -270,5 +309,8 @@
         private System.Windows.Forms.RichTextBox rtxDescription;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnImg;
+        private System.Windows.Forms.Label lblFilePath;
     }
 }

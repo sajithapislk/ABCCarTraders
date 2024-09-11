@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
 {
@@ -54,10 +55,23 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
             int? vehicleId = cbVehicle.SelectedValue as int?;
             string description = rtxDescription.Text;
 
-            bool res = _vehiclePartService.RegisterVehiclePart(vehicleId, categoryId ?? 0, name, partNo, brand, price, qty, description);
+            string filePath = lblFilePath.Text;
+            string fileName = Path.GetFileName(filePath);
+            bool res = _vehiclePartService.RegisterVehiclePart(vehicleId, categoryId ?? 0, name, partNo, brand, price, qty, description, fileName);
 
             if (res)
             {
+                string localFilePath = Path.Combine(Application.StartupPath, "images", Path.GetFileName(filePath));
+                string imagesDir = Path.GetDirectoryName(localFilePath);
+
+                if (!Directory.Exists(imagesDir))
+                {
+                    Directory.CreateDirectory(imagesDir);
+                }
+
+                byte[] fileBytes = File.ReadAllBytes(filePath);
+
+                File.WriteAllBytes(localFilePath, fileBytes);
                 MessageBox.Show("Successfully Inserted");
                 clearData();
             }
@@ -82,6 +96,16 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
             txtQty.Text = string.Empty;
             cbVehicle.SelectedIndex = -1;
             rtxDescription.Text = string.Empty;
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                lblFilePath.Text = open.FileName;
+            }
         }
     }
 }

@@ -22,9 +22,9 @@ namespace ABCCarTraders.Services
             return _vehiclePartRepository.All();
         }
 
-        public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
+        public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description, string fileName)
         {
-            if (vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == 0 || qty == 0 || description == null) return false;
+            if (vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == 0 || qty == 0 || description == null || fileName == null) return false;
             var vehiclePart = new VehiclePartModel
             {
                 VehicleId = vehicleId ?? 0,
@@ -34,7 +34,8 @@ namespace ABCCarTraders.Services
                 Brand = brand,
                 Price = price,
                 Qty = qty,
-                Description = description
+                Description = description,
+                Img = fileName
             };
 
             return _vehiclePartRepository.Add(vehiclePart);
