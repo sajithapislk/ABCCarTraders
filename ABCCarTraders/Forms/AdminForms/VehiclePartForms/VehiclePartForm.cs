@@ -68,8 +68,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
                         Description = currentRow.Cells["Description"].Value.ToString(),
                     };
 
-                    var _form = new VehiclePartEditForm();
-                    _form.VehiclePartModel = vehiclePart;
+                    var _form = new VehiclePartEditForm(vehiclePart);
 
                     _form.ShowDialog();
 

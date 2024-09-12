@@ -72,8 +72,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehicleForms
                         Qty = int.Parse(currentRow.Cells["Qty"].Value.ToString())
                     };
 
-                    var _form = new VehicleEditForm();
-                    _form.VehicleModel = vehicle;
+                    var _form = new VehicleEditForm(vehicle);
 
                     _form.ShowDialog();
 

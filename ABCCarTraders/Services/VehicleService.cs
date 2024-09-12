@@ -69,5 +69,10 @@ namespace ABCCarTraders.Services
         {
             return _vehicleRepository.Delete(id);
         }
+
+        public VehicleModel FindById(int id)
+        {
+            return _vehicleRepository.FindById(id);
+        }
     }
 }

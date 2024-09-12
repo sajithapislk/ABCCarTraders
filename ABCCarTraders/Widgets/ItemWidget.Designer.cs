@@ -127,6 +127,7 @@
             this.btnView.TabIndex = 5;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // ItemWidget
             // 

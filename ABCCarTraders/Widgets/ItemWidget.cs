@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABCCarTraders.Services;
 using System.IO;
+using ABCCarTraders.Forms.CustomerForms.InfoForms;
 
 namespace ABCCarTraders.Widgets
 {
@@ -85,6 +86,19 @@ namespace ABCCarTraders.Widgets
             }else
             {
                 _tempOrderInfoService.saveVehiclePart(_id, qty);
+            }
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+
+            if (_type == "Vehicle")
+            {
+                new VehicleInfoForm(_id).ShowDialog();
+            }
+            else
+            {
+                //_tempOrderInfoService.saveVehiclePart(_id, qty);
             }
         }
     }

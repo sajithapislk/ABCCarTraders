@@ -19,15 +19,16 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
         private readonly VehicleService _vehicleService;
 
         private VehiclePartModel _vehiclePartModel;
-        public VehiclePartModel VehiclePartModel
-        {
-            get { return _vehiclePartModel; }
-            set { _vehiclePartModel = value; }
-        }
+        //public VehiclePartModel VehiclePartModel
+        //{
+        //    get { return _vehiclePartModel; }
+        //    set { _vehiclePartModel = value; }
+        //}
 
-        public VehiclePartEditForm()
+        public VehiclePartEditForm(VehiclePartModel vehiclePartModel)
         {
             InitializeComponent();
+            _vehiclePartModel = vehiclePartModel;
             _vehiclePartCategoryService = new VehiclePartCategoryService();
             _vehiclePartService = new VehiclePartService();
             _vehicleService = new VehicleService();
