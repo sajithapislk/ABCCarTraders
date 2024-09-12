@@ -112,5 +112,33 @@ namespace ABCCarTraders.Repositories
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;
         }
+
+        public VehiclePartModel FindById(int id)
+        {
+            string query = $"SELECT * FROM vehicle_parts WHERE id={id}";
+            DataTable result = _dbService.ExecuteQuery(query);
+
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+
+                VehiclePartModel vehiclePart = new VehiclePartModel
+                {
+                    Id = Convert.ToInt32(row["id"]),
+                    VehicleId = Convert.ToInt32(row["vehicle_id"]),
+                    CategoryId = Convert.ToInt32(row["category_id"]),
+                    Name = row["name"].ToString(),
+                    PartNumber = row["part_number"].ToString(),
+                    Brand = row["brand"].ToString(),
+                    Price = Convert.ToDouble(row["price"]),
+                    Qty = Convert.ToInt32(row["qty"]),
+                    Description = row["description"].ToString(),
+                    Img = row["img"].ToString()
+                };
+
+                return vehiclePart;
+            }
+            return null;
+        }
     }
 }

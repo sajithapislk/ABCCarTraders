@@ -98,7 +98,7 @@ namespace ABCCarTraders.Widgets
             }
             else
             {
-                //_tempOrderInfoService.saveVehiclePart(_id, qty);
+                new VehiclePartInfoForm(_id).ShowDialog();
             }
         }
     }
