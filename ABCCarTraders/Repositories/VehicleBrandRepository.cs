@@ -57,10 +57,18 @@ namespace ABCCarTraders.Repositories
         }
         public bool DeleteBrand(int id)
         {
-            string query = $"DELETE FROM vehicle_brands WHERE id={id}";
-
-            int rowsAffected = _dbService.ExecuteNonQuery(query);
-            return rowsAffected > 0;
+            try
+            {
+                string query = "DELETE FROM vehicle_brands WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                string query = "UPDATE vehicle_brands SET deleted_at=GETDATE() WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
         }
     }
 }

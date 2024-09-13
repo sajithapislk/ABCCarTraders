@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public List<VehicleModel> All()
         {
-            string query = $"SELECT * FROM vehicles";
+            string query = $"SELECT * FROM vehicles WHERE deleted_at IS NULL";
             DataTable result = _dbService.ExecuteQuery(query);
             List<VehicleModel> vehicles = new List<VehicleModel>();
 
@@ -121,10 +121,18 @@ namespace ABCCarTraders.Repositories
         }
         public bool Delete(int id)
         {
-            string query = $"DELETE FROM vehicles WHERE id={id}";
-
-            int rowsAffected = _dbService.ExecuteNonQuery(query);
-            return rowsAffected > 0;
+            try
+            {
+                string query = "DELETE FROM vehicles WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                string query = "UPDATE vehicles SET deleted_at=GETDATE() WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
         }
         public VehicleModel FindById(int id)
         {

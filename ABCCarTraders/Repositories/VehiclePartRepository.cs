@@ -107,10 +107,18 @@ namespace ABCCarTraders.Repositories
 
         public bool Delete(int id)
         {
-            string query = $"DELETE FROM vehicle_parts WHERE id={id}";
-
-            int rowsAffected = _dbService.ExecuteNonQuery(query);
-            return rowsAffected > 0;
+            try
+            {
+                string query = $"DELETE FROM vehicle_parts WHERE id = {id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                string softDeleteQuery = $"UPDATE vehicle_parts SET deleted_at = GETDATE() WHERE id = {id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(softDeleteQuery);
+                return rowsAffected > 0;
+            }
         }
 
         public VehiclePartModel FindById(int id)

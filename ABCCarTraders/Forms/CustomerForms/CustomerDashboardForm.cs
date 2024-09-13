@@ -21,6 +21,7 @@ namespace ABCCarTraders.Forms.CustomerForms
             InitializeComponent();
             loadUser();
             _authService = new AuthenticationService();
+            loadForm(new ShopForm(this));
         }
 
         private void loadUser()
