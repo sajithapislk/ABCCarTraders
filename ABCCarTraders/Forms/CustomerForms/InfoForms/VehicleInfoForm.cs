@@ -32,9 +32,9 @@ namespace ABCCarTraders.Forms.CustomerForms.InfoForms
         {
             txtVehicleName.Text = _vehicleModel.Name;
             txtVehicleNo.Text = _vehicleModel.Number;
-            cbVehicleType.SelectedValue = _vehicleModel.Type;
-            cbVehicleBrand.SelectedValue = _vehicleModel.Brand;
-            cbVehicleColor.Text = _vehicleModel.Color;
+            txtVehicleType.Text = _vehicleModel.Type.ToString();
+            txtVehicleBrand.Text = _vehicleModel.Brand.ToString();
+            txtVehicleColor.Text = _vehicleModel.Color;
             txtVehicleYear.Text = _vehicleModel.Year;
             txtPrice.Text = _vehicleModel.Price.ToString();
             txtVehicleEngine.Text = _vehicleModel.Engine;

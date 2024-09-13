@@ -30,9 +30,7 @@
         {
             this.rtxDescription = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbVehicle = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -43,6 +41,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picItem = new System.Windows.Forms.PictureBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtVehicle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,15 +65,6 @@
             this.label7.TabIndex = 37;
             this.label7.Text = "Vehicle";
             // 
-            // cbVehicle
-            // 
-            this.cbVehicle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbVehicle.FormattingEnabled = true;
-            this.cbVehicle.Location = new System.Drawing.Point(106, 113);
-            this.cbVehicle.Name = "cbVehicle";
-            this.cbVehicle.Size = new System.Drawing.Size(137, 27);
-            this.cbVehicle.TabIndex = 36;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -83,15 +74,6 @@
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 38;
             this.label2.Text = "Category";
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(108, 76);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(137, 27);
-            this.cbCategory.TabIndex = 35;
             // 
             // txtPrice
             // 
@@ -183,6 +165,22 @@
             this.picItem.TabIndex = 42;
             this.picItem.TabStop = false;
             // 
+            // txtCategory
+            // 
+            this.txtCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtCategory.Location = new System.Drawing.Point(108, 79);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(137, 26);
+            this.txtCategory.TabIndex = 34;
+            // 
+            // txtVehicle
+            // 
+            this.txtVehicle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVehicle.Location = new System.Drawing.Point(108, 109);
+            this.txtVehicle.Name = "txtVehicle";
+            this.txtVehicle.Size = new System.Drawing.Size(137, 26);
+            this.txtVehicle.TabIndex = 34;
+            // 
             // VehiclePartInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,13 +189,13 @@
             this.Controls.Add(this.picItem);
             this.Controls.Add(this.rtxDescription);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbVehicle);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtBrand);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtVehicle);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.txtPartNo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -215,9 +213,7 @@
         #endregion
         private System.Windows.Forms.RichTextBox rtxDescription;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbVehicle;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtName;
@@ -228,5 +224,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picItem;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.TextBox txtVehicle;
     }
 }

@@ -29,12 +29,12 @@ namespace ABCCarTraders.Forms.CustomerForms.InfoForms
         }
         private void loadData()
         {
-            cbCategory.SelectedValue = _vehiclePartModel.CategoryId;
+            txtCategory.Text = _vehiclePartModel.CategoryId.ToString();
             txtPrice.Text = _vehiclePartModel.Price.ToString();
             txtBrand.Text = _vehiclePartModel.Brand;
             txtName.Text = _vehiclePartModel.Name;
             txtPartNo.Text = _vehiclePartModel.PartNumber;
-            cbVehicle.SelectedValue = _vehiclePartModel.VehicleId;
+            txtVehicle.Text = _vehiclePartModel.VehicleId.ToString();
             rtxDescription.Text = _vehiclePartModel.Description;
         
             string _img = _vehiclePartModel.Img;

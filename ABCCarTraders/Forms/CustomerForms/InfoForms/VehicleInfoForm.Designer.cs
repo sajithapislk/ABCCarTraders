@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbVehicleColor = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbVehicleBrand = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbVehicleType = new System.Windows.Forms.ComboBox();
             this.txtVehicleAFC = new System.Windows.Forms.TextBox();
             this.txtVehiclePower = new System.Windows.Forms.TextBox();
             this.txtVehicleTorque = new System.Windows.Forms.TextBox();
@@ -53,184 +50,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picItem = new System.Windows.Forms.PictureBox();
+            this.txtVehicleType = new System.Windows.Forms.TextBox();
+            this.txtVehicleBrand = new System.Windows.Forms.TextBox();
+            this.txtVehicleColor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picItem)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbVehicleColor
-            // 
-            this.cbVehicleColor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbVehicleColor.FormattingEnabled = true;
-            this.cbVehicleColor.Items.AddRange(new object[] {
-            "alizarin",
-            "amaranth",
-            "amber",
-            "amethyst",
-            "apricot",
-            "aqua",
-            "aquamarine",
-            "asparagus",
-            "auburn",
-            "azure",
-            "beige",
-            "bistre",
-            "black",
-            "blue",
-            "blue-green",
-            "blue-violet",
-            "bondi-blue",
-            "brass",
-            "bronze",
-            "brown",
-            "buff",
-            "burgundy",
-            "camouflage-green",
-            "caput-mortuum",
-            "cardinal",
-            "carmine",
-            "carrot-orange",
-            "celadon",
-            "cerise",
-            "cerulean",
-            "champagne",
-            "charcoal",
-            "chartreuse",
-            "cherry-blossom-pink",
-            "chestnut",
-            "chocolate",
-            "cinnabar",
-            "cinnamon",
-            "cobalt",
-            "copper",
-            "coral",
-            "corn",
-            "cornflower",
-            "cream",
-            "crimson",
-            "cyan",
-            "dandelion",
-            "denim",
-            "ecru",
-            "emerald",
-            "eggplant",
-            "falu-red",
-            "fern-green",
-            "firebrick",
-            "flax",
-            "forest-green",
-            "french-rose",
-            "fuchsia",
-            "gamboge",
-            "gold",
-            "goldenrod",
-            "green",
-            "grey",
-            "han-purple",
-            "harlequin",
-            "heliotrope",
-            "hollywood-cerise",
-            "indigo",
-            "ivory",
-            "jade",
-            "kelly-green",
-            "khaki",
-            "lavender",
-            "lawn-green",
-            "lemon",
-            "lemon-chiffon",
-            "lilac",
-            "lime",
-            "lime-green",
-            "linen",
-            "magenta",
-            "magnolia",
-            "malachite",
-            "maroon",
-            "mauve",
-            "midnight-blue",
-            "mint-green",
-            "misty-rose",
-            "moss-green",
-            "mustard",
-            "myrtle",
-            "navajo-white",
-            "navy-blue",
-            "ochre",
-            "office-green",
-            "olive",
-            "olivine",
-            "orange",
-            "orchid",
-            "papaya-whip",
-            "peach",
-            "pear",
-            "periwinkle",
-            "persimmon",
-            "pine-green",
-            "pink",
-            "platinum",
-            "plum",
-            "powder-blue",
-            "puce",
-            "prussian-blue",
-            "psychedelic-purple",
-            "pumpkin",
-            "purple",
-            "quartz-grey",
-            "raw-umber",
-            "razzmatazz",
-            "red",
-            "robin-egg-blue",
-            "rose",
-            "royal-blue",
-            "royal-purple",
-            "ruby",
-            "russet",
-            "rust",
-            "safety-orange",
-            "saffron",
-            "salmon",
-            "sandy-brown",
-            "sangria",
-            "sapphire",
-            "scarlet",
-            "school-bus-yellow",
-            "sea-green",
-            "seashell",
-            "sepia",
-            "shamrock-green",
-            "shocking-pink",
-            "silver",
-            "sky-blue",
-            "slate-grey",
-            "smalt",
-            "spring-bud",
-            "spring-green",
-            "steel-blue",
-            "tan",
-            "tangerine",
-            "taupe",
-            "teal",
-            "tenné-(tawny)",
-            "terra-cotta",
-            "thistle",
-            "titanium-white",
-            "tomato",
-            "turquoise",
-            "tyrian-purple",
-            "ultramarine",
-            "van-dyke-brown",
-            "vermilion",
-            "violet",
-            "viridian",
-            "wheat",
-            "white",
-            "wisteria",
-            "yellow",
-            "zucchini"});
-            this.cbVehicleColor.Location = new System.Drawing.Point(99, 428);
-            this.cbVehicleColor.Name = "cbVehicleColor";
-            this.cbVehicleColor.Size = new System.Drawing.Size(157, 27);
-            this.cbVehicleColor.TabIndex = 59;
             // 
             // label7
             // 
@@ -242,15 +66,6 @@
             this.label7.TabIndex = 58;
             this.label7.Text = "Brand";
             // 
-            // cbVehicleBrand
-            // 
-            this.cbVehicleBrand.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbVehicleBrand.FormattingEnabled = true;
-            this.cbVehicleBrand.Location = new System.Drawing.Point(99, 391);
-            this.cbVehicleBrand.Name = "cbVehicleBrand";
-            this.cbVehicleBrand.Size = new System.Drawing.Size(157, 27);
-            this.cbVehicleBrand.TabIndex = 56;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -260,15 +75,6 @@
             this.label2.Size = new System.Drawing.Size(42, 19);
             this.label2.TabIndex = 57;
             this.label2.Text = "Type";
-            // 
-            // cbVehicleType
-            // 
-            this.cbVehicleType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbVehicleType.FormattingEnabled = true;
-            this.cbVehicleType.Location = new System.Drawing.Point(99, 354);
-            this.cbVehicleType.Name = "cbVehicleType";
-            this.cbVehicleType.Size = new System.Drawing.Size(157, 27);
-            this.cbVehicleType.TabIndex = 55;
             // 
             // txtVehicleAFC
             // 
@@ -450,17 +256,38 @@
             this.picItem.TabIndex = 60;
             this.picItem.TabStop = false;
             // 
+            // txtVehicleType
+            // 
+            this.txtVehicleType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleType.Location = new System.Drawing.Point(99, 359);
+            this.txtVehicleType.Name = "txtVehicleType";
+            this.txtVehicleType.Size = new System.Drawing.Size(157, 26);
+            this.txtVehicleType.TabIndex = 46;
+            // 
+            // txtVehicleBrand
+            // 
+            this.txtVehicleBrand.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleBrand.Location = new System.Drawing.Point(99, 393);
+            this.txtVehicleBrand.Name = "txtVehicleBrand";
+            this.txtVehicleBrand.Size = new System.Drawing.Size(157, 26);
+            this.txtVehicleBrand.TabIndex = 46;
+            // 
+            // txtVehicleColor
+            // 
+            this.txtVehicleColor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleColor.Location = new System.Drawing.Point(99, 424);
+            this.txtVehicleColor.Name = "txtVehicleColor";
+            this.txtVehicleColor.Size = new System.Drawing.Size(157, 26);
+            this.txtVehicleColor.TabIndex = 46;
+            // 
             // VehicleInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 543);
             this.Controls.Add(this.picItem);
-            this.Controls.Add(this.cbVehicleColor);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbVehicleBrand);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbVehicleType);
             this.Controls.Add(this.txtVehicleAFC);
             this.Controls.Add(this.txtVehiclePower);
             this.Controls.Add(this.txtVehicleTorque);
@@ -469,6 +296,9 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtVehicleYear);
             this.Controls.Add(this.txtVehicleName);
+            this.Controls.Add(this.txtVehicleColor);
+            this.Controls.Add(this.txtVehicleBrand);
+            this.Controls.Add(this.txtVehicleType);
             this.Controls.Add(this.txtVehicleNo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label12);
@@ -490,11 +320,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cbVehicleColor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbVehicleBrand;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbVehicleType;
         private System.Windows.Forms.TextBox txtVehicleAFC;
         private System.Windows.Forms.TextBox txtVehiclePower;
         private System.Windows.Forms.TextBox txtVehicleTorque;
@@ -515,5 +342,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picItem;
+        private System.Windows.Forms.TextBox txtVehicleType;
+        private System.Windows.Forms.TextBox txtVehicleBrand;
+        private System.Windows.Forms.TextBox txtVehicleColor;
     }
 }
