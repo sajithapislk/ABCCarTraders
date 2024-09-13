@@ -144,7 +144,7 @@ namespace ABCCarTraders.Forms.CustomerForms
 
         private void btnViewCart_Click(object sender, EventArgs e)
         {
-            var cartForm = new CartForm();
+            var cartForm = new CartForm(_dashboardForm);
             _dashboardForm.loadForm(cartForm);
         }
     }

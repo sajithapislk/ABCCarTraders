@@ -35,6 +35,7 @@ namespace ABCCarTraders.Repositories
                         CustomerId = Convert.ToInt32(row["customer_id"]),
                         Address = row["address"].ToString(),
                         Status = row["status"].ToString(),
+                        Amount = double.Parse(row["amount"].ToString())
                     };
 
                     vehicle_orders.Add(order);
@@ -73,6 +74,29 @@ namespace ABCCarTraders.Repositories
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;
         }
+        public OrderModel FindById(int id)
+        {
+            string query = $"SELECT * FROM orders WHERE id={id}";
+            DataTable result = _dbService.ExecuteQuery(query);
+            OrderModel vehicle_order = new OrderModel();
 
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                
+                OrderModel order = new OrderModel
+                {
+                    Id = Convert.ToInt32(row["id"]),
+                    CustomerId = Convert.ToInt32(row["customer_id"]),
+                    Address = row["address"].ToString(),
+                    Status = row["status"].ToString(),
+                    Amount = double.Parse(row["amount"].ToString())
+                };
+                
+
+                return order;
+            }
+            return null;
+        }
     }
 }

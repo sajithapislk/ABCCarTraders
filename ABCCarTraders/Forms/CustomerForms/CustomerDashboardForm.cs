@@ -54,7 +54,7 @@ namespace ABCCarTraders.Forms.CustomerForms
 
         public void btnCart_Click(object sender, EventArgs e)
         {
-            loadForm(new CartForm());
+            loadForm(new CartForm(this));
         }
 
         private void btnOrderHistory_Click(object sender, EventArgs e)

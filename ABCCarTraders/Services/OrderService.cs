@@ -17,7 +17,10 @@ namespace ABCCarTraders.Services
         {
             _vehicleOrderRepository = new OrderRepository();
         }
-
+        public OrderModel FindById(int id)
+        {
+            return _vehicleOrderRepository.FindById(id);
+        }
         public List<OrderModel> List()
         {
             return _vehicleOrderRepository.All();

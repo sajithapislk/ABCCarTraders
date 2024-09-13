@@ -210,6 +210,12 @@
     <Compile Include="Forms\CustomerForms\OrderHistoryForm.Designer.cs">
       <DependentUpon>OrderHistoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerForms\ReportForms\OrderSuccessReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForms\ReportForms\OrderSuccessReportForm.Designer.cs">
+      <DependentUpon>OrderSuccessReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForms\ShopForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     <EmbeddedResource Include="Forms\CustomerForms\OrderHistoryForm.resx">
       <DependentUpon>OrderHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForms\ReportForms\OrderSuccessReportForm.resx">
+      <DependentUpon>OrderSuccessReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForms\ShopForm.resx">
       <DependentUpon>ShopForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +377,7 @@
     </Compile>
     <EmbeddedResource Include="Reports\AdminReports\CustomerOrderReport.rdlc" />
     <EmbeddedResource Include="Reports\AdminReports\VehicleReport.rdlc" />
+    <EmbeddedResource Include="Reports\CustinerReports\OrderSuccessReport.rdlc" />
     <EmbeddedResource Include="Widgets\ItemWidget.resx">
       <DependentUpon>ItemWidget.cs</DependentUpon>
     </EmbeddedResource>

@@ -3,6 +3,7 @@ using ABCCarTraders.Forms.AdminForms;
 using ABCCarTraders.Forms.AdminForms.ReportForms;
 using ABCCarTraders.Forms.AdminForms.VehiclePartForms;
 using ABCCarTraders.Forms.CustomerForms;
+using ABCCarTraders.Forms.CustomerForms.ReportForms;
 using ABCCarTraders.Models;
 using ABCCarTraders.Utils;
 using System;

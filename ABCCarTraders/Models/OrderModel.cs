@@ -11,7 +11,7 @@ namespace ABCCarTraders.Models
         public int Id { get; set; }
         public int CustomerId { get; set; }
         public string Address { get; set; }
-        public decimal Amount { get; set; }
+        public double Amount { get; set; }
         public string Status { get; set; }
     }
 }

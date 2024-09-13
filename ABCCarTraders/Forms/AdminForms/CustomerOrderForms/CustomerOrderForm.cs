@@ -45,7 +45,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
                 {
                     Id = int.Parse(currentRow.Cells["Id"].Value.ToString()),
                     Address = currentRow.Cells["Address"].Value.ToString(),
-                    Amount = decimal.Parse(currentRow.Cells["Amount"].Value.ToString()),
+                    Amount = double.Parse(currentRow.Cells["Amount"].Value.ToString()),
                     CustomerId = int.Parse(currentRow.Cells["CustomerId"].Value.ToString()),
                     Status = currentRow.Cells["Status"].Value.ToString()
                 };
@@ -60,8 +60,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
             {
                 DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
 
-                var _form = new CustomerOrderViewForm();
-                _form.OrderId = int.Parse(currentRow.Cells["Id"].Value.ToString());
+                var _form = new CustomerOrderViewForm(int.Parse(currentRow.Cells["Id"].Value.ToString()));
 
                 _form.ShowDialog();
             }

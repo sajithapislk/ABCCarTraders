@@ -27,9 +27,9 @@ namespace ABCCarTraders.Services
 
             _tempList = _tempOrderInfoService.List();
         }
-        public bool ConvertList(string address)
+        public int ConvertList(string address, double total)
         {
-            if (address == null) return false;
+            if (address == null) return -1;
             try
             {
                 SessionManager.LoadSession();
@@ -39,7 +39,7 @@ namespace ABCCarTraders.Services
                 {
                     CustomerId=userId,
                     Address=address,
-                    Amount=0,
+                    Amount= total,
                     Status="Pending"
                 };
                 int orderId = _vehicleOrderRepository.Add(order);
@@ -57,11 +57,11 @@ namespace ABCCarTraders.Services
                 }
                 _tempOrderInfoService.clearTempData();
 
-                return true;
+                return orderId;
             }
             catch (Exception e)
             {
-                return false;
+                return -1;
             }
         }
     }

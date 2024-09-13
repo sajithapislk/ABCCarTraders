@@ -10,23 +10,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
+namespace ABCCarTraders.Forms.CustomerForms.ReportForms
 {
-    public partial class CustomerOrderViewForm : Form
+    public partial class OrderSuccessReportForm : Form
     {
+        private readonly OrderService _orderService;
         private readonly VehicleService _vehicleService;
         private readonly VehiclePartService _vehiclePartService;
         private readonly OrderInfoService _orderInfoService;
 
         private List<VehiclePartModel> _vehiclePartList;
         private List<VehicleModel> _vehicleList;
+        private OrderModel _order;
 
         private int _orderId;
-
-        public CustomerOrderViewForm(int orderId)
+        public OrderSuccessReportForm(int orderId)
         {
             InitializeComponent();
+
             _orderId = orderId;
+            _orderService = new OrderService();
             _vehicleService = new VehicleService();
             _vehiclePartService = new VehiclePartService();
             _orderInfoService = new OrderInfoService();
@@ -34,20 +37,29 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
             _vehiclePartList = new List<VehiclePartModel>();
             _vehicleList = new List<VehicleModel>();
         }
+        private void passDataToReport()
+        {
+            List<OrderModel> _orderList = new List<OrderModel> { _order };
+            // Create report data sources for each dataset
+            var orderDataSource = new Microsoft.Reporting.WinForms.ReportDataSource("OrderDataset", _orderList);
+            var vehicleDataSource = new Microsoft.Reporting.WinForms.ReportDataSource("VehicleDataset", _vehicleList);
+            var vehiclePartDataSource = new Microsoft.Reporting.WinForms.ReportDataSource("VehiclePartDataset", _vehiclePartList);
 
-        private void getVehicles()
-        {
-            dgvVehicle.ClearSelection();
-            dgvVehicle.DataSource = _vehicleList;
-        }
-        private void getVehicleParts()
-        {
-            dgvVehiclePart.ClearSelection();
-            dgvVehiclePart.DataSource = _vehiclePartList;
+            // Clear existing data sources
+            this.reportViewer1.LocalReport.DataSources.Clear();
+
+            // Add the new data sources
+            this.reportViewer1.LocalReport.DataSources.Add(orderDataSource);
+            this.reportViewer1.LocalReport.DataSources.Add(vehicleDataSource);
+            this.reportViewer1.LocalReport.DataSources.Add(vehiclePartDataSource);
+
+            // Refresh the report to show the data
+            this.reportViewer1.RefreshReport();
         }
 
-        private void LoadData()
+        private void loadData()
         {
+            _order = _orderService.FindById(_orderId);
             var vehicleList = _vehicleService.List();
             var vehiclePartList = _vehiclePartService.List();
 
@@ -56,7 +68,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
             var VehicleOrderList = list["VehicleOrderList"] as List<VehicleOrderInfoModel>;
             var VehiclePartOrderList = list["VehiclePartOrderList"] as List<VehiclePartOrderInfoModel>;
 
-            if (VehicleOrderList!=null)
+            if (VehicleOrderList != null)
             {
                 for (int i = 0; i < VehicleOrderList.Count(); i++)
                 {
@@ -68,7 +80,7 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
                     }
                 }
             }
-            if (VehiclePartOrderList!=null)
+            if (VehiclePartOrderList != null)
             {
                 for (int i = 0; i < VehiclePartOrderList.Count(); i++)
                 {
@@ -80,13 +92,12 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerOrderForms
                     }
                 }
             }
-
-            getVehicles();
-            getVehicleParts();
         }
-        private void CustomerOrderViewForm_Activated(object sender, EventArgs e)
+
+        private void OrderSuccessReportForm_Load(object sender, EventArgs e)
         {
-            LoadData();
+            loadData();
+            passDataToReport();
         }
     }
 }

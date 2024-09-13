@@ -51,6 +51,7 @@ namespace ABCCarTraders.Services
         {
             TempVehicleOrderManager.Clear();
             TempVehiclePartOrderManager.Clear();
+            list.Clear();
         }
         public void DeleteIndex(string type, int index)
         {

@@ -5,11 +5,14 @@ using System.Windows.Forms;
 using ABCCarTraders.Models;
 using ABCCarTraders.Services;
 using System.Data;
+using ABCCarTraders.Forms.CustomerForms.ReportForms;
 
 namespace ABCCarTraders.Forms.CustomerForms
 {
     public partial class CartForm : Form
     {
+        private CustomerDashboardForm _dashboardForm;
+
         private readonly VehicleService _vehicleService;
         private readonly VehiclePartService _vehiclePartService;
         private readonly TempOrderInfoService _tempOrderInfoService;
@@ -21,9 +24,10 @@ namespace ABCCarTraders.Forms.CustomerForms
 
         private double totalAmout = 0.00; 
 
-        public CartForm()
+        public CartForm(CustomerDashboardForm dashboardForm)
         {
             InitializeComponent();
+            _dashboardForm = dashboardForm;
             _vehicleService = new VehicleService();
             _vehiclePartService = new VehiclePartService();
             _tempOrderInfoService = new TempOrderInfoService();
@@ -41,6 +45,8 @@ namespace ABCCarTraders.Forms.CustomerForms
 
         private void FetchData()
         {
+            dgvList.Rows.Clear();
+            dgvList.Refresh();
             AddOrdersToGrid("VehicleOrders", true, "Vehicle");
             AddOrdersToGrid("VehiclePartOrders", false, "Part");
             lblAmount.Text = totalAmout.ToString();
@@ -80,11 +86,13 @@ namespace ABCCarTraders.Forms.CustomerForms
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string address = txtAddress.Text;
-            var res = _tempCartToPermentService.ConvertList(address);
-            if (res)
+            var res = _tempCartToPermentService.ConvertList(address, totalAmout);
+            if (res > 0)
             {
                 MessageBox.Show("Order placed successfull");
-                FetchData();
+                var form = new OrderHistoryForm();
+                new OrderSuccessReportForm(res).ShowDialog();
+                _dashboardForm.loadForm(form);
             }
             else
             {
