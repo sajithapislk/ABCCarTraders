@@ -72,6 +72,12 @@
     <Compile Include="Forms\AdminForms\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\CustomerForms\CustomerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CustomerForms\CustomerEditForm.Designer.cs">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,10 +114,10 @@
     <Compile Include="Forms\AdminForms\VehiclePartCategoryForms\VehiclePartCategoryForm.Designer.cs">
       <DependentUpon>VehiclePartCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerForm.cs">
+    <Compile Include="Forms\AdminForms\CustomerForms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\CustomerForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\CustomerForms\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderForm.cs">
@@ -270,6 +276,7 @@
     <Compile Include="Services\VehicleTypeService.cs" />
     <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Utils\TempVehiclePartOrderManager.cs" />
+    <Compile Include="Utils\ValidatioManager.cs" />
     <Compile Include="Widgets\ItemWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,8 +288,11 @@
     <EmbeddedResource Include="Forms\AdminForms\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\CustomerForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\CustomerForms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CustomerForms\CustomerEditForm.resx">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CustomerOrderForms\CustomerOrderForm.resx">
       <DependentUpon>CustomerOrderForm.cs</DependentUpon>

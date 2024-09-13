@@ -64,7 +64,8 @@ namespace ABCCarTraders.Repositories
                         Id = Convert.ToInt32(row["id"]),
                         Name = row["name"].ToString(),
                         Email = row["email"].ToString(),
-                        Tp = row["tp"].ToString()
+                        Tp = row["tp"].ToString(),
+                        Username = row["username"].ToString(),
                     };
 
                     _customers.Add(_customer);
@@ -85,6 +86,34 @@ namespace ABCCarTraders.Repositories
             else
             {
                 query = $"INSERT INTO Users (Username, Password, IsAdmin) VALUES ('{user.Username}', '{user.Password}', 1)";
+            }
+
+            int rowsAffected = _dbService.ExecuteNonQuery(query);
+            return rowsAffected > 0;
+        }
+
+        public bool UpdateUser(UserModel user)
+        {
+            string query;
+
+            if (user is CustomerModel)
+            {
+                CustomerModel customer = user as CustomerModel;
+
+                query = $"UPDATE users SET " +
+                        $"username = '{customer.Username}', " +
+                        $"name = '{customer.Name}', " +
+                        $"email = '{customer.Email}', " +
+                        $"tp = '{customer.Tp}', " +
+                        $"is_admin = 0 " +
+                        $"WHERE id = {customer.Id}";
+            }
+            else
+            {
+                query = $"UPDATE users SET " +
+                        $"username = '{user.Username}', " +
+                        $"is_admin = 1 " +
+                        $"WHERE id = {user.Id}";
             }
 
             int rowsAffected = _dbService.ExecuteNonQuery(query);

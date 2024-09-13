@@ -1,5 +1,5 @@
-﻿using ABCCarTraders.Services;
-using ABCCarTraders.Utils;
+﻿using ABCCarTraders.Models;
+using ABCCarTraders.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,26 +10,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCCarTraders.Forms
+namespace ABCCarTraders.Forms.AdminForms.CustomerForms
 {
-    public partial class CustomerRegisterForm : Form
+    public partial class CustomerEditForm : Form
     {
         private readonly CustomerService _customerService;
-        public CustomerRegisterForm()
+        private CustomerModel _data;
+
+        public CustomerEditForm(CustomerModel customerModel)
         {
             InitializeComponent();
+            _data = customerModel;
             _customerService = new CustomerService();
         }
+        private void loadData()
+        {
+            txtName.Text = _data.Name;
+            txtEmail.Text = _data.Email;
+            txtTp.Text = _data.Tp;
+            txtUsername.Text = _data.Username;
+        }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void CustomerEditForm_Load(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            string password = txtPassword.Text;
             string name = txtName.Text;
             string email = txtEmail.Text;
             string tp = txtTp.Text;
 
-            var res = _customerService.RegisterCustomer(username, password, name, email, tp,false);
+            var res = _customerService.UpdateCustomer(_data.Id, username, name, email, tp);
             if (res)
             {
                 MessageBox.Show("Customer register successfull");
@@ -40,12 +54,6 @@ namespace ABCCarTraders.Forms
             {
                 MessageBox.Show("Customer register failled");
             }
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new LoginForm().Show();
         }
     }
 }

@@ -25,19 +25,6 @@ namespace ABCCarTraders.Services
             if (user!=null) SessionManager.Login(user);
             return user;
         }
-        public bool RegisterCustomer(string username, string password, string name, string email, string tp)
-        {
-            if (username == null || password == null || name == null || email == null || tp == null) return false;
-            var customer = new CustomerModel
-            {
-                Username = username,
-                Password = password,
-                Name = name,
-                Email = email,
-                Tp = tp
-            };
-            return _userRepository.AddUser(customer);
-        }
         public void Logout()
         {
             SessionManager.Logout();
