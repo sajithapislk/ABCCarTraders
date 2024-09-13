@@ -75,8 +75,8 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartCategoryForms
                 {
                     DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
                     int _id = int.Parse(currentRow.Cells["Id"].Value.ToString());
-                    //_vehicleService.DeleteVehicle(_id);
-                    //getVehicles();
+                    _vehiclePartCategoryService.Delete(_id);
+                    getCategory();
                 }
             }
         }

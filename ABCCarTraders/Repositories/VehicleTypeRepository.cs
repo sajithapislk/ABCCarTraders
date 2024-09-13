@@ -20,7 +20,7 @@ namespace ABCCarTraders.Repositories
 
         public List<VehicleTypeModel> GetTypes()
         {
-            string query = $"SELECT * FROM vehicle_types";
+            string query = $"SELECT * FROM vehicle_types WHERE deleted_at IS NULL";
             DataTable result = _dbService.ExecuteQuery(query);
             List<VehicleTypeModel> carTypes = new List<VehicleTypeModel>();
 
@@ -65,7 +65,7 @@ namespace ABCCarTraders.Repositories
             }
             catch (Exception ex)
             {
-                string query = "UPDATE vehicle_types SET deleted_at=GETDATE() WHERE id={id}";
+                string query = $"UPDATE vehicle_types SET deleted_at=GETDATE() WHERE id={id}";
                 int rowsAffected = _dbService.ExecuteNonQuery(query);
                 return rowsAffected > 0;
             }

@@ -45,5 +45,9 @@ namespace ABCCarTraders.Services
         {
             return _vehicleOrderRepository.UpdateStatus(id,status);
         }
+        public bool Delete(int id)
+        {
+            return _vehicleOrderRepository.Delete(id);
+        }
     }
 }

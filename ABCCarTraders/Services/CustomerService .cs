@@ -61,5 +61,9 @@ namespace ABCCarTraders.Services
 
             return _userRepository.UpdateUser(user);
         }
+        public bool Delete(int id)
+        {
+            return _userRepository.Delete(id);
+        }
     }
 }

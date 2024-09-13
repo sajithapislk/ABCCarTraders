@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public List<VehiclePartModel> All()
         {
-            string query = $"SELECT * FROM vehicle_parts";
+            string query = $"SELECT * FROM vehicle_parts WHERE deleted_at IS NULL";
             DataTable result = _dbService.ExecuteQuery(query);
             List<VehiclePartModel> vehicleParts = new List<VehiclePartModel>();
 

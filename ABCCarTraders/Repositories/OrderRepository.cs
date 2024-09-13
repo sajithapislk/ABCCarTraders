@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public List<OrderModel> All()
         {
-            string query = $"SELECT * FROM orders";
+            string query = $"SELECT * FROM orders WHERE deleted_at IS NULL";
             DataTable result = _dbService.ExecuteQuery(query);
             List<OrderModel> vehicle_orders = new List<OrderModel>();
 
@@ -63,13 +63,13 @@ namespace ABCCarTraders.Repositories
         {
             try
             {
-                string query = "DELETE FROM orders WHERE id={id}";
+                string query = $"DELETE FROM orders WHERE id={id}";
                 int rowsAffected = _dbService.ExecuteNonQuery(query);
                 return rowsAffected > 0;
             }
             catch (Exception ex)
             {
-                string query = "UPDATE orders SET deleted_at=GETDATE() WHERE id={id}";
+                string query = $"UPDATE orders SET deleted_at=GETDATE() WHERE id={id}";
                 int rowsAffected = _dbService.ExecuteNonQuery(query);
                 return rowsAffected > 0;
             }

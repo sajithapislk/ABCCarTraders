@@ -21,7 +21,7 @@ namespace ABCCarTraders.Repositories
 
         public UserModel GetUserForLogin(string username, string password)
         {
-            string query = $"SELECT * FROM users WHERE username = @username AND password = @password";
+            string query = $"SELECT * FROM users WHERE username = @username AND password = @password AND deleted_at IS NULL";
             DataTable result = _dbService.ExecuteQueryWithParameters(query, new SqlParameter("@username", username), new SqlParameter("@password", password));
             if (result.Rows.Count > 0)
             {
@@ -118,6 +118,21 @@ namespace ABCCarTraders.Repositories
 
             int rowsAffected = _dbService.ExecuteNonQuery(query);
             return rowsAffected > 0;
+        }
+        public bool Delete(int id)
+        {
+            try
+            {
+                string query = $"DELETE FROM users WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                string query = $"UPDATE users SET deleted_at=GETDATE() WHERE id={id}";
+                int rowsAffected = _dbService.ExecuteNonQuery(query);
+                return rowsAffected > 0;
+            }
         }
     }
 }

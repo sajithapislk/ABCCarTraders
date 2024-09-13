@@ -31,5 +31,9 @@ namespace ABCCarTraders.Services
             if (name == null) return false;
             return _vehicleBrandRepository.UpdateBrand(id, name);
         }
+        public bool Delete(int id)
+        {
+            return _vehicleBrandRepository.DeleteBrand(id);
+        }
     }
 }

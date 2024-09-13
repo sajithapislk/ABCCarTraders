@@ -32,5 +32,9 @@ namespace ABCCarTraders.Services
             if (name == null) return false;
             return _vehiclePartCategoryRepository.UpdateCategory(id,name);
         }
+        public bool Delete(int id)
+        {
+            return _vehiclePartCategoryRepository.DeleteCategory(id);
+        }
     }
 }

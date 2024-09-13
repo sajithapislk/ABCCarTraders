@@ -123,13 +123,13 @@ namespace ABCCarTraders.Repositories
         {
             try
             {
-                string query = "DELETE FROM vehicles WHERE id={id}";
+                string query = $"DELETE FROM vehicles WHERE id={id}";
                 int rowsAffected = _dbService.ExecuteNonQuery(query);
                 return rowsAffected > 0;
             }
             catch (Exception ex)
             {
-                string query = "UPDATE vehicles SET deleted_at=GETDATE() WHERE id={id}";
+                string query = $"UPDATE vehicles SET deleted_at=GETDATE() WHERE id={id}";
                 int rowsAffected = _dbService.ExecuteNonQuery(query);
                 return rowsAffected > 0;
             }
