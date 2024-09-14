@@ -64,7 +64,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
             string description = rtxDescription.Text;
 
 
-            bool res = _vehiclePartService.UpdateVehiclePart(_vehiclePartModel.Id ?? 0, vehicleId, categoryId ?? 0, name, partNo, brand, price, qty, description);
+            bool res = _vehiclePartService.UpdateVehiclePart(_vehiclePartModel.Id, vehicleId, categoryId, name, partNo, brand, price, qty, description);
 
             if (res)
             {

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ABCCarTraders.Services
 {
@@ -20,7 +21,11 @@ namespace ABCCarTraders.Services
 
         public UserModel Login(string username, string password)
         {
-            if (username == null || password == null) return null;
+            if (Validation.IsEmpty(username, password))
+            {
+                MessageBox.Show("Validation failed: Some fields are empty or invalid.");
+                return null;
+            }
             UserModel user = _userRepository.GetUserForLogin(username, password);
             if (user!=null) SessionManager.Login(user);
             return user;

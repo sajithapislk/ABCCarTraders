@@ -57,7 +57,7 @@ namespace ABCCarTraders.Forms.AdminForms.VehiclePartForms
 
             string filePath = lblFilePath.Text;
             string fileName = Path.GetFileName(filePath);
-            bool res = _vehiclePartService.RegisterVehiclePart(vehicleId, categoryId ?? 0, name, partNo, brand, price, qty, description, fileName);
+            bool res = _vehiclePartService.RegisterVehiclePart(vehicleId, categoryId, name, partNo, brand, price, qty, description, fileName);
 
             if (res)
             {

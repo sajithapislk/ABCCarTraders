@@ -1,10 +1,12 @@
 ﻿using ABCCarTraders.Models;
 using ABCCarTraders.Repositories;
+using ABCCarTraders.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ABCCarTraders.Services
 {
@@ -22,13 +24,17 @@ namespace ABCCarTraders.Services
             return _vehiclePartRepository.All();
         }
 
-        public bool RegisterVehiclePart(int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description, string fileName)
+        public bool RegisterVehiclePart(int? vehicleId, int? categoryId, string name, string partNumber, string brand, double price, int qty, string description, string fileName)
         {
-            if (vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == 0 || qty == 0 || description == null || fileName == null) return false;
+            if (Validation.IsEmpty(name, partNumber, brand,  description, fileName) || vehicleId == null || categoryId == null)
+            {
+                MessageBox.Show("Validation failed: Some fields are empty or invalid.");
+                return false;
+            }
             var vehiclePart = new VehiclePartModel
             {
-                VehicleId = vehicleId ?? 0,
-                CategoryId = categoryId,
+                VehicleId = vehicleId.Value,
+                CategoryId = categoryId.Value,
                 Name = name,
                 PartNumber = partNumber,
                 Brand = brand,
@@ -40,14 +46,18 @@ namespace ABCCarTraders.Services
 
             return _vehiclePartRepository.Add(vehiclePart);
         }
-        public bool UpdateVehiclePart(int id, int? vehicleId, int categoryId, string name, string partNumber, string brand, double price, int qty, string description)
+        public bool UpdateVehiclePart(int? id, int? vehicleId, int? categoryId, string name, string partNumber, string brand, double price, int qty, string description)
         {
-            if (id == null || vehicleId == null || categoryId == null || name == null || partNumber == null || brand == null || price == null || qty == null || description == null) return false;
+            if (Validation.IsEmpty(name, partNumber, brand, description) || vehicleId == null || categoryId == null)
+            {
+                MessageBox.Show("Validation failed: Some fields are empty or invalid.");
+                return false;
+            }
             var vehiclePart = new VehiclePartModel
             {
-                Id = id,
-                VehicleId = vehicleId ?? 0,
-                CategoryId = categoryId,
+                Id = id.Value,
+                VehicleId = vehicleId.Value,
+                CategoryId = categoryId.Value,
                 Name = name,
                 PartNumber = partNumber,
                 Brand = brand,

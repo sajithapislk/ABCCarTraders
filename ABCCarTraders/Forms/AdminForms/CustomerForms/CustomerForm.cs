@@ -64,8 +64,8 @@ namespace ABCCarTraders.Forms.AdminForms.CustomerForms
                 {
                     DataGridViewRow currentRow = dgvList.Rows[e.RowIndex];
                     int _id = int.Parse(currentRow.Cells["Id"].Value.ToString());
-                    //_customerService.DeleteVehicle(_id);
-                    //getVehicles();
+                    _customerService.Delete(_id);
+                    getVehicles();
                 }
             }
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,6 +53,8 @@
             // 
             // dgvList
             // 
+            this.dgvList.AllowUserToAddRows = false;
+            this.dgvList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,6 +72,15 @@
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
+            this.dgvList.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.Size = new System.Drawing.Size(792, 640);
             this.dgvList.TabIndex = 1;
             this.dgvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellContentClick);
@@ -122,62 +134,71 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 26);
+            this.label3.Size = new System.Drawing.Size(346, 26);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Vehicle - ABC Car Traders ";
+            this.label3.Text = "Vehicle Part - ABC Car Traders ";
             // 
             // Id
             // 
             this.Id.DataPropertyName = "id";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // name
             // 
-            this.name.DataPropertyName = "name";
+            this.name.DataPropertyName = "Name";
             this.name.HeaderText = "name";
             this.name.Name = "name";
+            this.name.ReadOnly = true;
             // 
             // category_id
             // 
-            this.category_id.DataPropertyName = "category_id";
+            this.category_id.DataPropertyName = "CategoryId";
             this.category_id.HeaderText = "category_id";
             this.category_id.Name = "category_id";
+            this.category_id.ReadOnly = true;
             // 
             // part_number
             // 
-            this.part_number.DataPropertyName = "part_number";
+            this.part_number.DataPropertyName = "PartNumber";
             this.part_number.HeaderText = "part_number";
             this.part_number.Name = "part_number";
+            this.part_number.ReadOnly = true;
             // 
             // brand
             // 
-            this.brand.DataPropertyName = "brand";
+            this.brand.DataPropertyName = "Brand";
             this.brand.HeaderText = "brand";
             this.brand.Name = "brand";
+            this.brand.ReadOnly = true;
             // 
             // price
             // 
-            this.price.DataPropertyName = "price";
+            this.price.DataPropertyName = "Price";
             this.price.HeaderText = "price";
             this.price.Name = "price";
+            this.price.ReadOnly = true;
             // 
             // qty
             // 
-            this.qty.DataPropertyName = "qty";
+            this.qty.DataPropertyName = "Qty";
             this.qty.HeaderText = "qty";
             this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
             // 
             // description
             // 
-            this.description.DataPropertyName = "description";
+            this.description.DataPropertyName = "Description";
             this.description.HeaderText = "description";
             this.description.Name = "description";
+            this.description.ReadOnly = true;
             // 
             // Update
             // 
             this.Update.HeaderText = "Update";
             this.Update.Name = "Update";
+            this.Update.ReadOnly = true;
             this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Update.UseColumnTextForButtonValue = true;
@@ -186,6 +207,7 @@
             // 
             this.Delete.HeaderText = "Delete";
             this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Delete.UseColumnTextForButtonValue = true;
