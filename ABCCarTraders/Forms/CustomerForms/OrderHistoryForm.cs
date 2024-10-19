@@ -23,7 +23,7 @@ namespace ABCCarTraders.Forms.CustomerForms
         }
         private void getOrder()
         {
-            List<OrderModel> list = _orderService.List();
+            List<OrderModel> list = _orderService.AllByCustomer();
             dgvList.DataSource = list;
         }
     }

@@ -50,7 +50,7 @@ namespace ABCCarTraders.Repositories
         {
             try
             {
-                string query = $"SELECT * FROM vehicle_parts WHERE order_id={id}";
+                string query = $"SELECT * FROM vehicle_part_order_info WHERE order_id={id}";
                 DataTable result = _dbService.ExecuteQuery(query);
                 List<VehiclePartOrderInfoModel> list = new List<VehiclePartOrderInfoModel>();
 

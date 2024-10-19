@@ -25,6 +25,10 @@ namespace ABCCarTraders.Services
         {
             return _vehicleOrderRepository.All();
         }
+        public List<OrderModel> AllByCustomer()
+        {
+            return _vehicleOrderRepository.AllByCustomer();
+        }
 
         public bool MakeOrder(string address)
         {
